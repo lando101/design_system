@@ -6,6 +6,8 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -29,6 +31,7 @@ import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
     BsDropdownModule.forRoot(),
   ],
   providers: [],
