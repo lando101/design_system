@@ -13,6 +13,7 @@ import { ColorPalettePageComponent } from './pages/color-palette-page/color-pale
 import { TypographyPageComponent } from './pages/typography-page/typography-page.component';
 import { FormsPageComponent } from './pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
+import { DesignPageComponent } from './pages/design-page/design-page.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.componen
     ColorPalettePageComponent,
     TypographyPageComponent,
     FormsPageComponent,
-    ButtonsPageComponent
+    ButtonsPageComponent,
+    DesignPageComponent
   ],
   imports: [
     BrowserModule,

@@ -34,7 +34,7 @@ nav{
     padding: 0px;
     .image-container{
       overflow: hidden;
-      width: 50px;
+      width: 158px;
       margin: 0px 10px;
       img{
         width: 163px;
@@ -42,11 +42,11 @@ nav{
       }
     }
     label {
-      font-size: 1.8rem;
-      font-weight: bold;
+      font-weight: 100;
+      font-size: 1.95rem;
+      color: #525252;
       padding: 0px 12px;
       margin: 0px;
-      color: $primary-color;
       border-left: 1px solid $border-color;
     }
   }
