@@ -16,7 +16,7 @@ export class ColorPalettePageComponent implements OnInit {
       area: 'primary-color-palette', etc: ''
     },
     {id: 2, displayName: 'Pacific Blue', color: '#0085ca', textColor: 'white', subContentHeader: 'Usage ',
-      subContent: 'Active indicator, link', toolTip: '', display: true, order: 2,
+      subContent: 'Active indicator, external link', toolTip: '', display: true, order: 2,
       area: 'primary-color-palette', etc: ''
     },
     {id: 3, displayName: 'Denim', color: '#2655e2', textColor: 'white', subContentHeader: 'Usage ',

@@ -1,4 +1,4 @@
-// @import "../scss/variables";
+@import "../../../scss/variables";
 
 // COLORS
 $primary-color: #005581;
@@ -14,6 +14,19 @@ nav{
   justify-content: space-between;
   padding: 5px 0px;
   border-bottom: 1px solid $border-color;
+  .nav-links-container{
+    width: 30rem;
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: space-around !important;
+    margin: 0px 5rem;
+    li{
+      a{
+        color: $font-color;
+      }
+    }
+
+  }
   a {
     display: flex;
     align-items: center;

@@ -9,7 +9,7 @@ import { FormsPageComponent } from '../app/pages/forms-page/forms-page.component
 import { ButtonsPageComponent } from '../app/pages/buttons-page/buttons-page.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, data: { title: 'Home'}},
+  {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
   {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
   {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
   {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
