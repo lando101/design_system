@@ -5,7 +5,7 @@
     </div>
     <label>Design System</label>
   </a>
-  <ul class="nav nav-links-container">
+  <!-- <ul class="nav nav-links-container">
     <li class="nav-item">
       <a class="nav-link active" href="#">Foundation</a>
     </li>
@@ -20,6 +20,11 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Assets</a>
+    </li>
+  </ul> -->
+  <ul class="nav nav-links-container">
+    <li class="nav-item" *ngFor="let link of routerLinks" >
+      <a class="nav-link" href="{{link.href}}">{{link.displayName}}</a>
     </li>
   </ul>
 </nav>
