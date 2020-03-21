@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CoreModule } from './core/core.module';
 
 // 3RD PARD IMPORTS
 import { BsDropdownModule } from 'ngx-bootstrap';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -15,8 +15,10 @@ import { FormsPageComponent } from './pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from './pages/design-page/design-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
 
-
+// MATERIAL IMPORTS
+// import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
+    CoreModule,
+    SharedModule,
+    // MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

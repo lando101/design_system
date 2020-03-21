@@ -41,6 +41,9 @@ GENERATE COMMANDS
 ng generate service my-service
 ng generate component my-component
 
+INSTALLATION OF MATERIAL
+https://www.youtube.com/watch?v=OY0Y_kEX-18
+
 
 
 
