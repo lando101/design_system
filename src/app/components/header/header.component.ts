@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
     {id: 3, displayName: 'Design', display: true, href: '/design'},
     {id: 4, displayName: 'Components', display: true, href: '/components'},
     {id: 5, displayName: 'Assets', display: true, href: '/assets'}
-  ]
+  ];
 
   constructor() { }
 
