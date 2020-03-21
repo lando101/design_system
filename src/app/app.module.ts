@@ -14,6 +14,7 @@ import { TypographyPageComponent } from './pages/typography-page/typography-page
 import { FormsPageComponent } from './pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from './pages/design-page/design-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { DesignPageComponent } from './pages/design-page/design-page.component';
     BrowserModule,
     AppRoutingModule,
     BsDropdownModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
