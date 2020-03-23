@@ -22,6 +22,7 @@ export class AuthService {
     logged in and setting up null when logged out */
     this.afAuth.authState.subscribe(user => {
       if (user) {
+        console.log("subscribe user data");
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user'));
@@ -37,13 +38,15 @@ export class AuthService {
   SignIn(email, password) {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then((result) => {
+        this.SetUserData(result.user);
+        console.log(result.user.uid);
         this.ngZone.run(() => {
           console.log('USER WAS AUTHENTICATED');
           // setTimeout(() => {
           this.router.navigate(['authenticated']);
           // }, 2000);
         });
-        this.SetUserData(result.user);
+        
         console.log(result.user);
       }).catch((error) => {
         window.alert(error.message);
@@ -118,6 +121,7 @@ export class AuthService {
         photoURL: user.photoURL,
         emailVerified: user.emailVerified
       };
+      localStorage.setItem('user', JSON.stringify(userData));
       return userRef.set(userData, {
         merge: true
       });
