@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { $ } from 'protractor';
 import { Tabs } from '../../models/tabs/tabs.model';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-navigation',
@@ -9,7 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
   styleUrls: ['./side-navigation.component.scss']
 })
 export class SideNavigationComponent implements OnInit {
-
+  activeTab: Tabs;
   tabs: Tabs [] = [
     // {id: 1, displayName: ' Home ', toolTip: '', display: true, order: 1, area: 'home', etc: '', href: '/',
     // active: true, icon: 'fas fa-home'},
@@ -23,9 +23,12 @@ export class SideNavigationComponent implements OnInit {
     href: '/buttons', active: false, icon: 'fas fa-mouse'},
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    // DETERMINE ACTIVE TAB ON PAGE LOAD
+    const tabIndex = this.tabs.findIndex(x => this.router.url === ('/authenticated/' + x.area + x.href));
+    this.tabs[tabIndex].active = true;
   }
 
 
