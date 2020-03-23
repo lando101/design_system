@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
 // import { environment } from '../environments/environment';
 
 // 3RD PARD IMPORTS
@@ -25,6 +25,9 @@ import { EmailPageComponent } from './pages/email-page/email-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
+// SERVICES
+import { AuthService } from './services/auth.service';
+
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
   authDomain: 'style-guide-app.firebaseapp.com',
@@ -35,7 +38,9 @@ export const firebaseConfig = {
   appId: '1:1051463396968:web:590257d75091f1230c15dd',
   measurementId: 'G-0CSFH36JFV'
 };
-
+@Injectable({
+  providedIn: 'root'
+})
 
 
 @NgModule({
@@ -59,9 +64,11 @@ export const firebaseConfig = {
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService, AngularFirestoreModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
