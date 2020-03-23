@@ -16,6 +16,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
+    animation: 1s login-reveal;
+    @keyframes login-reveal{
+      0%{
+        opacity: 0;
+        transform: translate(-50%, -48%);
+      }
+      25%{
+        opacity: 0;
+        transform: translate(-50%, -48%);
+      }
+      100%{
+        opactiy: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+    img{
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      opacity: .5;
+    }
     .login-content-outer{
       display: flex;
       justify-content: center;
@@ -45,6 +67,11 @@
           height: 30px;
           opacity: .8;
           border: 2px solid white;
+          transition: .2s ease-in-out;
+          &:focus {
+            opacity: 1;
+            width: 75%;
+          }
         }
         .login-button{
           width: 150px;
