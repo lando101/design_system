@@ -23,11 +23,21 @@
     </li>
   </ul> -->
   <ul class="nav nav-links-container">
-    <li class="nav-item" *ngFor="let link of routerLinks" >
-      <a class="nav-link" href="{{link.href}}">{{link.displayName}}</a>
+    <li class="nav-item" *ngFor="let link of routerLinks" routerLink = '"/{link.href}}"' >
+      <a class="nav-link">{{link.displayName}}</a>
     </li>
     <input type="button" class="btn btnPrimary" value="Log out" (click)="authService.SignOut()">
   </ul>
+
+  <!-- <nav mat-tab-nav-bar>
+    <a mat-tab-link
+       *ngFor="let link of navLinks"
+       [routerLink]="link.path"
+       routerLinkActive #rla="routerLinkActive"
+       [active]="rla.isActive">
+      {{link.label}}
+    </a>
+  </nav> -->
 </nav>
 
 

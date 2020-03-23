@@ -21,9 +21,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginPageComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'authenticated', canActivate: [AuthGuard], component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
-      // {path: '', redirectTo: 'design', pathMatch: 'full'},
+      {path: '', redirectTo: 'design', pathMatch: 'full'},
       { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
-        // {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
+        {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
         {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
         {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
         {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},

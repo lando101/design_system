@@ -1,6 +1,6 @@
 <div class='login-page'>
-  <img type="image/x-icon" href="../../../assets/EPAS Logo Only Color Transparent.gif">
   <div class="login-container">
+    <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/EPAS+Logo+Acronym+Only+White.png" width="auto" height="50" class="d-inline-block align-top" alt="">
     <div class="login-content-outer">
       <div class="login-content-inner">
         <h3 class='login-header'>Welcome!</h3>
@@ -8,7 +8,7 @@
           <input
             type="text"
             class="formControl"
-            placeholder="Username"
+            placeholder="Email"
             #userName
             required
           />
@@ -30,8 +30,7 @@
             type="button"
             class="btn btnPrimary login-button"
             value="Log in"
-            (click)="authService.SignIn(userName.value, userPassword.value)"
-          />
+            (click)="authService.SignIn(userName.value, userPassword.value)"/>
         </div>
 
         <!-- <div class="formGroup">
