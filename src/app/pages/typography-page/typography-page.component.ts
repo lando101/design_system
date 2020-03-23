@@ -32,7 +32,7 @@ export class TypographyPageComponent implements OnInit {
       order: 6, area: 'typography', etc: ''
     },
     {id: 6, type: 'External Link', style: '13px, 400, #0085ca', textColor: '#0085ca',
-      usage: 'Form Labels', display: true, fontsize: '13px', fontweight: '400',
+      usage: 'Hyperlinks', display: true, fontsize: '13px', fontweight: '400',
       order: 6, area: 'typography', etc: '', textDecoration: 'underline'
     },
   ];
