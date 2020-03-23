@@ -6,6 +6,8 @@ import { CoreModule } from './core/core.module';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -34,6 +36,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
     CoreModule,
