@@ -13,14 +13,11 @@ import { auth } from 'firebase/app';
 export class AppComponent {
   title = 'style-guide-app';
 
-<<<<<<< HEAD
-
-=======
   constructor(public auth: AngularFireAuth) {
-  
-  } 
 
-  login(email, pw) {    
+  }
+
+  login(email, pw) {
     this.auth.signInWithEmailAndPassword(email, pw)
     .catch(err => {
       alert(err.message);
@@ -30,5 +27,4 @@ export class AppComponent {
   logout() {
     this.auth.signOut();
   }
->>>>>>> nicholas-newman-branch
 }

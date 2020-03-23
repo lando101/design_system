@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<app-header></app-header>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
-</form>
-<app-side-navigation></app-side-navigation>
-<!-- <md-toolbar></md-toolbar> -->
-<!-- <router-outlet></router-outlet> -->
-
-=======
 <div *ngIf="auth.user | async as user; else showLogin">
     <app-header></app-header>
     <app-side-navigation></app-side-navigation>
@@ -28,4 +10,3 @@
 </ng-template>
 test
 <!-- <router-outlet></router-outlet> -->
->>>>>>> nicholas-newman-branch
