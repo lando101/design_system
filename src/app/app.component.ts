@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { AuthServiceService } from './services/auth-service.service';
 
 @Component({
   selector: 'app-root',
@@ -13,18 +14,6 @@ import { auth } from 'firebase/app';
 export class AppComponent {
   title = 'style-guide-app';
 
-  constructor(public auth: AngularFireAuth) {
+  constructor(public auth: AuthServiceService) {}
 
-  }
-
-  login(email, pw) {
-    this.auth.signInWithEmailAndPassword(email, pw)
-    .catch(err => {
-      alert(err.message);
-    });;
-  }
-
-  logout() {
-    this.auth.signOut();
-  }
 }

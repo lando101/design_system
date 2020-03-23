@@ -18,6 +18,7 @@ import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.componen
 import { DesignPageComponent } from './pages/design-page/design-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 // MATERIAL IMPORTS
 // import {MatInputModule} from '@angular/material/input';
@@ -31,7 +32,8 @@ import { SharedModule } from './shared/shared.module';
     TypographyPageComponent,
     FormsPageComponent,
     ButtonsPageComponent,
-    DesignPageComponent
+    DesignPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

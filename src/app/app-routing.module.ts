@@ -8,9 +8,11 @@ import { TypographyPageComponent } from '../app/pages/typography-page/typography
 import { FormsPageComponent } from '../app/pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from '../app/pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from '../app/pages/design-page/design-page.component';
+import { AppComponent } from '../app/app.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/design', pathMatch: 'full' },
+// { path: '', component: AppComponent, pathMatch: 'full' },
+{ path: '', redirectTo: '/design', pathMatch: 'full' },
 { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
     {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
     {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
