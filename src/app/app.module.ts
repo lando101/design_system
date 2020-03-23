@@ -15,6 +15,7 @@ import { FormsPageComponent } from './pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from './pages/design-page/design-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DesignSystemPageComponent } from './pages/design-system-page/design-system-page.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TypographyPageComponent,
     FormsPageComponent,
     ButtonsPageComponent,
-    DesignPageComponent
+    DesignPageComponent,
+    DesignSystemPageComponent
   ],
   imports: [
     BrowserModule,
