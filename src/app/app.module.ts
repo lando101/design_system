@@ -1,22 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
-import { NgModule } from '@angular/core';
+// import { NgModule } from '@angular/core';
 import { CoreModule } from './core/core.module';
 
 // 3RD PARD IMPORTS
 import { BsDropdownModule } from 'ngx-bootstrap';
-=======
 import { NgModule, Injectable } from '@angular/core';
 // import { environment } from '../environments/environment';
 
 // 3RD PARD IMPORTS
-import { BsDropdownModule } from 'ngx-bootstrap';
-import { AngularFireModule } from '@angular/fire';
+// import { BsDropdownModule } from 'ngx-bootstrap';
+// import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 // PROJECT COMPONENTS
->>>>>>> login
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
@@ -30,10 +27,7 @@ import { FormsPageComponent } from './pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from './pages/design-page/design-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-<<<<<<< HEAD
 import { SharedModule } from './shared/shared.module';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-=======
 import { DesignSystemPageComponent } from './pages/design-system-page/design-system-page.component';
 import { EmailPageComponent } from './pages/email-page/email-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
@@ -55,7 +49,6 @@ export const firebaseConfig = {
 @Injectable({
   providedIn: 'root'
 })
->>>>>>> login
 
 // MATERIAL IMPORTS
 // import {MatInputModule} from '@angular/material/input';
@@ -70,29 +63,22 @@ export const firebaseConfig = {
     FormsPageComponent,
     ButtonsPageComponent,
     DesignPageComponent,
-<<<<<<< HEAD
-=======
     DesignSystemPageComponent,
     EmailPageComponent,
     SignupPageComponent,
->>>>>>> login
     LoginPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
-<<<<<<< HEAD
     CoreModule,
     SharedModule,
     // MatInputModule
-=======
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule
->>>>>>> login
   ],
   providers: [AuthService, AngularFirestoreModule],
   bootstrap: [AppComponent]
