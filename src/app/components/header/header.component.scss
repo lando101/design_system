@@ -78,6 +78,17 @@ nav{
       border-left: 1px solid $border-color;
     }
   }
+  button{
+    height: 100%;
+    border-left: 1px solid $border-color;
+    border-radius: 0;
+    font-size: .93rem;
+    padding: 15px;
+    color: $primary-color;
+    &:hover{
+      // background: darken()
+    }
+  }
 }
 
 

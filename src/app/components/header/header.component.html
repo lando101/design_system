@@ -6,10 +6,6 @@
     <label>Design System</label>
   </a>
 
-  <!-- <mat-tab-group>
-    <mat-tab *ngFor="let link of routerLinks" href="{{link.href}}" label="{{link.displayName}}"></mat-tab>
-  </mat-tab-group> -->
-
   <div class="nav-routes-container">
     <nav mat-tab-nav-bar>
       <a mat-tab-link
@@ -20,15 +16,8 @@
          {{link.displayName}}
       </a>
     </nav>
-    <!-- <router-outlet></router-outlet> -->
   </div>
-  <!-- <ul class="nav nav-links-container">
-    <li class="nav-item" *ngFor="let link of routerLinks" >
-      <a class="nav-link" href="{{link.href}}">{{link.displayName}}</a>
-    </li>
-  </ul> -->
-    <input type="button" class="btn btnPrimary" value="Log out" (click)="authService.SignOut()">
-  <!-- </ul> -->
+    <button class="btn btnPrimary" (click)="authService.SignOut()"><i class="fas fa-sign-out-alt">Sign Out</i></button>
 </nav>
 
 
