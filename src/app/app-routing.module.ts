@@ -8,10 +8,10 @@ import { TypographyPageComponent } from '../app/pages/typography-page/typography
 import { FormsPageComponent } from '../app/pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from '../app/pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from '../app/pages/design-page/design-page.component';
-import {DesignSystemPageComponent} from '../app/pages/design-system-page/design-system-page.component';
+import { DesignSystemPageComponent } from '../app/pages/design-system-page/design-system-page.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'authenticated/design', pathMatch: 'full'},
+  {path: '', redirectTo: 'authenticated', pathMatch: 'full'},
   { path: 'authenticated', component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
       {path: '', redirectTo: 'design', pathMatch: 'full'},
       { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
