@@ -8,6 +8,7 @@ import { TypographyPageComponent } from '../app/pages/typography-page/typography
 import { FormsPageComponent } from '../app/pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from '../app/pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from '../app/pages/design-page/design-page.component';
+<<<<<<< HEAD
 import { AppComponent } from '../app/app.component';
 
 const routes: Routes = [
@@ -20,6 +21,31 @@ const routes: Routes = [
     {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
     {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
 ]},
+=======
+import { DesignSystemPageComponent } from '../app/pages/design-system-page/design-system-page.component';
+import { EmailPageComponent } from './pages/email-page/email-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+
+// SERVICES
+import { AuthGuard } from './shared/shared/guard/auth.guard';
+import { SecureInnerPagesGuard } from './shared/shared/guard/secure-inner-pages.guard';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: 'login', component: LoginPageComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'authenticated', canActivate: [AuthGuard], component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
+      {path: '', redirectTo: 'design', pathMatch: 'full'},
+      { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
+        {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
+        {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
+        {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
+        {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
+        {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
+    ]},
+  ]},
+
+>>>>>>> login
 
 
   // {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
@@ -41,7 +67,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,
-  { enableTracing: true})],
+{ enableTracing: true})],
   exports: [RouterModule]
 })
 

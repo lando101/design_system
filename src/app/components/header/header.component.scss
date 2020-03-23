@@ -4,6 +4,12 @@
 $primary-color: #005581;
 $border-color: #eaeaea;
 
+.nav-item{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 nav{
   width: 100%;
   height: 55px;
@@ -13,8 +19,9 @@ nav{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 0px;
+  padding: 0px;
   border-bottom: 1px solid $border-color;
+<<<<<<< HEAD
   .nav-routes-container{
     height: 100%;
     width: auto;
@@ -24,9 +31,28 @@ nav{
         padding: 0px;
         margin: 0px;
         border-bottom: none;
+=======
+  .nav-links-container{
+    width: 30rem;
+    height: 55px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: space-around !important;
+    margin: 0px 5rem;
+    li{
+      a{
+        color: $font-color;
+>>>>>>> login
+      }
+      &:active{
+        border-bottom: 2px solid royalblue;
       }
     }
+<<<<<<< HEAD
 
+=======
+  }
+>>>>>>> login
   a {
     display: flex;
     align-items: center;

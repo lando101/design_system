@@ -1,1 +1,75 @@
+<<<<<<< HEAD
 <p>login-page works!</p>
+=======
+<div class='login-page'>
+  <div class="login-container">
+    <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/EPAS+Logo+Acronym+Only+White.png" width="auto" height="50" class="d-inline-block align-top" alt="">
+    <div class="login-content-outer">
+      <div class="login-content-inner">
+        <h3 class='login-header'>Welcome!</h3>
+        <div class="formGroup">
+          <input
+            type="text"
+            class="formControl"
+            placeholder="Email"
+            #userName
+            required
+          />
+        </div>
+
+        <div class="formGroup">
+          <input
+            type="password"
+            class="formControl"
+            placeholder="Password"
+            #userPassword
+            required
+          />
+        </div>
+
+        <!-- Calling SignIn Api from AuthService -->
+        <div class="formGroup">
+          <input
+            type="button"
+            class="btn btnPrimary login-button"
+            value="Log in"
+            (click)="authService.SignIn(userName.value, userPassword.value)"/>
+        </div>
+
+        <!-- <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div> -->
+
+        <!-- Calling GoogleAuth Api from AuthService -->
+        <!-- <div class="formGroup">
+          <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+            <i class="fab fa-google-plus-g"></i>
+            Log in with Google
+          </button>
+        </div> -->
+
+        <!-- <div class="forgotPassword">
+          <span routerLink="/forgot-password">Forgot Password?</span>
+        </div>
+      </div>
+
+      <div class="redirectToLogin">
+        <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+      </div> -->
+      </div>
+      <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+>>>>>>> login
