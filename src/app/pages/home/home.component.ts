@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SideNavigationComponent } from '../../components/side-navigation/side-navigation.component';
+
 import {
   trigger,
   state,
@@ -15,9 +17,9 @@ import {
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(public nav: SideNavigationComponent) { 
+    nav.visible = false;
   }
 
+  ngOnInit(): void { }
 }

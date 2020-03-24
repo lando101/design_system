@@ -10,7 +10,8 @@ import { ButtonsPageComponent } from '../app/pages/buttons-page/buttons-page.com
 import { DesignPageComponent } from '../app/pages/design-page/design-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/design', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: 'home', component: HomeComponent },
 { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
     {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
     {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},

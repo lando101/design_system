@@ -35,7 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [SideNavigationComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
