@@ -83,7 +83,10 @@
 
           &:hover{
             background: darken($primary-color, 5%);
-          }
+          }          
+        }
+        .redirect {
+          cursor: pointer;
         }
         animation: 1s login-reveal;
         @keyframes login-reveal{
