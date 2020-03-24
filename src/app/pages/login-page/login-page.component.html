@@ -1,10 +1,13 @@
-<div class='login-page'>
+<!-- <div class='login-page' [@moveIn]> -->
+  <div class='login-page'>
   <div class="login-container">
     <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/EPAS+Logo+Acronym+Only+White.png" width="auto" height="50" class="d-inline-block align-top" alt="">
     <div class="login-content-outer">
       <div class="login-content-inner">
-        <h3 class='login-header'>Welcome!</h3>
+        <h3 class='login-header'>Sign in <i class="fas fa-sign-in-alt"></i></h3>
+        <p>Enter your credentials to log in.</p>
         <div class="formGroup">
+          <i class="far fa-envelope"></i>
           <input
             type="text"
             class="formControl"
@@ -15,6 +18,7 @@
         </div>
 
         <div class="formGroup">
+          <i class="fas fa-key"></i>
           <input
             type="password"
             class="formControl"
@@ -29,7 +33,7 @@
           <input
             type="button"
             class="btn btnPrimary login-button"
-            value="Log in"
+            value="Sign in"
             (click)="authService.SignIn(userName.value, userPassword.value)"/>
         </div>
 
@@ -55,6 +59,9 @@
       </div>
       </div>
       <ul class="bg-bubbles">
+        <!-- <li><i class="fas fa-key"></i></li>
+        <li><i class="fas fa-fingerprint"></i></li>
+        <li><i class="fas fa-users"></i></li> -->
         <li></li>
         <li></li>
         <li></li>
@@ -68,4 +75,5 @@
       </ul>
     </div>
   </div>
+  <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/500.png" width="auto" height="30" class="angular-image" alt="">
 </div>

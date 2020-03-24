@@ -1,16 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
+// import { NgModule } from '@angular/core';
+import { CoreModule } from './core/core.module';
+
+// 3RD PARD IMPORTS
+import { BsDropdownModule } from 'ngx-bootstrap';
 import { NgModule, Injectable } from '@angular/core';
 // import { environment } from '../environments/environment';
 
 // 3RD PARD IMPORTS
-import { BsDropdownModule } from 'ngx-bootstrap';
-import { AngularFireModule } from '@angular/fire';
+// import { BsDropdownModule } from 'ngx-bootstrap';
+// import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 // PROJECT COMPONENTS
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 import { HeaderComponent } from './components/header/header.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -20,6 +27,7 @@ import { FormsPageComponent } from './pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from './pages/design-page/design-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
 import { DesignSystemPageComponent } from './pages/design-system-page/design-system-page.component';
 import { EmailPageComponent } from './pages/email-page/email-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
@@ -43,7 +51,8 @@ export const firebaseConfig = {
   providedIn: 'root'
 })
 
-
+// MATERIAL IMPORTS
+// import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +75,9 @@ export const firebaseConfig = {
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
+    CoreModule,
+    SharedModule,
+    // MatInputModule
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule
