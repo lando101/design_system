@@ -12,6 +12,8 @@ import { DesignSystemPageComponent } from '../app/pages/design-system-page/desig
 import { EmailPageComponent } from './pages/email-page/email-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { DesignOverviewComponent } from './pages/design-overview/design-overview.component';
+import { IconsPageComponent } from './pages/icons-page/icons-page.component';
 
 // SERVICES
 import { AuthGuard } from './shared/shared/guard/auth.guard';
@@ -24,8 +26,10 @@ const routes: Routes = [
       {path: '', redirectTo: 'design', pathMatch: 'full'},
       { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
         {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
+        {path: 'design-overview', component: DesignOverviewComponent, data: { title: 'Design Overview'}},
         {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
         {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
+        {path: 'icons', component: IconsPageComponent, data: { title: 'Icons'}},
         {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
         {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
     ]},

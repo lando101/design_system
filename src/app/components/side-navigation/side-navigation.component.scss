@@ -52,7 +52,7 @@
   color: $primary-color;
   background-color: $active-bg-color;
   padding: 10px 30px;
-  border-left: 3px solid $active-color;
+  border-left: 4px solid $active-color;
   // /* border-right: 2px solid royalblue; */
   // border-bottom: 1px solid #efefef;
 }
@@ -60,7 +60,7 @@
 .column-container{
   border-right: 1px solid $border-color;
   flex: 0 0 25%;
-  max-width: 330px;
+  max-width: 290px;
   padding: 0px 0px 0px 0px;
   background: $primary-bg-color;
   .nav-header{

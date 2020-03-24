@@ -35,6 +35,8 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
 // SERVICES
 import { AuthService } from './services/auth.service';
+import { DesignOverviewComponent } from './pages/design-overview/design-overview.component';
+import { IconsPageComponent } from './pages/icons-page/icons-page.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -66,7 +68,9 @@ export const firebaseConfig = {
     DesignSystemPageComponent,
     EmailPageComponent,
     SignupPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    DesignOverviewComponent,
+    IconsPageComponent
   ],
   imports: [
     BrowserModule,

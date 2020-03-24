@@ -1,0 +1,16 @@
+@import './variables';
+
+@mixin h3(){
+
+}
+
+
+// IMAGE CONTAINER MIXINS
+@mixin small-image-left() {
+  height: 150px;
+  // margin: 15px 0px;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0px 2px 5px 1px $border-color-darker;
+}
