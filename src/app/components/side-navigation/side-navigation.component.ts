@@ -9,7 +9,7 @@ import { Routes, RouterModule, Router } from '@angular/router';
   styleUrls: ['./side-navigation.component.scss']
 })
 export class SideNavigationComponent implements OnInit {
-  visible: boolean = true;
+  visible = true;
   activeTab: Tabs;
 
   tabs: Tabs [];
@@ -21,7 +21,6 @@ export class SideNavigationComponent implements OnInit {
     const tabIndex = this.tabs.findIndex(x => this.router.url === ('/authenticated/' + x.area + x.href));
     this.tabs[tabIndex].active = true;
   }
-  
   // SET TAB SELECTED TO ACTIVE AND REMOVE ACTIVE FROM OTHER TABS
   setActiveTab(tab: Tabs) {
     this.tabs.filter(x => x.active = false);

@@ -23,8 +23,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginPageComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'authenticated', canActivate: [AuthGuard], component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
-      {path: 'home', component: HomeComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full'},
+      { path: 'home', component: HomeComponent },
       { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
         {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
         {path: 'design-overview', component: DesignOverviewComponent, data: { title: 'Design Overview'}},

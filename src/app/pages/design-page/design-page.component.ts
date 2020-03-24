@@ -8,8 +8,10 @@ import { SideNavigationComponent } from '../../components/side-navigation/side-n
 })
 export class DesignPageComponent implements OnInit {
 
-  constructor(public nav: SideNavigationComponent) { 
-    nav.tabs = [      
+  constructor(public nav: SideNavigationComponent) {
+    // SHOW SIDE NAVE WITH DATA ABOVE
+    this.nav.visible = true;
+    nav.tabs = [
       {id: 2, displayName: 'Color Palette', toolTip: 'test', display: true, order: 2, area: 'design', etc: '',
       href: '/color-palette', active: true, icon: 'fas fa-palette'},
       {id: 3, displayName: 'Typography', toolTip: 'test', display: true, order: 3, area: 'design', etc: '',
