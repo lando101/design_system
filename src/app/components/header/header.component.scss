@@ -4,18 +4,46 @@
 $primary-color: #005581;
 $border-color: #eaeaea;
 
+.nav-item{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 nav{
   width: 100%;
+  height: 55px;
   margin-bottom: 50px;
   z-index: 9;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 0px;
+  padding: 0px;
+  box-shadow: 0px 2px 2px 0px #dadada42;
   border-bottom: 1px solid $border-color;
+  .nav-routes-container{
+    height: 100%;
+    width: auto;
+    flex-wrap: nowrap;
+    position: absolute;
+    right: 100px;
+    top: 0px;
+      nav{
+        height: 55px;
+        padding: 0px;
+        margin: 0px;
+        border-bottom: none;
+        box-shadow: none;
+        a{
+          height: 55px;
+          min-width: 115px;
+        }
+      }
+  }
   .nav-links-container{
     width: 30rem;
+    height: 55px;
     display: flex;
     justify-content: space-evenly;
     justify-content: space-around !important;
@@ -24,13 +52,15 @@ nav{
       a{
         color: $font-color;
       }
+      &:active{
+        border-bottom: 2px solid royalblue;
+      }
     }
-
   }
   a {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0px;
     .image-container{
       overflow: hidden;
@@ -48,9 +78,45 @@ nav{
       padding: 0px 12px;
       margin: 0px;
       border-left: 1px solid $border-color;
+      height: 35px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  button{
+    border-left: 1px solid $border-color;
+    border-radius: 0;
+    font-size: .93rem;
+    color: $primary-color;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100px;
+    padding: 0px 6px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 35px;
+    &:hover{
+      // background: darken()
     }
   }
 }
 
 
 
+// MATERIAL MODIFICATIONS
+.mat-tab-body-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  transition: height 500ms cubic-bezier(0.35, 0, 0.25, 1);
+  display: none;
+  }
+
+  .mat-tab-link-container {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    z-index: 1;
+    height: 55px;
+    }

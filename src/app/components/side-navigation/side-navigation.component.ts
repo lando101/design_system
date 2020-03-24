@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { $ } from 'protractor';
 import { Tabs } from '../../models/tabs/tabs.model';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-navigation',
@@ -10,14 +10,16 @@ import { Routes, RouterModule } from '@angular/router';
 })
 export class SideNavigationComponent implements OnInit {
   visible: boolean = true;
+  activeTab: Tabs;
 
   tabs: Tabs [];
 
-  constructor() { } 
+  constructor(private router: Router) { }
 
-  ngOnInit(): void 
-  {
-    
+  ngOnInit(): void {
+    // DETERMINE ACTIVE TAB ON PAGE LOAD
+    const tabIndex = this.tabs.findIndex(x => this.router.url === ('/authenticated/' + x.area + x.href));
+    this.tabs[tabIndex].active = true;
   }
   
   // SET TAB SELECTED TO ACTIVE AND REMOVE ACTIVE FROM OTHER TABS

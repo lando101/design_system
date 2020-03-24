@@ -1,3 +1,29 @@
 <div class="page-reveal-animation">
-  <h3> Typogrpahy </h3>
+  <h3> Typography </h3>
+  <div class="container">
+    <p> A visual hierarchy of text enables a user to navigate a website or software application
+      with ease. When a user sees consistent use of typography throughout a single digitial experience,
+      it provides a sense of comfort on what actions that user should take.
+    </p>
+    <p>All text in EPAS applications should use a font called Vernada.
+    </p>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Type</th>
+        <th scope="col">Style</th>
+        <th scope="col">Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let font of fontStyles" >
+        <!-- <th scope="row">1</th> -->
+        <td style='font-size: {{font.fontsize}}; font-weight: {{font.fontweight}}; color: {{font.textColor}}; text-decoration: {{font.textDecoration}}'>{{font.type}}</td>
+        <td>{{font.style}}</td>
+        <td>{{font.usage}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

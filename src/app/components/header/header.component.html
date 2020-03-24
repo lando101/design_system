@@ -5,28 +5,19 @@
     </div>
     <label>Design System</label>
   </a>
-  <!-- <ul class="nav nav-links-container">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Foundation</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Content</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Design</a>
-    </li>
-     <li class="nav-item">
-      <a class="nav-link" href="#">Components</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Assets</a>
-    </li>
-  </ul> -->
-  <ul class="nav nav-links-container">
-    <li class="nav-item" *ngFor="let link of routerLinks" >
-      <a class="nav-link" href="{{link.href}}">{{link.displayName}}</a>
-    </li>
-  </ul>
+
+  <div class="nav-routes-container">
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link
+         *ngFor="let link of routerLinks"
+         [routerLink]="link.href"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="rla.isActive">
+         {{link.displayName}}
+      </a>
+    </nav>
+  </div>
+    <button class="btn btnPrimary" (click)="authService.SignOut()"><i class="fas fa-sign-out-alt"></i>Sign Out</button>
 </nav>
 
 

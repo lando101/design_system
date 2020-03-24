@@ -8,17 +8,34 @@ import { TypographyPageComponent } from '../app/pages/typography-page/typography
 import { FormsPageComponent } from '../app/pages/forms-page/forms-page.component';
 import { ButtonsPageComponent } from '../app/pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from '../app/pages/design-page/design-page.component';
+import { DesignSystemPageComponent } from '../app/pages/design-system-page/design-system-page.component';
+import { EmailPageComponent } from './pages/email-page/email-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { DesignOverviewComponent } from './pages/design-overview/design-overview.component';
+import { IconsPageComponent } from './pages/icons-page/icons-page.component';
+
+// SERVICES
+import { AuthGuard } from './shared/shared/guard/auth.guard';
+import { SecureInnerPagesGuard } from './shared/shared/guard/secure-inner-pages.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  {path: 'home', component: HomeComponent },
-{ path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
-    {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-    {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-    {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
-    {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
-    {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
-]},
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: 'login', component: LoginPageComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'authenticated', canActivate: [AuthGuard], component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: 'home', component: HomeComponent },
+      { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
+        {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
+        {path: 'design-overview', component: DesignOverviewComponent, data: { title: 'Design Overview'}},
+        {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
+        {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
+        {path: 'icons', component: IconsPageComponent, data: { title: 'Icons'}},
+        {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
+        {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
+    ]},
+  ]},
+
 
 
   // {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
@@ -40,7 +57,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,
-  { enableTracing: true})],
+{ enableTracing: true})],
   exports: [RouterModule]
 })
 

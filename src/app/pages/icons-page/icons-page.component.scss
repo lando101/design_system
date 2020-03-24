@@ -1,0 +1,23 @@
+@import '../../../styles.scss';
+
+.image-container{
+  width: 100%;
+  height: auto;
+  background: $primary-bg-color;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  img{
+    @include small-image-left();
+  }
+  .img-desc{
+    margin: 10px;
+    .img-header{
+
+    }
+    .img-text{
+
+    }
+  }
+}
+

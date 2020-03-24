@@ -24,6 +24,8 @@ https://www.youtube.com/watch?v=ZkYsMBNR_eY&t=600s
   ]
 }
 
+FIREBASE SETUP || AUTHENTICATION
+https://www.positronx.io/full-angular-7-firebase-authentication-system/
 
 INSTALLING BOOTSTRAP RESOURCE
 https://www.techiediaries.com/angular-bootstrap/
@@ -40,6 +42,9 @@ ng build
 GENERATE COMMANDS
 ng generate service my-service
 ng generate component my-component
+
+INSTALLATION OF MATERIAL
+https://www.youtube.com/watch?v=OY0Y_kEX-18
 
 
 

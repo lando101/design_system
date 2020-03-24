@@ -3,9 +3,11 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 @import "./scss/index";
 @import "./scss/variables";
+@import './scss/mixins';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 $epas-pimary-color: red;
 
-body{
+body {
   // overflow: hidden;
 }
 
