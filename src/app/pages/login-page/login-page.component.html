@@ -1,9 +1,10 @@
-<div class='login-page'>
+<!-- <div class='login-page' [@moveIn]> -->
+  <div class='login-page'>
   <div class="login-container">
     <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/EPAS+Logo+Acronym+Only+White.png" width="auto" height="50" class="d-inline-block align-top" alt="">
     <div class="login-content-outer">
       <div class="login-content-inner">
-        <h3 class='login-header'>Welcome!</h3>
+        <h3 class='login-header'>Sign in <i class="fas fa-sign-in-alt"></i></h3>
         <p>Enter your credentials to log in.</p>
         <div class="formGroup">
           <i class="far fa-envelope"></i>
@@ -32,7 +33,7 @@
           <input
             type="button"
             class="btn btnPrimary login-button"
-            value="Log in"
+            value="Sign in"
             (click)="authService.SignIn(userName.value, userPassword.value)"/>
         </div>
 
