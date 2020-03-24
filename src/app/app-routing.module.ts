@@ -12,6 +12,7 @@ import { DesignSystemPageComponent } from '../app/pages/design-system-page/desig
 import { EmailPageComponent } from './pages/email-page/email-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 // SERVICES
 import { AuthGuard } from './shared/shared/guard/auth.guard';
@@ -20,6 +21,8 @@ import { SecureInnerPagesGuard } from './shared/shared/guard/secure-inner-pages.
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginPageComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'register-user', component: SignupPageComponent },
+  { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'authenticated', canActivate: [AuthGuard], component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
       {path: '', redirectTo: 'design', pathMatch: 'full'},
       { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [

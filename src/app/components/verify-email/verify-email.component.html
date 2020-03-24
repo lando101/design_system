@@ -1,0 +1,48 @@
+<div class='login-page'>
+    <div class="login-container">
+      <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/EPAS+Logo+Acronym+Only+White.png" width="auto" height="50" class="d-inline-block align-top" alt="">
+      <div class="login-content-outer">
+        <div class="login-content-inner">
+            <div class="displayTable">
+                <div class="displayTableCell">
+              
+                  <div class="authBlock">
+                    <h3  class='login-header'>Thank You for Registering</h3>
+              
+                    <div class="formGroup" *ngIf="authService.userData as user">
+                      <p class="text-center">We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
+                      <p class="text-center">Please check your email and click on the link to verfiy your email address.</p>
+                    </div>
+                    
+                    <!-- Calling SendVerificationMail() method using authService Api -->
+                    <div class="formGroup">
+                      <button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
+                        <i class="fas fa-redo-alt"></i>
+                        Resend Verification Email
+                      </button>
+                    </div>
+              
+                  </div>
+              
+                  <div class="redirectToLogin">
+                    <span>Go back to?<span class="redirect" routerLink="/login"> Sign in</span></span>
+                  </div>
+              
+                </div>
+              </div>
+        </div>
+        <ul class="bg-bubbles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
