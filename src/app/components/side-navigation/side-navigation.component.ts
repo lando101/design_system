@@ -19,8 +19,10 @@ export class SideNavigationComponent implements OnInit {
 
   ngOnInit(): void {
     // DETERMINE ACTIVE TAB ON PAGE LOAD
-    const tabIndex = this.tabs.findIndex(x => this.router.url === ('/authenticated/' + x.area + x.href));
-    this.tabs[tabIndex].active = true;
+    if (this.visible) {
+      const tabIndex = this.tabs.findIndex(x => this.router.url === ('/authenticated/' + x.area + x.href));
+      this.tabs[tabIndex].active = true;
+    }
   }
   // SET TAB SELECTED TO ACTIVE AND REMOVE ACTIVE FROM OTHER TABS
   setActiveTab(tab: Tabs) {
