@@ -12,12 +12,17 @@
   padding: 0px 15px;
   color: $primary-bg-color;
   background: $primary-color;
+  &:hover{
+    transition: .2s;
+    background: ligthen($primary-color, 7%);
+  }
 }
 
 // SECTION CONTAINER
 @mixin home-section-container(){
-  padding: 25px 0px 30px 0px;
+  padding: 30px 0px 30px 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 80%;
   margin: 0;
@@ -121,13 +126,14 @@
       }
       .button-container{
         height: 2rem;
+        width: 100%;
         margin: 10px 0px;
         display: flex;
         justify-content: center;
         align-content: center;
         position: absolute;
         bottom: 0px;
-        transform: translate(50%, 0%);
+        left: 0px;
         button{
          @include primary-button();
         }

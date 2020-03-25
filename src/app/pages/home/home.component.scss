@@ -77,7 +77,7 @@
   }
   .home-page-bottom-container{
     height: 380px;
-    background: white;
+    background: lighten($content-bg-color, 3%);
     width: 100%;
     position: relative;
     top: -60px;
