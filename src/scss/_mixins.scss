@@ -13,8 +13,8 @@
   color: $primary-bg-color;
   background: $primary-color;
   &:hover{
-    transition: .2s;
-    background: ligthen($primary-color, 7%);
+    transition: .2s ease-in-out;
+    background: lighten($primary-color, 7%);
   }
 }
 

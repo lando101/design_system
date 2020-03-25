@@ -17,7 +17,7 @@ export class TopicService {
       color: '#005581', icon: 'fas fa-pencil-ruler', topicClass: 'design-background',
       circleClass: 'design-circle-background', link: '/authenticated/design'
     },
-    {id: 'components', displayName: 'UX/UX Components',
+    {id: 'components', displayName: 'UI/UX Components',
       desc: 'Learn more about available reusable EPAS UI/UX components',
       color: '#005581', icon: 'fas fa-puzzle-piece', topicClass: 'component-background',
       circleClass: 'component-circle-background', link: '/authenticated/components'

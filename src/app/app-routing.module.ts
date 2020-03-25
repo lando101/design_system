@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full'},
       { path: 'home', component: HomeComponent },
       { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
-        {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
+        {path: '', redirectTo: 'design-overview', pathMatch: 'full'},
         {path: 'design-overview', component: DesignOverviewComponent, data: { title: 'Design Overview'}},
         {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
         {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
