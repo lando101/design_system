@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild} from '@angular/core';
 import { $ } from 'protractor';
 import { Tabs } from '../../models/tabs/tabs.model';
 import { Routes, RouterModule, Router } from '@angular/router';
+import {  DesignPageComponent } from '../../pages/design-page/design-page.component';
 
 @Component({
   selector: 'app-side-navigation',
@@ -12,7 +13,7 @@ export class SideNavigationComponent implements OnInit {
   visible = true;
   activeTab: Tabs;
 
-  tabs: Tabs [];
+  @Input() tabs: Tabs [];
 
   constructor(private router: Router) { }
 
