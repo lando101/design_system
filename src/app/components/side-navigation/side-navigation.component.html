@@ -2,18 +2,25 @@
   <div *ngIf="this.visible" class="col-3 column-container">
     <div class="nav-header">Design</div>
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a *ngFor="let tab of tabs" routerLink='/authenticated/{{tab.area}}{{tab.href}}' (click)="setActiveTab(tab)" [ngClass]="{'active': tab.active}" data-toggle="pill" class="nav-link " id="tab.id" href="tab.href" role="tab" aria-controls="v-pills-home" aria-selected="tab.active">
+      
+      <a *ngFor="let tab of tabs" routerLink='/{{tab.href}}' (click)="setActiveTab(tab)" [ngClass]="{'active': tab.active}" 
+        data-toggle="pill" class="nav-link " id="tab.id" href="tab.href" role="tab" 
+        aria-controls="v-pills-home" aria-selected="tab.active">
         <i class="{{tab.icon}}"></i>
         {{tab.displayName}}
       </a>
+      <!-- <a *ngFor="let tab of tabs"  (click)="setActiveTab(tab)" [ngClass]="{'active': tab.active}" data-toggle="pill" class="nav-link " id="tab.id" href="tab.href" role="tab" aria-controls="v-pills-home" aria-selected="tab.active">
+        <i class="{{tab.icon}}"></i>  
+        {{tab.displayName}}
+      </a> -->
     </div>
   </div>
   <div class="content-container">
     <div class="tab-content-outer-container">
       <div class="tab-content-inner-container">
         <!-- directs user to page based on selection -->
-       <router-outlet></router-outlet>
+       
       </div>
     </div>
   </div>
-</div>
+</div> 

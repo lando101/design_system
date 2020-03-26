@@ -172,3 +172,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   0%   { transform: translateY(0); opacity: .3}
   100% { transform: translateY(-700px) rotate(600deg); opacity: 0}
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

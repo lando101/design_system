@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { SideNavigationComponent } from '../../components/side-navigation/side-navigation.component';
+// import { SideNavigationComponent } from '../../components/side-navigation/side-navigation.component';
 
 import {
   trigger,
@@ -24,9 +24,11 @@ export class HomeComponent implements OnInit {
 
   iconBiggerArray: any[] = [{icon: ''}];
 
-  constructor(public nav: SideNavigationComponent) {
-    nav.visible = false;
-  }
+  constructor() {}
+  // constructor(public nav: SideNavigationComponent) {
+  //   nav.visible = false;
+  // }
+
   @HostListener('window:resize', ['$event'])
 
   onResize(event) {

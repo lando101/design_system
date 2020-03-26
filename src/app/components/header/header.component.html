@@ -11,11 +11,19 @@
       <a mat-tab-link
          *ngFor="let link of routerLinks"
          [routerLink]="link.href"
+         (click)="setSidebar(link)"
          routerLinkActive #rla="routerLinkActive"
          [active]="rla.isActive">
          {{link.displayName}}
       </a>
+      <!-- <a mat-tab-link
+         *ngFor="let link of routerLinks"
+          [routerLink]="link.href">
+         {{link.displayName}}
+      </a>  -->
+      
     </nav>
+
   </div>
     <button class="btn btnPrimary" (click)="authService.SignOut()"><i class="fas fa-sign-out-alt"></i>Sign Out</button>
 </nav>

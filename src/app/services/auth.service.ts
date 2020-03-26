@@ -20,17 +20,17 @@ export class AuthService {
   ) {
     /* Saving user data in localstorage when
     logged in and setting up null when logged out */
-    this.afAuth.authState.subscribe(user => {
-      if (user) {
-        console.log("subscribe user data");
-        this.userData = user;
-        localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
-      } else {
-        localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
-      }
-    });
+    // this.afAuth.authState.subscribe(user => {
+    //   if (user) {
+    //     console.log("subscribe user data");
+    //     this.userData = user;
+    //     localStorage.setItem('user', JSON.stringify(this.userData));
+    //     JSON.parse(localStorage.getItem('user'));
+    //   } else {
+    //     localStorage.setItem('user', null);
+    //     JSON.parse(localStorage.getItem('user'));
+    //   }
+    // });
   }
 
 
@@ -43,7 +43,7 @@ export class AuthService {
         this.ngZone.run(() => {
           console.log('USER WAS AUTHENTICATED');
           // setTimeout(() => {
-          this.router.navigate(['authenticated']);
+          this.router.navigate(['/']);
           // }, 2000);
         });
         
@@ -101,7 +101,7 @@ export class AuthService {
       return this.afAuth.auth.signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-            this.router.navigate(['authenticated']);
+            this.router.navigate(['/']);
           });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -127,11 +127,11 @@ export class AuthService {
       });
     }
 
-    // Sign out
-    SignOut() {
-      return this.afAuth.auth.signOut().then(() => {
-        localStorage.removeItem('user');
-        this.router.navigate(['login']);
-      });
-    }
+  // Sign out
+  SignOut() {
+    return this.afAuth.auth.signOut().then(() => {
+      localStorage.removeItem('user');
+      this.router.navigate(['/auth']);
+    });
+  }
 }
