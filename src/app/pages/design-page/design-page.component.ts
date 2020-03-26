@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, RouterOutlet } from '@angular/router';
 import { SideNavigationComponent } from '../../components/side-navigation/side-navigation.component';
 
 @Component({

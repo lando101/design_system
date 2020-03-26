@@ -4,13 +4,15 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import {Observable, Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   userData: any; // SAVE LOGGED IN USER DATA
-
+  loginSuccessSource = new Subject<boolean>();
+  loginSuccess$ = this.loginSuccessSource.asObservable();
 
   constructor(
     public afs: AngularFirestore,   // Inject Firestore service
@@ -44,12 +46,15 @@ export class AuthService {
           console.log('USER WAS AUTHENTICATED');
           // setTimeout(() => {
           this.router.navigate(['authenticated']);
+          // this.loginSuccessSource.next(true);
           // }, 2000);
         });
-        
+
         console.log(result.user);
       }).catch((error) => {
-        window.alert(error.message);
+        // NEED TO MAKE THE LOGIN SHAKE
+        this.loginSuccessSource.next(false);
+        this.loginSuccess$ = this.loginSuccessSource.asObservable();
       });
   }
 
@@ -65,6 +70,7 @@ export class AuthService {
           window.alert(error.message);
         });
     }
+
 
     // Send email verfificaiton when new user sign up
     SendVerificationMail() {

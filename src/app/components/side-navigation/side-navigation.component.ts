@@ -15,7 +15,7 @@ export class SideNavigationComponent implements OnInit {
 
   @Input() tabs: Tabs [];
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
     // DETERMINE ACTIVE TAB ON PAGE LOAD
