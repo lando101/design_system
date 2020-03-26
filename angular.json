@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "style-guide-app"
+  "defaultProject": "style-guide-app",
+  "cli": {
+    "analytics": "9e6cff91-df35-431b-9b60-e66d6af76fee"
+  }
 }

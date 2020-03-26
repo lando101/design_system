@@ -1,0 +1,16 @@
+
+.topic-page-container{
+  animation: page-appear .7s;
+
+  @keyframes page-appear {
+    0%{
+      opacity: 0;
+      transform: scale(.99);
+    }
+    100%{
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+

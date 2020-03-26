@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
 export class HeaderComponent implements OnInit {
   @Output() sidebarData: EventEmitter<any[]> = new EventEmitter<any[]>();
   // activeSibebarTabs: any[];
-
+  key: string;
   routerLinks: any[] = [
     {id: 1, displayName: 'Home', display: true, href: '/home'},
     {id: 2, displayName: 'Foundation', display: true, href: '/foundation'},
@@ -47,6 +47,17 @@ export class HeaderComponent implements OnInit {
     } else {
       this.sidebarData.emit(null);
     }
+  }
 
+  removeStorageState() {
+    this.key = 'welcome-animate';
+    sessionStorage.removeItem(this.key);
+    this.signout();
+    console.log(localStorage.getItem(this.key));
+    console.log("STORAGE STATE AFTER LOGOUT");
+  }
+
+  signout(){
+    this.authService.SignOut()
   }
 }

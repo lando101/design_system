@@ -1,17 +1,45 @@
 <div class="home-page-outer-container">
-  <div class="home-page-top-container">
-    <div class='brand-container'>
-      <div class="image-container">
-        <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/EPAS+Logo+Acronym+Only+Full+Color.png" width="30" height="30" class="d-inline-block align-top" alt="">
+  <div class="home-page-inner-container">
+    <div class="home-page-top-container">
+      <div class='brand-container'>
+        <div class='brand-inner-container'>
+          <div class="image-container">
+            <img  src="https://general-assets-landon.s3.amazonaws.com/work-assets/EPAS+Logo+Acronym+Only+Full+Color.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          </div>
+          <label>Design System</label>
+        </div>
       </div>
-      <label>Design System</label>
+      <span *ngFor="let icon of iconBiggerArray; let index = index;">
+        <i class='{{icon.icon}}' [ngClass]="{'even-column': index%2 === 0}" style="top: {{icon.top}}px; left: {{icon.left}}px; transform: rotate({{icon.rotate}}deg)"></i>
+      </span>
     </div>
-    <span *ngFor="let icon of iconBiggerArray; let index = index;">
-      <i class='{{icon.icon}}' [ngClass]="{'even-column': index%2 === 0}" ></i>
-    </span>
+    <div class='home-page-bottom-container'>
+      <div class="card-mixin">
+          <div class="section-container">
+            <div *ngFor="let topic of localTopics" >
+              <div class="card card-dimension">
+                <div class="card-color-top {{topic.topicClass}}">
+                  <div class="icon-container {{topic.circleClass}}">
+                    <i class="{{topic.icon}}"></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{topic.displayName}}</h5>
+                  <p class="card-text">{{topic.desc}}</p>
+                  <div class="button-container">
+                    <button [routerLink]="topic.link"> Learn more </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
   </div>
-  <div class='home-page-bottom-container'>
-TEST
-  </div>
+  <footer>
+    <div>EPAS Design System </div>
+     |
+    <div> Alpha Build</div>
+  </footer>
 </div>
 

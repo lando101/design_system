@@ -25,7 +25,7 @@ export class SideNavigationComponent implements OnInit {
   //   href: '/typography', active: false, icon: 'fas fa-font'},
   // ];
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
     // DETERMINE ACTIVE TAB ON PAGE LOAD
