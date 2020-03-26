@@ -13,6 +13,8 @@ import { AuthService } from 'src/app/services/auth.service';
 export class DefaultLayoutComponent implements OnInit {
   @ViewChild(HeaderComponent, {static: false})
   private headerComponent: HeaderComponent;
+  displaySideBar = false;
+  activeTabs: any[];
 
   public auth = this.injector.get(AuthService);
   
@@ -20,4 +22,13 @@ export class DefaultLayoutComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  setSideBarData(tabModel: any[]) {
+    this.activeTabs = tabModel;
+
+    if (this.activeTabs) {
+          this.displaySideBar = true;
+    }
+  }
+
 }

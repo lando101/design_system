@@ -44,6 +44,7 @@ const routes: Routes = [
       { path: 'design', component: DesignPageComponent, canActivate: [AuthGuard]},
       { path: 'components', component: ComponentsPageComponent, canActivate: [AuthGuard]},
       { path: 'assets', component: AssetsPageComponent, canActivate: [AuthGuard]}
+      // { path: '**', component: PageNotFoundComponent }
     ]
   }
 

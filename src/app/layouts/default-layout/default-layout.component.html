@@ -1,4 +1,7 @@
-<app-header ></app-header>
+<app-header (sidebarData)="setSideBarData($event)"></app-header>
 
-<app-side-navigation></app-side-navigation>
+<ng-container *ngIf="displaySideBar">
+  <app-side-navigation [tabs]="activeTabs"></app-side-navigation>
+</ng-container>
+ 
 <router-outlet></router-outlet>
