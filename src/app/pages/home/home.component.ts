@@ -23,7 +23,9 @@ export class HomeComponent implements OnInit {
   top: string;
   iconArray: any[] = [{icon: 'fas fa-fingerprint'}, {icon: 'fas fa-users'},
     {icon: 'fas fa-gavel'}, {icon: 'fas fa-map-marked-alt'}, {icon: 'fas fa-shield-alt'},
-    {icon: 'fas fa-money-bill-wave'}, {icon: 'fas fa-clipboard-check'}
+    {icon: 'fas fa-money-bill-wave'}, {icon: 'fas fa-clipboard-check'}, {icon: 'fas fa-search'},
+    {icon: 'fas fa-bell'}, {icon: 'fas fa-magic'}, {icon: 'fas fa-star'}, {icon: 'fas fa-check-double'},
+    {icon: 'fas fa-crosshairs'},
   ];
   localTopics: Topic[];
   iconBiggerArray: any[] = [{icon: 'fas fa-fingerprint', left: '5', top: '1', rotate: '35'}];
@@ -40,8 +42,8 @@ export class HomeComponent implements OnInit {
     this.innerWidth = window.innerWidth;
     for (let i = 0; i < (this.innerWidth / 5); i++) {
       this.iconBiggerArray.push(this.iconArray[this.randomNumber(0, this.iconArray.length)]);
-      this.iconBiggerArray[i].left = this.randomNumberPlus(0, this.iconArray.length * 1.5);
-      this.iconBiggerArray[i].top = this.randomNumberPlus(0, this.iconArray.length * 2);
+      this.iconBiggerArray[i].left = this.randomNumberPlus(0, this.iconArray.length * 2.2);
+      this.iconBiggerArray[i].top = this.randomNumberPlus(0, this.iconArray.length * 2.7);
       this.iconBiggerArray[i].rotate  = (this.randomNumberPlus(0, this.iconArray.length) * 70);
     }
     // GET TOPICS FROM TOPICS SERVICE :: TO BE CHANGED TO JSON

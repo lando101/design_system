@@ -40,7 +40,7 @@
           height: 290px;
           min-width: 1000px;
           width: auto;
-          background: radial-gradient($primary-bg-color, transparent);
+          background: radial-gradient($primary-bg-color, #ffffffcc, transparent);
           padding: 20px;
           .image-container{
             display: flex;
@@ -65,13 +65,35 @@
         }
       }
       span{
-        width: 100px;
+        width: 75px;
         display: inline-block;
         text-align: center;
-        height: 50px;
+        height: 95px;
         font-size: 20px;
         position: relative;
         opacity: .1;
+        color: lighten($font-color, 10%);
+        transform: translateY(-575%), scale(.99);
+        animation: icon-scroll 240s infinite;
+        @keyframes icon-scroll {
+          0%{
+            opacity: 0;
+            transform: translateY(-575%) scale(.95);
+          }
+          1%{
+            opacity: .1;
+            transform: translateY(-574%) scale(1);
+          }
+          99%{
+            opacity: .1;
+            transform: translateY(0%) scale(1);
+          }
+          100%{
+            opacity: 0;
+            transform: translateY(0%) scale(.99);
+          }
+
+        }
         .even-column{
           margin-top: 20px;
         }
