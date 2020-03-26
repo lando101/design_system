@@ -18,6 +18,8 @@ import {
   animations: []
 })
 export class HomeComponent implements OnInit {
+  key: session;
+  keyState: string;
   innerWidth: number;
   left: string;
   top: string;
@@ -48,8 +50,13 @@ export class HomeComponent implements OnInit {
     }
     // GET TOPICS FROM TOPICS SERVICE :: TO BE CHANGED TO JSON
     this.localTopics = this.topicService.getTopics();
-    console.log(this.localTopics);
-    console.log('HERE ARE THE TOPICS');
+
+    // this.getLocalStorage();
+    // if (sessionStorage.getItem(this.key) === null){
+    //   setTimeout(() => {
+      // this.setLocalStorage();
+    //   }, 2000);
+    // }
    }
 
     randomNumber(min, max) {
@@ -58,4 +65,18 @@ export class HomeComponent implements OnInit {
     randomNumberPlus(min, max) {
       return Math.floor(Math.random() * (max - min)) * 3.33;
     }
+
+    // PREVENT BRAND FROM ANIMATING EVERY PAGE LOAD
+    // setLocalStorage() {
+    //   this.key = 'welcome-animate';
+    //   sessionStorage.setItem(this.key, 'true');
+    //   this.getLocalStorage();
+    // }
+    // GET STORAGE STATE OF ANIMATION
+    // getLocalStorage() {
+    //   this.keyState = sessionStorage.getItem(this.key);
+    //   console.log(this.keyState);
+    //   console.log('THIS IS THE KEY STATE');
+    //   return this.keyState;
+    // }
 }

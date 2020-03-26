@@ -42,14 +42,29 @@
           width: auto;
           background: radial-gradient($primary-bg-color, #ffffffcc, transparent);
           padding: 20px;
+          animation: brand-scale .7s;
+          @keyframes brand-scale {
+            0%{
+              opacity: 0;
+              transform: scale(.98);
+            }
+            100%{
+              opacity: 1;
+              transform: scale(1);
+            }
+
+          }
           .image-container{
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            background-color: $primary-bg-color;
+            z-index: 1;
             img{
               @include logo-large();
             }
+
           }
           label{
             font-weight: 100;
@@ -130,5 +145,7 @@
       }
     }
   }
-
+  footer{
+    @include footer();
+  }
 }

@@ -22,10 +22,10 @@ export class TopicService {
       color: '#005581', icon: 'fas fa-puzzle-piece', topicClass: 'component-background',
       circleClass: 'component-circle-background', link: '/authenticated/components'
     },
-    {id: 'assets', displayName: 'Assets',
-      desc: 'Find available EPAS assets such as .png, img, PowerPoints, documentation and more',
-      color: '#005581', icon: 'fas fa-file-download', topicClass: 'asset-background',
-      circleClass: 'asset-circle-background',  link: '/authenticated/assets'
+    {id: 'accessibility', displayName: 'Accessibility',
+      desc: 'Learn more about 508 compliance and test your app against compliance standards',
+      color: '#005581', icon: 'fas fa-universal-access', topicClass: 'asset-background',
+      circleClass: 'asset-circle-background',  link: '/authenticated/accessibility'
     }
 ];
 

@@ -31,6 +31,7 @@ import { Subscription } from 'rxjs';
 export class LoginPageComponent implements OnInit {
   loginStatus: Subscription;
   loginStatusState: boolean;
+
   constructor(public authService: AuthService) { }
   ngOnInit(): void {
     this.loginStatus = this.authService.loginSuccess$.subscribe(
@@ -41,6 +42,8 @@ export class LoginPageComponent implements OnInit {
           this.loginStatusState = true;
         }, 400);
       }
-    )
+    );
   }
 }
+
+
