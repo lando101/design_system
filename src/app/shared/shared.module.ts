@@ -4,18 +4,23 @@ import { NgModule } from '@angular/core';
 // MATERIAL IMPORTS
 import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from '@angular/material/stepper';
+
+
 
 
 @NgModule({
  imports: [
   // MatToolbarModule
   MatInputModule,
-  MatTabsModule
+  MatTabsModule,
+  MatStepperModule,
  ],
  exports: [
   // MatToolbarModule
   MatInputModule,
-  MatTabsModule
+  MatTabsModule,
+  MatStepperModule
  ]
 })
 

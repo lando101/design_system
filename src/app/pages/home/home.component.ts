@@ -18,7 +18,7 @@ import {
   animations: []
 })
 export class HomeComponent implements OnInit {
-  key: session;
+  // key: session;
   keyState: string;
   innerWidth: number;
   left: string;

@@ -10,6 +10,7 @@ import { NgModule, Injectable } from '@angular/core';
 // 3RD PARD IMPORTS
 // import { BsDropdownModule } from 'ngx-bootstrap';
 // import { AngularFireModule } from '@angular/fire';
+import { HttpClientModule } from '@angular/common/http';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
@@ -37,6 +38,11 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { AuthService } from './services/auth.service';
 import { DesignOverviewComponent } from './pages/design-overview/design-overview.component';
 import { IconsPageComponent } from './pages/icons-page/icons-page.component';
+import { AccessibilityComplianceService } from './services/accessibility-compliance-data.service';
+import { AccessibilityComplianceAssessmentComponent } from './components/accessibility-compliance-assessment/accessibility-compliance-assessment.component';
+
+// MATERIAL IMPORTS
+import { ReactiveFormsModule } from '@angular/forms';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -70,7 +76,8 @@ export const firebaseConfig = {
     SignupPageComponent,
     LoginPageComponent,
     DesignOverviewComponent,
-    IconsPageComponent
+    IconsPageComponent,
+    AccessibilityComplianceAssessmentComponent
   ],
   imports: [
     BrowserModule,
@@ -79,6 +86,8 @@ export const firebaseConfig = {
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     // MatInputModule
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,

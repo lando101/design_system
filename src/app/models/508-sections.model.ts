@@ -1,12 +1,12 @@
-export interface The508Sections {
-  "508-section": The508Section[];
+export interface AccessAssess {
+  section: AccessSection[];
 }
 
-export interface The508Section {
-  "question-text": string;
+export interface AccessSection {
+  question:        string;
   requirement:     number;
   order:           number;
-  "wcag-criteria": string;
+  wcag:            string;
   scoreOne:        string;
   scoreThree:      string;
   scoreFive:       string;
