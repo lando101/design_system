@@ -35,16 +35,13 @@ import { DefaultLayoutComponent } from './layouts';
 import { LayoutsModule } from './layouts/layouts.module';
 // import { DesignOverviewComponent } from './pages/de';
 import { IconsPageComponent } from './pages/icons-page/icons-page.component';
-<<<<<<< HEAD
 import { DataService } from './services/data.service';
-=======
 import { AccessibilityComplianceService } from './services/accessibility-compliance-data.service';
 import { AccessibilityComplianceAssessmentComponent } from './components/accessibility-compliance-assessment/accessibility-compliance-assessment.component';
 
 // MATERIAL IMPORTS
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
->>>>>>> landon-messmer-branch
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -96,11 +93,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     LayoutsModule
   ],
-<<<<<<< HEAD
-  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent],
-=======
-  providers: [AuthService, AngularFirestoreModule],
->>>>>>> landon-messmer-branch
+  providers: [AuthService, DataService, AngularFirestoreModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

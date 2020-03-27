@@ -9,17 +9,17 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
 @Injectable({
     providedIn: 'root'
   })
-export class DataService {    
-    private dataStore: { 
+export class DataService {
+    private dataStore: {
         tabs: Tabs[],
         topic: string
-    } = { 
+    } = {
         tabs: [],
         topic: ""
     };
 
     // Subjects should not be exposed outside of this class
-    private _tabs = new BehaviorSubject<Tabs[]>([]); 
+    private _tabs = new BehaviorSubject<Tabs[]>([]);
     private _topic = new BehaviorSubject<string>("");
 
     constructor(public afs: AngularFirestore, private zone: NgZone) { }
@@ -34,11 +34,13 @@ export class DataService {
     }
 
     // based on passed-in id, update the topic display name and tab array
-    ChangeTopic(id) {  
+    ChangeTopic(id) {
         const topic = this.afs.collection("topics").doc(id);
         topic.snapshotChanges().subscribe(a => {
             this.dataStore.topic = (a.payload.data() as any).displayName;
             this._topic.next(Object.assign({}, this.dataStore).topic);
+            console.log(this.dataStore.topic);
+            console.log('HEY THE DATA CAME IN BRAH');
         },
         error => console.log('Could not load topics'));
 
