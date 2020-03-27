@@ -37,6 +37,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { AuthService } from './services/auth.service';
 import { DesignOverviewComponent } from './pages/design-overview/design-overview.component';
 import { IconsPageComponent } from './pages/icons-page/icons-page.component';
+import { DataService } from './services/data.service';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -84,7 +85,7 @@ export const firebaseConfig = {
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, AngularFirestoreModule, SideNavigationComponent],
+  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

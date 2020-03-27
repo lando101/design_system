@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'protractor';
 import { Tabs } from '../../models/tabs/tabs.model';
-import { Routes, RouterModule, Router } from '@angular/router';
+import 'firebase/firestore';
+import { DataService } from 'src/app/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-navigation',
@@ -11,17 +12,27 @@ import { Routes, RouterModule, Router } from '@angular/router';
 export class SideNavigationComponent implements OnInit {
   visible: boolean = true;
   activeTab: Tabs;
-
+  title: string;
   tabs: Tabs [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private ds: DataService) { 
+    // Subscribe to the topic and tabs observables 
+    ds.tabs.subscribe(updatedTabs => {
+      this.tabs = updatedTabs;
+    });
 
-  ngOnInit(): void {
-    // DETERMINE ACTIVE TAB ON PAGE LOAD
-    const tabIndex = this.tabs.findIndex(x => this.router.url === ('/authenticated/' + x.area + x.href));
-    this.tabs[tabIndex].active = true;
+    ds.topic.subscribe(updatedTopic => {
+      this.title = updatedTopic;
+    })
   }
+
+  ngOnInit(): void { }
   
+  // Update the topic and tabs
+  changeTopic(topic: string){   
+    this.ds.ChangeTopic(topic);
+  }
+
   // SET TAB SELECTED TO ACTIVE AND REMOVE ACTIVE FROM OTHER TABS
   setActiveTab(tab: Tabs) {
     this.tabs.filter(x => x.active = false);
