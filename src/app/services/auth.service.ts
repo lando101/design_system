@@ -54,6 +54,7 @@ export class AuthService {
         // NEED TO MAKE THE LOGIN SHAKE
         this.loginSuccessSource.next(false);
         this.loginSuccess$ = this.loginSuccessSource.asObservable();
+        console.log(this.loginSuccess$);
       });
   }
 

@@ -18,6 +18,15 @@
   }
 }
 
+// DROPDOWN :: 3 DOTS
+@mixin drop-down-three-dots(){
+    width: auto;
+    border-radius: 5px;
+    border: 1px solid $border-color;
+    background-color: $active-bg-color;
+    margin: 0px 15px;
+}
+
 // FOOTER
 @mixin footer(){
   display: flex;

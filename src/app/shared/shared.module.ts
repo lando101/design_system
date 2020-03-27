@@ -5,8 +5,8 @@ import { NgModule } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatStepperModule} from '@angular/material/stepper';
-
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -15,12 +15,16 @@ import {MatStepperModule} from '@angular/material/stepper';
   MatInputModule,
   MatTabsModule,
   MatStepperModule,
+  MatMenuModule,
+  MatIconModule
  ],
  exports: [
   // MatToolbarModule
   MatInputModule,
   MatTabsModule,
-  MatStepperModule
+  MatStepperModule,
+  MatMenuModule,
+  MatIconModule
  ]
 })
 

@@ -1,4 +1,5 @@
 @import "../../../scss/variables";
+@import "../../../scss/mixins";
 
 // COLORS
 $primary-color: #005581;
@@ -28,6 +29,8 @@ nav{
     height: 100%;
     width: auto;
     flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
     position: absolute;
     right: 100px;
     top: 0px;
@@ -101,6 +104,9 @@ nav{
     &:hover{
       // background: darken()
     }
+  }
+  .drop-down-nav{
+    @include drop-down-three-dots();
   }
 }
 

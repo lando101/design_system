@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -18,6 +18,8 @@ export class HeaderComponent implements OnInit {
     {id: 5, displayName: 'Components', display: true, href: '/components'},
     {id: 6, displayName: 'Accessibility', display: true, href: '/accessibility'}
   ];
+
+  innerWidth: number;
 
 
   // MOVE THIS TO DATABASE :: WHY NOT HAVE DIFFERENT ARRAY FOR SIDE TABS DATA AND SEND THROUGH SERVICE?
@@ -39,8 +41,14 @@ export class HeaderComponent implements OnInit {
   ];
 
   constructor(public authService: AuthService) { }
+  @HostListener('window:resize', ['$event'])
 
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+    console.log(this.innerWidth);
+  }
   ngOnInit(): void {
+    this.onResize(event);
   }
 
   setSidebar(selectedItem: any) {
