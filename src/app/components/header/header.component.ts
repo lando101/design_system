@@ -16,23 +16,25 @@ export class HeaderComponent implements OnInit {
     // {id: 3, displayName: 'Content', display: true, href: '/authenticated//content'},
     {id: 4, displayName: 'Design', display: true, href: '/design'},
     {id: 5, displayName: 'Components', display: true, href: '/components'},
-    {id: 6, displayName: 'Assets', display: true, href: '/assets'}
+    {id: 6, displayName: 'Accessibility', display: true, href: '/accessibility'}
   ];
 
+
+  // MOVE THIS TO DATABASE
   sideTabsData = [
-    {id: 1, parentID: 4, displayName: 'Overview', toolTip: 'test', display: true, order: 1, area: 'design', etc: '',
+    {id: 1, parentID: 4, displayName: 'Overview', toolTip: 'test', display: true, order: 1, area: 'Design', etc: '',
     href: '/design-overview', active: true, icon: ''},
-    {id: 2, parentID: 4, displayName: 'Color Palette', toolTip: 'test', display: true, order: 2, area: 'design', etc: '',
+    {id: 2, parentID: 4, displayName: 'Color Palette', toolTip: 'test', display: true, order: 2, area: 'Design', etc: '',
     href: '/color-palette', active: false, icon: 'fas fa-palette'},
-    {id: 3, parentID: 4, displayName: 'Icons', toolTip: 'test', display: true, order: 3, area: 'design', etc: '',
+    {id: 3, parentID: 4, displayName: 'Icons', toolTip: 'test', display: true, order: 3, area: 'Design', etc: '',
     href: '/icons', active: false, icon: 'far fa-icons'},
-    {id: 4, parentID: 4, displayName: 'Typography', toolTip: 'test', display: true, order: 3, area: 'design', etc: '',
+    {id: 4, parentID: 4, displayName: 'Typography', toolTip: 'test', display: true, order: 3, area: 'Design', etc: '',
     href: '/typography', active: false, icon: 'fas fa-font'},
-    {id: 5, parentID: 2, displayName: 'Foundation item 1', toolTip: 'test', display: true, order: 3, area: 'design', etc: '',
+    {id: 5, parentID: 2, displayName: 'Foundation item 1', toolTip: 'test', display: true, order: 3, area: 'Foundation', etc: '',
     href: '/typography', active: true, icon: 'fas fa-font'},
-    {id: 6, parentID: 2, displayName: 'Foundation item 2', toolTip: 'test', display: true, order: 3, area: 'design', etc: '',
+    {id: 6, parentID: 2, displayName: 'Foundation item 2', toolTip: 'test', display: true, order: 3, area: 'Foundation', etc: '',
     href: '/typography', active: false, icon: 'fas fa-font'},
-    {id: 7, parentID: 2, displayName: 'Foundation item 3', toolTip: 'test', display: true, order: 3, area: 'design', etc: '',
+    {id: 7, parentID: 2, displayName: 'Foundation item 3', toolTip: 'test', display: true, order: 3, area: 'Foundation', etc: '',
     href: '/typography', active: false, icon: 'fas fa-font'},
   ];
 

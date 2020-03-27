@@ -13,6 +13,7 @@ export class SideNavigationComponent implements OnInit {
   @Input() tabs: Tabs [];
   visible = true;
   activeTab: Tabs;
+  header: string;
 
   // tabs = [
   //   {id: 1, displayName: 'Overview', toolTip: 'test', display: true, order: 1, area: 'design', etc: '',
@@ -37,5 +38,6 @@ export class SideNavigationComponent implements OnInit {
     // this.tabs.filter(x => x.active = false);
     this.tabs.map(c => c.active = false);
     tab.active = true;
+    // this.header = tab.area;
   }
 }

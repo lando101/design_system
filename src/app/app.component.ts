@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { AccessibilityComplianceAssessmentComponent } from './components/accessibility-compliance-assessment/accessibility-compliance-assessment.component'
 
 @Component({
   selector: 'app-root',

@@ -5,7 +5,7 @@ import { HomeComponent } from '../../pages/home/home.component';
 import { DefaultLayoutComponent } from './default-layout.component';
 
   const pagesRoutes: Routes = [
-  { path: '', 
+  { path: '',
     component: DefaultLayoutComponent,
     canActivate: [AuthGuard],
     children: [

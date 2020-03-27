@@ -1,0 +1,79 @@
+{
+  "508-section": [
+    {
+      "question-text": "this is a test",
+      "requirement": 1.1,
+      "order": 1,
+      "wcag-criteria": "2.1.1 & 2.1.2 Criteria (A)",
+      "scoreOne": "Navigation between and with pages without the mouse is NOT possible",
+      "scoreThree": "Navigation with the keyboard between pages and to key areas within pages is possible but some areas cannot be reached or when the focus is moved off to a secondary window, it cannot be moved back using the keyboard",
+      "scoreFive": "Navigation with the keyboard between and within all pages is possible, including to and from secondary windows",
+      "recievedRanking": null,
+      "blind": [
+        {
+          "displayName": "Blind",
+          "tooltip": "",
+          "status": false
+        }
+      ],
+      "lowVision": [
+        {
+          "displayName": "Low Vision",
+          "tooltip": "",
+          "status": false
+        }
+      ],
+      "colorBlind": [
+        {
+          "displayName": "Color Blind",
+          "tooltip": "",
+          "status": false
+        }
+      ],
+      "ambbulatory": [
+        {
+          "displayName": "Ambulatory",
+          "tooltip": "",
+          "status": false
+        }
+      ],
+      "deaf": [
+        {
+          "displayName": "Deaf/Hard of Hearing",
+          "tooltip": "",
+          "status": false
+        }
+      ],
+      "cognitive": [
+        {
+          "displayName": "Cognitive",
+          "tooltip": "",
+          "status": false
+        }
+      ],
+      "seizures": [
+        {
+          "displayName": "Seizures",
+          "tooltip": "",
+          "status": false
+        }
+      ],
+      "instructions": [
+        {
+          "header": "With NVDA/JAWS turned OFF, start at your home page/state. Set aside your mouse and do the following",
+          "step": [
+            {
+              "step1": "Navigate to and through each of your test pages (tab, shift-tab, arrow, enter, and spacebar should provide a lot of functionality)",
+              "step2": "Complete and submit a form",
+              "step3": "Alt+Down Arrow opens drop down form fields",
+              "step4": "Navigate through a table",
+              "step5": "Use any interactive components (maps, calculators, etc.)"
+            }
+          ],
+          "subHeader": "Repeat this proces with NVDA/JAWS turned ON if possible",
+          "note": "When starting your screen reader you will need to close and reopen your browser"
+        }
+      ]
+    }
+  ]
+}

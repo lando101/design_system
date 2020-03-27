@@ -34,16 +34,16 @@ import { DefaultLayoutComponent } from './layouts';
 
 
 const routes: Routes = [
-  { path: '', 
+  { path: '',
     component: DefaultLayoutComponent,
     // canActivate: [AuthGuard],
     children: [
-      { path: '', component: HomeComponent, canActivate: [AuthGuard]},
-      { path: 'home', redirectTo: '' },
+      { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'foundation', component: FoundationPageComponent, canActivate: [AuthGuard]},
       { path: 'design', component: DesignPageComponent, canActivate: [AuthGuard]},
       { path: 'components', component: ComponentsPageComponent, canActivate: [AuthGuard]},
-      { path: 'assets', component: AssetsPageComponent, canActivate: [AuthGuard]}
+      { path: 'accessibility', component: AssetsPageComponent, canActivate: [AuthGuard]}
       // { path: '**', component: PageNotFoundComponent }
     ]
   }
