@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   ];
 
 
-  // MOVE THIS TO DATABASE
+  // MOVE THIS TO DATABASE :: WHY NOT HAVE DIFFERENT ARRAY FOR SIDE TABS DATA AND SEND THROUGH SERVICE?
   sideTabsData = [
     {id: 1, parentID: 4, displayName: 'Overview', toolTip: 'test', display: true, order: 1, area: 'Design', etc: '',
     href: '/design-overview', active: true, icon: ''},
