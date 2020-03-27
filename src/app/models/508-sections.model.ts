@@ -22,23 +22,26 @@ export interface AccessSection {
 }
 
 export interface Ambbulatory {
-  displayName: string;
-  tooltip:     string;
-  status:      boolean;
+  displayName:  string;
+  tooltip:      string;
+  status?:      boolean;
 }
 
 export interface Instruction {
-  header:    string;
-  step:      Step[];
-  subHeader: string;
-  note:      string;
+  header:     string;
+  step?:      Step[];
+  subHeader?: string;
+  note?:      string;
 }
 
 export interface Step {
-  step1: string;
-  step2: string;
-  step3: string;
-  step4: string;
-  step5: string;
+  step1?: string;
+  step2?: string;
+  step3?: string;
+  step4?: string;
+  step5?: string;
+  step6?: string;
+  step7?: string;
+  step8?: string;
 
 }
