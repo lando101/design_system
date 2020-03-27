@@ -3,61 +3,50 @@ import { Routes, RouterModule } from '@angular/router';
 
 // PAGE IMPORTS
 import { HomeComponent } from '../app/pages/home/home.component';
-import { ColorPalettePageComponent } from '../app/pages/color-palette-page/color-palette-page.component';
-import { TypographyPageComponent } from '../app/pages/typography-page/typography-page.component';
-import { FormsPageComponent } from '../app/pages/forms-page/forms-page.component';
-import { ButtonsPageComponent } from '../app/pages/buttons-page/buttons-page.component';
 import { DesignPageComponent } from '../app/pages/design-page/design-page.component';
-import { DesignSystemPageComponent } from '../app/pages/design-system-page/design-system-page.component';
-import { EmailPageComponent } from './pages/email-page/email-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { SignupPageComponent } from './pages/signup-page/signup-page.component';
-import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { FoundationPageComponent } from './pages/foundation-page/foundation-page.component';
+import { AssetsPageComponent } from './pages/assets-page/assets-page.component';
+import { ComponentsPageComponent } from './pages/components-page/components-page.component';
 
 // SERVICES
-import { AuthGuard } from './shared/shared/guard/auth.guard';
-import { SecureInnerPagesGuard } from './shared/shared/guard/secure-inner-pages.guard';
+import { AuthGuard } from './core/auth';
+import { DefaultLayoutComponent } from './layouts';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full'},
-  { path: 'login', component: LoginPageComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'register-user', component: SignupPageComponent },
-  { path: 'verify-email-address', component: VerifyEmailComponent },
-  { path: 'authenticated', canActivate: [AuthGuard], component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
-      {path: '', redirectTo: 'design', pathMatch: 'full'},
-      { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
-        {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
-        {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-        {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
-        {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
-        {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
-    ]},
-  ]},
-
-
-
-  // {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-  // {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-  // {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
-  // {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
-  // {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
-
-
-//   { path: 'component-two', component: ComponentTwo,
-//   children: [
-//     { path: '', redirectTo: 'child-one', pathMatch: 'full' },
-//     { path: 'child-one', component: ChildOne },
-//     { path: 'child-two', component: ChildTwo }
-//   ]
-// }
+  { path: '',
+    component: DefaultLayoutComponent,
+    // canActivate: [AuthGuard],
+    children: [
+      { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'foundation', component: FoundationPageComponent, canActivate: [AuthGuard]},
+      { path: 'design', component: DesignPageComponent, canActivate: [AuthGuard]},
+      { path: 'components', component: ComponentsPageComponent, canActivate: [AuthGuard]},
+      { path: 'accessibility', component: AssetsPageComponent, canActivate: [AuthGuard]}
+      // { path: '**', component: PageNotFoundComponent }
+    ]
+  }
 
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes,
-{ enableTracing: true})],
-  exports: [RouterModule]
-})
 
+
+// OLD
+// @NgModule({
+//   imports: [RouterModule.forRoot(routes,
+// { enableTracing: true})],
+//   exports: [RouterModule]
+// })
+
+@NgModule({
+  declarations: [],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled'
+    })],
+  exports: [RouterModule],
+  providers: [AuthGuard]
+})
 
 export class AppRoutingModule { }

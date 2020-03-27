@@ -10,5 +10,10 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
+  // ensure angular destroys itself on hot reloads
+  if (window['ngRef']) {
+    window['ngRef'].destroy();
+  }
+  window['ngRef'] = ref;
+}).catch(err => console.error(err));

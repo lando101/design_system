@@ -4,6 +4,7 @@ https://github.com/lando101/style-guide-app
 
 DEPLOY TO AWS
 ng build  && npm run aws-deploy
+install aws cli :: once installed aws config -- set aws keys
 
 VIDEO TO DEPLOY TO AWS
 https://www.youtube.com/watch?v=ZkYsMBNR_eY&t=600s
@@ -23,6 +24,9 @@ https://www.youtube.com/watch?v=ZkYsMBNR_eY&t=600s
     }
   ]
 }
+
+// WHEN AND HOW TO BUILD A DATA SERVICE
+https://www.codementor.io/@yomateo/angular-service-go-get-json-4min-video-oohl3rwmx
 
 FIREBASE SETUP || AUTHENTICATION
 https://www.positronx.io/full-angular-7-firebase-authentication-system/

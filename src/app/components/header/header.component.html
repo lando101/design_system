@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" routerLink='/home'>
     <div class="image-container">
       <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/EPAS+Logo+Acronym+Only+Full+Color.png" width="30" height="30" class="d-inline-block align-top" alt="">
     </div>
@@ -7,17 +7,39 @@
   </a>
 
   <div class="nav-routes-container">
-    <nav mat-tab-nav-bar>
+    <nav mat-tab-nav-bar *ngIf="innerWidth > 1200;else smallNav">
       <a mat-tab-link
          *ngFor="let link of routerLinks"
          [routerLink]="link.href"
+         (click)="setSidebar(link)"
          routerLinkActive #rla="routerLinkActive"
          [active]="rla.isActive">
          {{link.displayName}}
       </a>
+      <!-- <a mat-tab-link
+         *ngFor="let link of routerLinks"
+          [routerLink]="link.href">
+         {{link.displayName}}
+      </a>  -->
+
     </nav>
+
   </div>
-    <button class="btn btnPrimary" (click)="authService.SignOut()"><i class="fas fa-sign-out-alt"></i>Sign Out</button>
+
+<ng-template #smallNav>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Nav button with pages" class="drop-down-nav">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let link of routerLinks" [routerLink]="link.href" (click)="setSidebar(link)">
+      <!-- <mat-icon>dialpad</mat-icon> -->
+      <span>{{link.displayName}}</span>
+    </button>
+  </mat-menu>
+</ng-template>
+
+
+    <button class="btn btnPrimary" (click)="removeStorageState()"><i class="fas fa-sign-out-alt"></i>Sign Out</button>
 </nav>
 
 

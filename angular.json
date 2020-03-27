@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
@@ -97,7 +97,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "style-guide-app"
+  "defaultProject": "style-guide-app",
+  "cli": {
+    "analytics": "9e6cff91-df35-431b-9b60-e66d6af76fee"
+  }
 }
