@@ -4,13 +4,15 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import {Observable, Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   userData: any; // SAVE LOGGED IN USER DATA
-
+  loginSuccessSource = new Subject<boolean>();
+  loginSuccess$ = this.loginSuccessSource.asObservable();
 
   constructor(
     public afs: AngularFirestore,   // Inject Firestore service
@@ -20,17 +22,17 @@ export class AuthService {
   ) {
     /* Saving user data in localstorage when
     logged in and setting up null when logged out */
-    this.afAuth.authState.subscribe(user => {
-      if (user) {
-        console.log("subscribe user data");
-        this.userData = user;
-        localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
-      } else {
-        localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
-      }
-    });
+    // this.afAuth.authState.subscribe(user => {
+    //   if (user) {
+    //     console.log("subscribe user data");
+    //     this.userData = user;
+    //     localStorage.setItem('user', JSON.stringify(this.userData));
+    //     JSON.parse(localStorage.getItem('user'));
+    //   } else {
+    //     localStorage.setItem('user', null);
+    //     JSON.parse(localStorage.getItem('user'));
+    //   }
+    // });
   }
 
 
@@ -43,13 +45,16 @@ export class AuthService {
         this.ngZone.run(() => {
           console.log('USER WAS AUTHENTICATED');
           // setTimeout(() => {
-          this.router.navigate(['authenticated']);
+          this.router.navigate(['/']);
           // }, 2000);
         });
-        
+
         console.log(result.user);
       }).catch((error) => {
-        window.alert(error.message);
+        // NEED TO MAKE THE LOGIN SHAKE
+        this.loginSuccessSource.next(false);
+        this.loginSuccess$ = this.loginSuccessSource.asObservable();
+        console.log(this.loginSuccess$);
       });
   }
 
@@ -65,6 +70,7 @@ export class AuthService {
           window.alert(error.message);
         });
     }
+
 
     // Send email verfificaiton when new user sign up
     SendVerificationMail() {
@@ -101,7 +107,7 @@ export class AuthService {
       return this.afAuth.auth.signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-            this.router.navigate(['authenticated']);
+            this.router.navigate(['/']);
           });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -127,11 +133,11 @@ export class AuthService {
       });
     }
 
-    // Sign out
-    SignOut() {
-      return this.afAuth.auth.signOut().then(() => {
-        localStorage.removeItem('user');
-        this.router.navigate(['login']);
-      });
-    }
+  // Sign out
+  SignOut() {
+    return this.afAuth.auth.signOut().then(() => {
+      localStorage.removeItem('user');
+      this.router.navigate(['/auth']);
+    });
+  }
 }
