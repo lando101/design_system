@@ -37,15 +37,15 @@ export class LoginPageComponent implements OnInit {
     this.loginStatus = this.authService.loginSuccess$.subscribe(
       data => {
         this.loginStatusState = data;
-        console.log('WE SUBSCRIBED');
         console.log(this.loginStatusState + 'LOGIN STATUS');
         setTimeout(() => {
           this.loginStatusState = true;
         }, 400);
       }
     );
-    // console.log('login init');
+  }
+
+  test(){
+    console.log('ENTER KEY WORKED');
   }
 }
-
-

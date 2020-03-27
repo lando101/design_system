@@ -40,6 +40,7 @@ import { AccessibilityComplianceAssessmentComponent } from './components/accessi
 
 // MATERIAL IMPORTS
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -72,7 +73,8 @@ export const firebaseConfig = {
     // LoginPageComponent,
     // DesignOverviewComponent,
     IconsPageComponent,
-    AccessibilityComplianceAssessmentComponent
+    AccessibilityComplianceAssessmentComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

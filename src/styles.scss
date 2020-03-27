@@ -5,7 +5,7 @@
 @import "./scss/variables";
 @import './scss/mixins';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-// @import "~animate.css/animate.min";  temporarily commented this out W.A.Z.
+@import "~animate.css/animate.min";
 $epas-pimary-color: red;
 
 body {
