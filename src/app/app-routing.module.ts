@@ -12,44 +12,6 @@ import { ComponentsPageComponent } from './pages/components-page/components-page
 import { AuthGuard } from './core/auth';
 import { DefaultLayoutComponent } from './layouts';
 
-// <<<<<<< HEAD
-// const routes: Routes = [
-//   { path: '', redirectTo: 'login', pathMatch: 'full'},
-//   { path: 'login', component: LoginPageComponent, canActivate: [SecureInnerPagesGuard] },
-//   { path: 'authenticated', canActivate: [AuthGuard], component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
-//       {path: '', redirectTo: 'home', pathMatch: 'full'},
-//       {path: 'home', component: HomeComponent },
-//       { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
-//         {path: '', redirectTo: 'design-overview', pathMatch: 'full'},
-//         {path: 'design-overview', component: DesignOverviewComponent, data: { title: 'Design Overview'}},
-//         {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-//         {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
-//         {path: 'icons', component: IconsPageComponent, data: { title: 'Icons'}},
-//         {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
-//         {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
-//     ]},
-//   ]},
-// =======
-
-// old version
-// const routes: Routes = [
-//   { path: '', redirectTo: 'login', pathMatch: 'full'},
-//   { path: 'login', component: LoginPageComponent, canActivate: [SecureInnerPagesGuard] },
-//   { path: 'authenticated', canActivate: [AuthGuard], component: DesignSystemPageComponent, data: { title: 'Design System'}, children: [
-//       { path: '', redirectTo: 'home', pathMatch: 'full'},
-//       { path: 'home', component: HomeComponent },
-//       { path: 'design', component: DesignPageComponent, data: { title: 'Data'}, children: [
-//         {path: '', redirectTo: 'color-palette', pathMatch: 'full'},
-//         {path: 'design-overview', component: DesignOverviewComponent, data: { title: 'Design Overview'}},
-//         {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-//         {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
-//         {path: 'icons', component: IconsPageComponent, data: { title: 'Icons'}},
-//         {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
-//         {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}}
-//     ]},
-//   ]},
-// ];
-
 
 const routes: Routes = [
   { path: '',
