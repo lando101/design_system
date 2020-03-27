@@ -39,8 +39,6 @@ export class DataService {
         topic.snapshotChanges().subscribe(a => {
             this.dataStore.topic = (a.payload.data() as any).displayName;
             this._topic.next(Object.assign({}, this.dataStore).topic);
-            console.log(this.dataStore.topic);
-            console.log('HEY THE DATA CAME IN BRAH');
         },
         error => console.log('Could not load topics'));
 

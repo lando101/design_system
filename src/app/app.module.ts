@@ -42,6 +42,7 @@ import { AccessibilityComplianceAssessmentComponent } from './components/accessi
 // MATERIAL IMPORTS
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -93,7 +94,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     LayoutsModule
   ],
-  providers: [AuthService, DataService, AngularFirestoreModule],
+  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
