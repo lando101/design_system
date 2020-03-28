@@ -5,13 +5,13 @@ import { HomeComponent } from '../../pages/home/home.component';
 import { DefaultLayoutComponent } from './default-layout.component';
 
   const pagesRoutes: Routes = [
-  // { path: 'home',
-  //   component: DefaultLayoutComponent,
-  //   canActivate: [AuthGuard],
-  //   children: [
-  //     { path: '', component: HomeComponent, canActivate: [AuthGuard]}
-  //   ]
-  // }
+  { path: '',
+    component: DefaultLayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'home', component: HomeComponent, canActivate: [AuthGuard]}
+    ]
+  }
 ];
 
 @NgModule({

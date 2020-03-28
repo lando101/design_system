@@ -18,14 +18,14 @@ import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { DesignPageComponent } from './pages/design-page/design-page.component';
+import { DesignPageComponent } from './pages/topic-pages/design-page/design-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DesignSystemPageComponent } from './pages/design-system-page/design-system-page.component';
 
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
-import { FoundationPageComponent } from './pages/foundation-page/foundation-page.component';
-import { ComponentsPageComponent } from './pages/components-page/components-page.component';
+import { FoundationPageComponent } from './pages/topic-pages/foundation-page/foundation-page.component';
+import { ComponentsPageComponent } from './pages/topic-pages/components-page/components-page.component';
 // import { AssetsPageComponent } from './pages/assets-page/assets-page.component';
 // SERVICES
 import { AuthService } from './services/auth.service';
@@ -43,7 +43,7 @@ import { AccessibilityComplianceAssessmentComponent } from './components/accessi
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
-import { AccessibilityPageComponent } from './pages/accessibility-page/accessibility-page.component';
+import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-page/accessibility-page.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',

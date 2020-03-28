@@ -3,17 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 // PAGE IMPORTS
 import { HomeComponent } from '../app/pages/home/home.component';
-import { DesignPageComponent } from '../app/pages/design-page/design-page.component';
-import { FoundationPageComponent } from './pages/foundation-page/foundation-page.component';
+import { DesignPageComponent } from './pages/topic-pages/design-page/design-page.component';
+import { FoundationPageComponent } from './pages/topic-pages/foundation-page/foundation-page.component';
 // import { AssetsPageComponent } from './pages/assets-page/assets-page.component';
-import { ComponentsPageComponent } from './pages/components-page/components-page.component';
+import { ComponentsPageComponent } from './pages/topic-pages/components-page/components-page.component';
 
 // SERVICES
 import { AuthGuard } from './core/auth';
 import { DefaultLayoutComponent } from './layouts';
-import { AccessibilityPageComponent } from './pages/accessibility-page/accessibility-page.component';
-import { ColorPalettePageComponent } from 'style-guide-app/src/app/pages/color-palette-page/color-palette-page.component';
-import { ButtonsPageComponent } from 'style-guide-app/src/app/pages/buttons-page/buttons-page.component';
+import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-page/accessibility-page.component';
+import { ColorPalettePageComponent } from './pages/color-palette-page/color-palette-page.component';
+import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
 
 
 const routes: Routes = [
