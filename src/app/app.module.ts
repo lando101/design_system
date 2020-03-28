@@ -26,7 +26,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 
 import { FoundationPageComponent } from './pages/foundation-page/foundation-page.component';
 import { ComponentsPageComponent } from './pages/components-page/components-page.component';
-import { AssetsPageComponent } from './pages/assets-page/assets-page.component';
+// import { AssetsPageComponent } from './pages/assets-page/assets-page.component';
 // SERVICES
 import { AuthService } from './services/auth.service';
 
@@ -43,6 +43,7 @@ import { AccessibilityComplianceAssessmentComponent } from './components/accessi
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
+import { AccessibilityPageComponent } from './pages/accessibility-page/accessibility-page.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -71,12 +72,13 @@ export const firebaseConfig = {
     SignupPageComponent,
     FoundationPageComponent,
     ComponentsPageComponent,
-    AssetsPageComponent,
+    // AssetsPageComponent,
     // LoginPageComponent,
     // DesignOverviewComponent,
     IconsPageComponent,
     AccessibilityComplianceAssessmentComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    AccessibilityPageComponent
   ],
   imports: [
     BrowserModule,
