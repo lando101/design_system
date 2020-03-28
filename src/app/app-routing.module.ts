@@ -12,6 +12,8 @@ import { ComponentsPageComponent } from './pages/components-page/components-page
 import { AuthGuard } from './core/auth';
 import { DefaultLayoutComponent } from './layouts';
 import { AccessibilityPageComponent } from './pages/accessibility-page/accessibility-page.component';
+import { ColorPalettePageComponent } from 'style-guide-app/src/app/pages/color-palette-page/color-palette-page.component';
+import { ButtonsPageComponent } from 'style-guide-app/src/app/pages/buttons-page/buttons-page.component';
 
 
 const routes: Routes = [
@@ -21,17 +23,26 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'foundation', component: FoundationPageComponent, canActivate: [AuthGuard]},
-      { path: 'design', component: DesignPageComponent, canActivate: [AuthGuard]},
+      { path: 'foundation', component: FoundationPageComponent, canActivate: [AuthGuard], children: [
+          // {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
+          // {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
+          // {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
+          // {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
+          // {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
+         ]
+      },
+      { path: 'design', component: DesignPageComponent, canActivate: [AuthGuard], children:[
+        {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
+        {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
+           {path: 'icons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
+      ]
+    },
       { path: 'components', component: ComponentsPageComponent, canActivate: [AuthGuard]},
       { path: 'accessibility', component: AccessibilityPageComponent, canActivate: [AuthGuard]}
       // { path: '**', component: PageNotFoundComponent }
     ]
   }
-
 ];
-
-
 
 // OLD
 // @NgModule({
