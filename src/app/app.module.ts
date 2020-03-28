@@ -34,7 +34,7 @@ import { AuthComponent } from './core/auth';
 import { DefaultLayoutComponent } from './layouts';
 import { LayoutsModule } from './layouts/layouts.module';
 // import { DesignOverviewComponent } from './pages/de';
-import { IconsPageComponent } from './pages/icons-page/icons-page.component';
+import { IconsPageComponent } from './pages/topic-pages/design-page/icons-page/icons-page.component';
 import { DataService } from './services/data.service';
 import { AccessibilityComplianceService } from './services/accessibility-compliance-data.service';
 import { AccessibilityComplianceAssessmentComponent } from './components/accessibility-compliance-assessment/accessibility-compliance-assessment.component';
@@ -44,6 +44,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-page/accessibility-page.component';
+import { ColorPalettePageComponent } from './pages/topic-pages/design-page/color-palette-page/color-palette-page.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -78,7 +79,8 @@ export const firebaseConfig = {
     IconsPageComponent,
     AccessibilityComplianceAssessmentComponent,
     LoginPageComponent,
-    AccessibilityPageComponent
+    AccessibilityPageComponent,
+    ColorPalettePageComponent
   ],
   imports: [
     BrowserModule,

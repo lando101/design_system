@@ -7,13 +7,16 @@ import { DesignPageComponent } from './pages/topic-pages/design-page/design-page
 import { FoundationPageComponent } from './pages/topic-pages/foundation-page/foundation-page.component';
 // import { AssetsPageComponent } from './pages/assets-page/assets-page.component';
 import { ComponentsPageComponent } from './pages/topic-pages/components-page/components-page.component';
+import { IconsPageComponent } from './pages/topic-pages/design-page/icons-page/icons-page.component';
+
 
 // SERVICES
 import { AuthGuard } from './core/auth';
 import { DefaultLayoutComponent } from './layouts';
 import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-page/accessibility-page.component';
-import { ColorPalettePageComponent } from './pages/color-palette-page/color-palette-page.component';
-import { ButtonsPageComponent } from './pages/buttons-page/buttons-page.component';
+import { ColorPalettePageComponent } from './pages/topic-pages/design-page/color-palette-page/color-palette-page.component';
+import { ButtonsPageComponent } from './pages/topic-pages/components-page/buttons-page/buttons-page.component';
+import { TypographyPageComponent } from './pages/topic-pages/design-page/typography-page/typography-page.component';
 
 
 const routes: Routes = [
@@ -34,7 +37,8 @@ const routes: Routes = [
       { path: 'design', component: DesignPageComponent, canActivate: [AuthGuard], children:[
         {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
         {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-           {path: 'icons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
+        {path: 'icons', component: IconsPageComponent, data: { title: 'Icons'}},
+        {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
       ]
     },
       { path: 'components', component: ComponentsPageComponent, canActivate: [AuthGuard]},

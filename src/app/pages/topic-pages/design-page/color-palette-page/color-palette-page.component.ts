@@ -1,13 +1,11 @@
-import { Component, OnInit, NgModule } from '@angular/core';
-import { PrimaryColorPalette } from '../../models/tabs-content/primary-color-palette.model';
-import { SecondaryColorPalette } from '../../models/tabs-content/secondary-color-palette.model';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { PrimaryColorPalette } from '../../../../models/tabs-content/primary-color-palette.model';
+import { SecondaryColorPalette } from '../../../../models/tabs-content/secondary-color-palette.model';
 
 @Component({
   templateUrl: './color-palette-page.component.html',
   styleUrls: ['./color-palette-page.component.scss']
 })
-
 export class ColorPalettePageComponent implements OnInit {
 
   copiedColorHex: string;

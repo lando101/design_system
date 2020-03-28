@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconsPageComponent implements OnInit {
 
+  testArray: string[] = ['Hello', 'Good Bye'];
+
   constructor() { }
 
   ngOnInit(): void {
