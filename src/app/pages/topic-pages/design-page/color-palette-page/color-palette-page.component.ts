@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PrimaryColorPalette } from '../../models/tabs-content/primary-color-palette.model';
-import { SecondaryColorPalette } from '../../models/tabs-content/secondary-color-palette.model';
+import { PrimaryColorPalette } from '../../../../models/tabs-content/primary-color-palette.model';
+import { SecondaryColorPalette } from '../../../../models/tabs-content/secondary-color-palette.model';
 
 @Component({
   templateUrl: './color-palette-page.component.html',

@@ -43,5 +43,4 @@ export interface Step {
   step6?: string;
   step7?: string;
   step8?: string;
-
 }

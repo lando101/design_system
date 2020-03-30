@@ -1,9 +1,9 @@
 <app-header (sidebarData)="setSideBarData($event)"></app-header>
-
+<router-outlet></router-outlet>
 <ng-container>
   <!-- <app-side-navigation [tabs]="activeTabs" *ngIf="router.url != '/home'"></app-side-navigation> -->
-  <app-side-navigation *ngIf="router.url != '/home'"></app-side-navigation>
+  <!-- <app-side-navigation *ngIf="router.url != '/home'"></app-side-navigation> -->
 
 </ng-container>
 
-<router-outlet></router-outlet>
+

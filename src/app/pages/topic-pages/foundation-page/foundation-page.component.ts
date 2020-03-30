@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SideNavigationComponent } from 'src/app/components/side-navigation/side-navigation.component';
 
 @Component({
   selector: 'app-foundation-page',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoundationPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public nav: SideNavigationComponent) {
+    nav.changeTopic("foundation");
+  }
 
   ngOnInit(): void {
   }

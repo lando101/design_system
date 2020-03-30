@@ -9,7 +9,7 @@ import { DefaultLayoutComponent } from './default-layout.component';
     component: DefaultLayoutComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: '', component: HomeComponent, canActivate: [AuthGuard]}
+      { path: 'home', component: HomeComponent, canActivate: [AuthGuard]}
     ]
   }
 ];
