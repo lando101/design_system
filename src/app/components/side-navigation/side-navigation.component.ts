@@ -3,7 +3,7 @@ import { DataService } from 'src/app/services/data.service';
 import { Component, OnInit, Input, ViewChild} from '@angular/core';
 import { $ } from 'protractor';
 import { Tabs } from '../../models/tabs/tabs.model';
-import { Routes, RouterModule, Router } from '@angular/router';
+import { Routes, RouterModule, Router, RouterOutlet } from '@angular/router';
 // import {  DesignPageComponent } from '../../pages/design-page/design-page.component';
 
 @Component({
