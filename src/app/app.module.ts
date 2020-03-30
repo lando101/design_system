@@ -46,6 +46,18 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-page/accessibility-page.component';
 import { ColorPalettePageComponent } from './pages/topic-pages/design-page/color-palette-page/color-palette-page.component';
+import { DesignOverviewPageComponent } from './pages/topic-pages/design-page/design-overview-page/design-overview-page.component';
+import { TypographyPageComponent } from './pages/topic-pages/design-page/typography-page/typography-page.component';
+import { AccordionPageComponent } from './pages/topic-pages/components-page/accordion-page/accordion-page.component';
+import { AlertPageComponent } from './pages/topic-pages/components-page/alert-page/alert-page.component';
+import { BannerPageComponent } from './pages/topic-pages/components-page/banner-page/banner-page.component';
+import { FooterPageComponent } from './pages/topic-pages/components-page/footer-page/footer-page.component';
+import { FormTemplatesComponent } from './pages/topic-pages/components-page/form-templates/form-templates.component';
+import { GridPageComponent } from './pages/topic-pages/components-page/grid-page/grid-page.component';
+import { SearchPageComponent } from './pages/topic-pages/components-page/search-page/search-page.component';
+import { SideNavigationPageComponent } from './pages/topic-pages/components-page/side-navigation-page/side-navigation-page.component';
+import { TablePageComponent } from './pages/topic-pages/components-page/table-page/table-page.component';
+import { TagPageComponent } from './pages/topic-pages/components-page/tag-page/tag-page.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -81,7 +93,19 @@ export const firebaseConfig = {
     AccessibilityComplianceAssessmentComponent,
     LoginPageComponent,
     AccessibilityPageComponent,
-    ColorPalettePageComponent
+    ColorPalettePageComponent,
+    DesignOverviewPageComponent,
+    TypographyPageComponent,
+    AccordionPageComponent,
+    AlertPageComponent,
+    BannerPageComponent,
+    FooterPageComponent,
+    FormTemplatesComponent,
+    GridPageComponent,
+    SearchPageComponent,
+    SideNavigationPageComponent,
+    TablePageComponent,
+    TagPageComponent
   ],
   imports: [
     BrowserModule,
