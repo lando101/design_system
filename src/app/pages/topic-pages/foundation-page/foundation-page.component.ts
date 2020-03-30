@@ -9,7 +9,7 @@ import { SideNavigationComponent } from 'src/app/components/side-navigation/side
 export class FoundationPageComponent implements OnInit {
 
   constructor(public nav: SideNavigationComponent) {
-    nav.changeTopic("foundation");
+    nav.changeTopic('foundation');
   }
 
   ngOnInit(): void {

@@ -1,3 +1,8 @@
+import { ListenPageComponent } from './pages/topic-pages/foundation-page/listen-page/listen-page.component';
+import { ContinuityPageComponent } from './pages/topic-pages/foundation-page/continuity-page/continuity-page.component';
+import { EmbraceAccessibilityPageComponent } from './pages/topic-pages/foundation-page/embrace-accessibility-page/embrace-accessibility-page.component';
+import { TrustPageComponent } from './pages/topic-pages/foundation-page/trust-page/trust-page.component';
+import { FoundationOverviewPageComponent } from './pages/topic-pages/foundation-page/foundation-overview-page/foundation-overview-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -17,6 +22,7 @@ import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-pa
 import { ColorPalettePageComponent } from './pages/topic-pages/design-page/color-palette-page/color-palette-page.component';
 import { ButtonsPageComponent } from './pages/topic-pages/components-page/buttons-page/buttons-page.component';
 import { TypographyPageComponent } from './pages/topic-pages/design-page/typography-page/typography-page.component';
+import { UserNeedsPageComponent } from './pages/topic-pages/foundation-page/user-needs-page/user-needs-page.component';
 
 
 const routes: Routes = [
@@ -27,11 +33,13 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'foundation', component: FoundationPageComponent, canActivate: [AuthGuard], children: [
-          // {path: '', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-          // {path: 'color-palette', component: ColorPalettePageComponent, data: { title: 'Color Palette'}},
-          // {path: 'typography', component: TypographyPageComponent, data: { title: 'Typography'}},
-          // {path: 'forms', component: FormsPageComponent, data: { title: 'Forms'}},
-          // {path: 'buttons', component: ButtonsPageComponent, data: { title: 'Buttons'}},
+          {path: '', component: FoundationOverviewPageComponent, data: { title: 'Overview'}},
+          {path: 'foundation-overview', component: FoundationOverviewPageComponent, data: { title: 'Overview'}},
+          {path: 'user-needs', component: UserNeedsPageComponent, data: { title: 'Start with Real User Needs'}},
+          {path: 'trust', component: TrustPageComponent, data: { title: 'Earn Trust'}},
+          {path: 'embrace-accessibility', component: EmbraceAccessibilityPageComponent, data: { title: 'Embrace Accessibility'}},
+          {path: 'continuity', component: ContinuityPageComponent, data: { title: 'Promote Continuity'}},
+          {path: 'listen', component: ListenPageComponent, data: { title: 'Listen'}}
          ]
       },
       { path: 'design', component: DesignPageComponent, canActivate: [AuthGuard], children:[
