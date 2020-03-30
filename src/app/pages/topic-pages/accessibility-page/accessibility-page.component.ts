@@ -10,7 +10,6 @@ import { Routes, RouterModule } from '@angular/router';
 export class AccessibilityPageComponent implements OnInit {
 
   constructor(public nav: SideNavigationComponent) {
-    nav.visible = true;
     nav.changeTopic("accessibility");
   }
 
