@@ -17,6 +17,20 @@ h3{
   color: $font-color;
   font-size: 1.75rem;
   margin-bottom: 16px;
+  padding-bottom: 5px;
+  border-bottom: none;
+}
+
+h2{
+  color: $font-color;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-color-darker;
+}
+
+h1{
+  color: $font-color;
+  margin-bottom: 16px;
   padding-bottom: 10px;
   border-bottom: 1px solid $border-color-darker;
 }
