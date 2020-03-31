@@ -65,6 +65,19 @@ li{
 }
 
 
+// SCROLL BAR STYLING
+.scroll1::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll1::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.scroll1::-webkit-scrollbar-thumb {
+  background: $primary-color;
+}
+
 
 // GLOBAL ANIMATIONS
   .page-reveal-animation{
