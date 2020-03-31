@@ -95,6 +95,15 @@
   align-items: flex-start;
 }
 
+@mixin smallish-image() {
+  vertical-align: middle;
+  border-style: none;
+  width: 30%;
+  margin: 0px 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
 @mixin text-image-flex(){
   display: flex;
   justify-content: space-between;

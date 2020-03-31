@@ -12,3 +12,7 @@ img{
 .text-image-container{
   @include text-image-flex();
 }
+
+.smallish-image{
+ @include smallish-image()
+}
