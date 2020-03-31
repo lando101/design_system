@@ -36,28 +36,28 @@
   bottom: 0px;
   height: 150px;
   // height: 25px;
-  background: $primary-color;
+  background: $footer-bg-color;
   width: 100%;
-  color: $primary-bg-color;
+  color: $font-color;
   padding: 0px 10%;
-  animation: footer-appear .8s;
+  // animation: footer-appear .8s;
   div{
     padding: 0px 5px;
   }
-  @keyframes footer-appear {
-    0%{
-      transform: translateY(100%);
-      // opacity: 0;
-    }
-    30%{
-      transform: translateY(100%);
-      // opacity: 0;
-    }
-    100%{
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
+  // @keyframes footer-appear {
+  //   0%{
+  //     transform: translateY(100%);
+  //     // opacity: 0;
+  //   }
+  //   30%{
+  //     transform: translateY(100%);
+  //     // opacity: 0;
+  //   }
+  //   100%{
+  //     transform: translateY(0%);
+  //     opacity: 1;
+  //   }
+  // }
 }
 
 

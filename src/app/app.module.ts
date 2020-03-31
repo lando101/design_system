@@ -58,6 +58,7 @@ import { SearchPageComponent } from './pages/topic-pages/components-page/search-
 import { SideNavigationPageComponent } from './pages/topic-pages/components-page/side-navigation-page/side-navigation-page.component';
 import { TablePageComponent } from './pages/topic-pages/components-page/table-page/table-page.component';
 import { TagPageComponent } from './pages/topic-pages/components-page/tag-page/tag-page.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -90,6 +91,7 @@ export const firebaseConfig = {
     // LoginPageComponent,
     // DesignOverviewComponent,
     IconsPageComponent,
+    FooterPageComponent,
     AccessibilityComplianceAssessmentComponent,
     LoginPageComponent,
     AccessibilityPageComponent,
@@ -99,16 +101,13 @@ export const firebaseConfig = {
     AccordionPageComponent,
     AlertPageComponent,
     BannerPageComponent,
-    FooterPageComponent,
+    FooterComponent,
     FormTemplatesComponent,
     GridPageComponent,
     SearchPageComponent,
     SideNavigationPageComponent,
     TablePageComponent,
     TagPageComponent
-  ],
-  exports: [
-    FooterPageComponent
   ],
   imports: [
     BrowserModule,

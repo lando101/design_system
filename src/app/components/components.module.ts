@@ -13,24 +13,26 @@ import { FooterComponent } from './footer/footer.component';
     imports: [
       CommonModule,
       SharedModule,
-      RouterModule
+      RouterModule,
+      // FooterComponent
       // FontAwesomeModule,
-      
+
     ],
     declarations: [
       HeaderComponent,
       SideNavigationComponent,
       DesignOverviewComponent,
-      FooterComponent
+      // FooterComponent
     ],
     exports: [
       HeaderComponent,
       SideNavigationComponent,
-      DesignOverviewComponent
+      DesignOverviewComponent,
+      // FooterComponent
     ],
     providers: [],
     entryComponents: []
   })
 
   export class ComponentsModule { }
-  
+
