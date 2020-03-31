@@ -86,6 +86,19 @@
   height: 100px;
 }
 
+@mixin md-image(){
+  vertical-align: middle;
+  border-style: none;
+  width: 390px;
+  margin: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin text-image-flex(){
+  display: flex;
+}
+
 // CARD MIXIN
 @mixin card-container(){
   .card-dimension{
