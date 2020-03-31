@@ -27,7 +27,7 @@ export class AccessibilityComplianceAssessmentComponent implements OnInit {
       this.assessmentSections = results;
       // console.log(this.assessmentSections);
       // console.log('YAY WE GOT THEM IN AN OBJECT');
-
+      // this._appRippleOptions.disabled = true;
       this.firstFormGroup = this._formBuilder.group({
         firstCtrl: ['', Validators.required]
       });

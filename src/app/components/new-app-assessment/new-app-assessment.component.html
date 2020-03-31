@@ -1,0 +1,88 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="d-flex justify-content-start align-items-start w-100 p-1 h-50">
+    <h6><span class="badge badge-primary">New</span></h6>
+    <span>Please enter the information below </span>
+  </div>
+  <div class="form-row">
+    <div class="form-group form-group col-md-8" required="true">
+      <label for="appNameInput">Application name</label>
+      <input type="text" class="form-control " id="appNameInput" aria-describedby="appHelp" data-toggle="validator" required formControlName="appName" [ngClass]="{ 'is-invalid': submitted && f.appName.errors }">
+      <small id="appHelp" class="form-text text-muted">We'll reuse this name for future accessibility tests of this app.</small>
+    </div>
+    <div class="form-group form-group col-md-4">
+      <label for="versionInput">Application version</label>
+      <input type="text" class="form-control " id="versionInput" placeholder="ex. 1.000.001" formControlName="appVersion" [ngClass]="{ 'is-invalid': submitted && f.appVersion.errors }">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group form-group col-md-5">
+      <label for="testerFirstNameInput">First name</label>
+      <input type="text" class="form-control " id="testerFirstNameInput" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+    </div>
+      <!-- <small id="appHelp" class="form-text text-muted">We'll reuse this name for future accessibility tests of this app.</small> -->
+    </div>
+    <div class="form-group form-group col-md-5">
+      <label for="testerLastNameInput">Last name</label>
+      <input type="text" class="form-control " id="testerNameInput" formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+    </div>
+      <!-- <small id="appHelp" class="form-text text-muted">We'll reuse this name for future accessibility tests of this app.</small> -->
+    </div>
+    <div class="form-group col-md-2">
+      <label for="unitInput">Unit</label>
+      <input type="text" class="form-control " id="unitInput" placeholder="ex. BPMU" formControlName="unit" [ngClass]="{ 'is-invalid': submitted && f.unit.errors }">
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.unit.errors.required">Unit is required</div>
+    </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="testerEmailInput">Email</label>
+      <input type="email" class="form-control " id="testerEmailInput" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
+      <small id="emailHelp" class="form-text text-muted">Results will be sent to this email.</small>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="testerEmailInput">Re-enter Email</label>
+      <input type="email" class="form-control " id="testerEmailInput" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-5">
+      <label for="exampleInputPassword1">Create Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+    </div>
+    <div class="form-group col-md-5">
+      <label for="exampleInputPassword1">Re-enter Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+    </div>
+  </div>
+  <!-- <div class="form-row">
+    <div class="d-flex justify-content-center align-items-center w-100 p-2 h-25">
+      Note this should only be done if the application has never been created before using this tool
+    </div>
+  </div> -->
+  <!-- <div class="d-flex justify-content-start align-items-center w-100 h-100">
+    <button type="submit" class="btn btn-primary">Submit information and let's start!</button>
+  </div> -->
+<div class="d-flex justify-content-between align-items-top w-100">
+  <div class="d-flex justify-content-start align-items-top w-25 h-100">
+    <button type="submit" class="btn btn-primary">Submit information and let's start!</button>
+  </div>
+  <div class="d-flex justify-content-end align-items-top w-75">
+    <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/undraw_navigator_a479.svg" alt="">
+  </div>
+</div>
+
+</form>

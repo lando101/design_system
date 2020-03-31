@@ -42,6 +42,7 @@ import { AccessibilityComplianceAssessmentComponent } from './components/accessi
 
 // MATERIAL IMPORTS
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-page/accessibility-page.component';
@@ -62,6 +63,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AccessibilityOverviewPageComponent } from './pages/topic-pages/accessibility-page/accessibility-overview-page/accessibility-overview-page.component';
 import { AccessibilityReqPageComponent } from './pages/topic-pages/accessibility-page/accessibility-req-page/accessibility-req-page.component';
 import { AccessibilityAssessmentPageComponent } from './pages/topic-pages/accessibility-page/accessibility-assessment-page/accessibility-assessment-page.component';
+import { NewAppAssessmentComponent } from './components/new-app-assessment/new-app-assessment.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -113,7 +115,9 @@ export const firebaseConfig = {
     TagPageComponent,
     AccessibilityOverviewPageComponent,
     AccessibilityReqPageComponent,
-    AccessibilityAssessmentPageComponent
+    AccessibilityAssessmentPageComponent,
+    NewAppAssessmentComponent
+    // FormsModule
   ],
   imports: [
     BrowserModule,
@@ -125,6 +129,7 @@ export const firebaseConfig = {
     ComponentsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    // FormsModule,
     // MatInputModule
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,

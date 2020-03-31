@@ -80,7 +80,7 @@ const routes: Routes = [
         {path: 'tag', component: TagPageComponent, data: { title: 'Tag'}},
       ]},
       { path: 'accessibility', component: AccessibilityPageComponent, canActivate: [AuthGuard], children: [
-        {path: '', redirectTo: 'accessibility-overview', pathMatch: 'full' },
+        {path: '', redirectTo: 'accessibility-test', pathMatch: 'full' },
         {path: 'accessibility-overview', component: AccessibilityOverviewPageComponent, data: { title: 'Accessibility Overview'}},
         {path: 'accessibility-test', component: AccessibilityAssessmentPageComponent, data: { title: 'Accessibility Test'}},
         {path: 'accessibility-requirements', component: AccessibilityReqPageComponent, data: { title: 'Accessibility Requirements'}},

@@ -5,16 +5,16 @@
 }
 // BUTTON MIXINS
 @mixin primary-button(){
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  font-weight: bold;
-  padding: 0px 15px;
-  color: $primary-bg-color;
-  background: $primary-color;
+  height: 30px !important;
+  border-radius: 5px !important;
+  border: none !important;
+  font-weight: 500 !important;
+  padding: 0px 15px !important;
+  color: $primary-bg-color !important;
+  background: $primary-color !important;
   &:hover{
-    transition: .2s ease-in-out;
-    background: lighten($primary-color, 7%);
+    transition: .2s ease-in-out !important;
+    background: lighten($primary-color, 7%) !important;
   }
 }
 
@@ -105,6 +105,10 @@
   margin: 0px 40px;
   display: flex;
   align-items: flex-start;
+}
+
+@mixin largish-image-center() {
+  width: 50%;
 }
 
 @mixin text-image-flex(){

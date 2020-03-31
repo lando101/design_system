@@ -46,3 +46,27 @@ $asset-color: #ffb140;
 .asset-background{
   background: $asset-color;
 }
+
+
+// TWEAKS TO MATERIAL CSS
+.mat-tab-body-content {
+  height: 100%;
+  overflow: auto;
+  overflow: hidden !important;
+}
+
+.mat-tab-label-content {
+  font-size: 1.1rem !important;
+  font-weight: 500;
+  color: #3a3a3a;
+  opacity: 1;
+}
+
+.mat-tab-label {
+  height: 40px !important;
+  padding: 0 5px !important;
+  padding-left: 0px !important;
+  margin-right: 20px !important;
+  justify-content: left !important;
+  min-width: auto !important;
+}

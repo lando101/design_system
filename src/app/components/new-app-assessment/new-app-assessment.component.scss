@@ -1,0 +1,24 @@
+@import '../../../styles.scss';
+
+button{
+  @include primary-button();
+  padding: 0px 60px !important;
+  width: 35%;
+}
+.mat-tab-label-content {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #3a3a3a;
+    opacity: 1;
+}
+
+span{
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0px 8px;
+}
+
+img{
+  @include largish-image-center();
+}
