@@ -35,6 +35,9 @@ import { SearchPageComponent } from './pages/topic-pages/components-page/search-
 import { SideNavigationPageComponent } from './pages/topic-pages/components-page/side-navigation-page/side-navigation-page.component';
 import { TablePageComponent } from './pages/topic-pages/components-page/table-page/table-page.component';
 import { TagPageComponent } from './pages/topic-pages/components-page/tag-page/tag-page.component';
+import { AccessibilityAssessmentPageComponent } from './pages/topic-pages/accessibility-page/accessibility-assessment-page/accessibility-assessment-page.component';
+import { AccessibilityOverviewPageComponent } from './pages/topic-pages/accessibility-page/accessibility-overview-page/accessibility-overview-page.component';
+import { AccessibilityReqPageComponent } from './pages/topic-pages/accessibility-page/accessibility-req-page/accessibility-req-page.component';
 
 const routes: Routes = [
   { path: '',
@@ -75,9 +78,14 @@ const routes: Routes = [
         {path: 'side-navigation', component: SideNavigationPageComponent, data: { title: 'Side Navigation'}},
         {path: 'table', component: TablePageComponent, data: { title: 'Table'}},
         {path: 'tag', component: TagPageComponent, data: { title: 'Tag'}},
-
       ]},
-      { path: 'accessibility', component: AccessibilityPageComponent, canActivate: [AuthGuard]}
+      { path: 'accessibility', component: AccessibilityPageComponent, canActivate: [AuthGuard], children: [
+        {path: '', redirectTo: 'accessibility-overview', pathMatch: 'full' },
+        {path: 'accessibility-overview', component: AccessibilityOverviewPageComponent, data: { title: 'Accessibility Overview'}},
+        {path: 'accessibility-test', component: AccessibilityAssessmentPageComponent, data: { title: 'Accessibility Test'}},
+        {path: 'accessibility-requirements', component: AccessibilityReqPageComponent, data: { title: 'Accessibility Requirements'}},
+
+      ]}
       // { path: '**', component: PageNotFoundComponent }
     ]
   }

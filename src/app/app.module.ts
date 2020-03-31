@@ -59,6 +59,9 @@ import { SideNavigationPageComponent } from './pages/topic-pages/components-page
 import { TablePageComponent } from './pages/topic-pages/components-page/table-page/table-page.component';
 import { TagPageComponent } from './pages/topic-pages/components-page/tag-page/tag-page.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AccessibilityOverviewPageComponent } from './pages/topic-pages/accessibility-page/accessibility-overview-page/accessibility-overview-page.component';
+import { AccessibilityReqPageComponent } from './pages/topic-pages/accessibility-page/accessibility-req-page/accessibility-req-page.component';
+import { AccessibilityAssessmentPageComponent } from './pages/topic-pages/accessibility-page/accessibility-assessment-page/accessibility-assessment-page.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -107,7 +110,10 @@ export const firebaseConfig = {
     SearchPageComponent,
     SideNavigationPageComponent,
     TablePageComponent,
-    TagPageComponent
+    TagPageComponent,
+    AccessibilityOverviewPageComponent,
+    AccessibilityReqPageComponent,
+    AccessibilityAssessmentPageComponent
   ],
   imports: [
     BrowserModule,

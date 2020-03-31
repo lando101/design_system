@@ -14,9 +14,9 @@ import {MatStepperModule} from '@angular/material/stepper';
 export class AccessibilityComplianceAssessmentComponent implements OnInit {
   accessibiiltySubscription: Subscription;
   assessmentSections: AccessAssess[] = [];
-  isLinear = false;
-  formGroup: FormGroup;
-  formArray: FormArray;
+  isLinear = true;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
   // firstFormGroup: FormGroup;
   // secondFormGroup: FormGroup;
 
@@ -27,6 +27,13 @@ export class AccessibilityComplianceAssessmentComponent implements OnInit {
       this.assessmentSections = results;
       // console.log(this.assessmentSections);
       // console.log('YAY WE GOT THEM IN AN OBJECT');
+
+      this.firstFormGroup = this._formBuilder.group({
+        firstCtrl: ['', Validators.required]
+      });
+      this.secondFormGroup = this._formBuilder.group({
+        secondCtrl: ['', Validators.required]
+      });
     });
 
     this.assessmentSections.forEach(x =>{
