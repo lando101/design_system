@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Topic } from '../../models/topics.model';
 import { TopicService } from '../../services/topic.service';
+import {FooterComponent} from '../../components/footer/footer.component';
 
 import {
   trigger,

@@ -107,6 +107,9 @@ export const firebaseConfig = {
     TablePageComponent,
     TagPageComponent
   ],
+  exports: [
+    FooterPageComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
