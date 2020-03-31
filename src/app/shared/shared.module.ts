@@ -8,7 +8,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
-import {FooterComponent} from '../components/footer/footer.component';
+// import {FooterComponent} from '../components/footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import {FooterComponent} from '../components/footer/footer.component';
   MatMenuModule,
   MatIconModule,
   CommonModule,
-  FooterComponent
+  // FooterComponent
  ],
  exports: [
   // MatToolbarModule
@@ -29,7 +29,7 @@ import {FooterComponent} from '../components/footer/footer.component';
   MatStepperModule,
   MatMenuModule,
   MatIconModule,
-  FooterComponent
+  // FooterComponent
  ]
 })
 

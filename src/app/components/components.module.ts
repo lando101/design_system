@@ -6,7 +6,7 @@ import { SideNavigationComponent } from './side-navigation/side-navigation.compo
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { DesignOverviewComponent } from './design-overview/design-overview.component';
-import { FooterComponent } from './footer/footer.component';
+// import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
