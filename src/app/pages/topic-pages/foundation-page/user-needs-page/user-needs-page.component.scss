@@ -3,3 +3,12 @@
   display: flex;
   justify-content: left;
 }
+
+
+img{
+  @include md-image();
+}
+
+.text-image-container{
+  @include text-image-flex();
+}

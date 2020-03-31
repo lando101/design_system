@@ -44,7 +44,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'foundation', component: FoundationPageComponent, canActivate: [AuthGuard], children: [
-          {path: '', component: FoundationOverviewPageComponent, data: { title: 'Overview'}},
+          {path: '', component: UserNeedsPageComponent, data: { title: 'Overview'}},
           {path: 'foundation-overview', component: FoundationOverviewPageComponent, data: { title: 'Overview'}},
           {path: 'user-needs', component: UserNeedsPageComponent, data: { title: 'Start with Real User Needs'}},
           {path: 'trust', component: TrustPageComponent, data: { title: 'Earn Trust'}},
