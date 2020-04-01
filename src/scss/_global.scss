@@ -70,3 +70,11 @@ $asset-color: #ffb140;
   justify-content: left !important;
   min-width: auto !important;
 }
+
+.mat-stepper-horizontal, .mat-stepper-vertical {
+  background-color: transparent !important;
+}
+
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: #005581 !important;
+}

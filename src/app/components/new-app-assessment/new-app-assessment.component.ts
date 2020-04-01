@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatStepper } from '@angular/material/stepper';
+
 
 @Component({
   selector: 'app-new-app-assessment',
@@ -7,34 +9,46 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./new-app-assessment.component.scss']
 })
 export class NewAppAssessmentComponent implements OnInit {
+  // @Output() submitted = new EventEmitter();
+  submitted: boolean;
+  isLinear = true;
+  appInfoGroup: FormGroup;
+  workFlowInfoGroup: FormGroup;
+  stepper: MatStepper;
 
-  registerForm: FormGroup;
-  submitted = false;
+
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-      this.registerForm = this.formBuilder.group({
-        appName: ['', Validators.required],
-        appVersion: ['', Validators.required],
-        firstName: ['', Validators.required],
-        lastName: ['', Validators.required],
-        unit: ['', Validators.required],
-        password: ['', Validators.required],
-        email: ['', Validators.required, Validators.email],
-    });
+      this.appInfoGroup = this.formBuilder.group({
+        appInfo: ['', Validators.required],
+      });
+      this.appInfoGroup.controls['appInfo'].setErrors({'incorrect': true});
+
+      this.workFlowInfoGroup = this.formBuilder.group({
+        workFlowInfo: ['', Validators.required],
+      });
+      console.log(this.appInfoGroup.controls.appInfo.status);
   }
- // convenience getter for easy access to form fields
- get f() { return this.registerForm.controls; }
 
- onSubmit() {
-   this.submitted = true;
-   console.log('TRIED TO SUBMIT');
-   // stop here if form is invalid
-   if (this.registerForm.invalid) {
-       return;
-   }
 
-   // display form values on success
-   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
-}
+ // TELL CHILD COMPONENT SUBMISSION WAS ATTEMPTED
+ onSubmit(stepper: MatStepper) {
+    this.stepper = stepper;
+    this.submitted= true;
+    console.log('TRIED TO SUBMIT FROM PARENT');
+    setTimeout(() => {
+      this.submitted = false;
+    }, 200);
+  }
+
+  // VALIDATION WAS COMPLETED AND GOOD TO GO TO NEXT STEP
+  successfulSubmit(submit: boolean){
+    if(submit){
+      this.appInfoGroup.controls['appInfo'].setErrors(null);
+      setTimeout(() => {
+        this.stepper.next();
+      }, 100);
+    }
+  }
 }

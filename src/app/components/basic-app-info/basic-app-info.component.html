@@ -1,0 +1,58 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <!-- <div class="d-flex justify-content-start align-items-start w-100 p-1 h-50">
+    <h6><span class="badge badge-primary">New</span></h6>
+
+  </div> -->
+  <!-- <span class="sub-header">Enter application information</span> -->
+  <div class="form-row">
+    <div class="form-group form-group col-md-8" required="true">
+      <label for="appNameInput">Application name</label>
+      <input type="text" class="form-control " id="appNameInput" aria-describedby="appHelp" data-toggle="validator" formControlName="appName" placeholder="ex. TRIP"  [ngClass]="{ 'is-invalid': submitted && f.appName.errors }">
+      <small id="appHelp" class="form-text text-muted">We'll reuse this name for future accessibility tests of this app.</small>
+    </div>
+    <div class="form-group form-group col-md-4">
+      <label for="versionInput">Current Application version</label>
+      <input type="text" class="form-control " id="versionInput" placeholder="ex. 1.000.001" formControlName="appVersion" [ngClass]="{ 'is-invalid': submitted && f.appVersion.errors }">
+    </div>
+  </div>
+  <div class="form-row">
+    <!-- <div class="form-group form-group col-md-4" required="true">
+      <label for="appTechnologyInput">Technology</label>
+      <input type="text" class="form-control " id="appTechnologyInput" aria-describedby="appHelp" data-toggle="validator" required formControlName="appName" [ngClass]="{ 'is-invalid': submitted && f.appName.errors }">
+    </div> -->
+    <div class="form-group col-md-4">
+      <label for="appTechnologyInput">Technology</label>
+      <select id="appTechnologyInput" class="form-control">
+        <option selected>Choose...</option>
+        <option>Angular</option>
+        <option>Metastorm 7</option>
+        <option>Metastorm 9</option>
+        <option>MVC</option>
+        <option>Pega</option>
+        <option>React</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group form-group col-md-4" required="true">
+      <label for="appDivisionInput">Division</label>
+      <input type="text" class="form-control " id="appDivisionInput" aria-describedby="appHelp" data-toggle="validator" required formControlName="division" [ngClass]="{ 'is-invalid': submitted && f.division.errors }">
+    </div>
+    <div class="form-group form-group col-md-4" required="true">
+      <label for="appUnitInput">Unit</label>
+      <input type="text" class="form-control " id="appDivisionInput" aria-describedby="appHelp" data-toggle="validator" required formControlName="unit" [ngClass]="{ 'is-invalid': submitted && f.unit.errors }">
+    </div>
+  </div>
+  <!-- <span class="sub-header">Add testers </span>
+  <span class="sub-header">Add workflows </span> -->
+  <!-- <div class="form-row">
+    <div class="d-flex justify-content-center align-items-center w-100 p-2 h-25">
+      Note this should only be done if the application has never been created before using this tool
+    </div>
+  </div> -->
+  <!-- <div class="d-flex justify-content-center align-items-center p-4 w-100 h-100">
+    <button type="submit" (click) = "onSubmit()" class="btn btn-primary">Submit information and let's start!</button>
+  </div> -->
+  <!-- <div class="d-flex justify-content-center align-items-center w-">
+    <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/undraw_navigator_a479.svg" alt="">
+  </div> -->
+</form>

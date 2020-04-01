@@ -64,6 +64,7 @@ import { AccessibilityOverviewPageComponent } from './pages/topic-pages/accessib
 import { AccessibilityReqPageComponent } from './pages/topic-pages/accessibility-page/accessibility-req-page/accessibility-req-page.component';
 import { AccessibilityAssessmentPageComponent } from './pages/topic-pages/accessibility-page/accessibility-assessment-page/accessibility-assessment-page.component';
 import { NewAppAssessmentComponent } from './components/new-app-assessment/new-app-assessment.component';
+import { BasicAppInfoComponent } from './components/basic-app-info/basic-app-info.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -116,7 +117,8 @@ export const firebaseConfig = {
     AccessibilityOverviewPageComponent,
     AccessibilityReqPageComponent,
     AccessibilityAssessmentPageComponent,
-    NewAppAssessmentComponent
+    NewAppAssessmentComponent,
+    BasicAppInfoComponent
     // FormsModule
   ],
   imports: [
