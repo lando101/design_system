@@ -3,7 +3,9 @@
 button{
   @include primary-button();
   padding: 0px 60px !important;
-  width: 35%;
+  width: 100%;
+  display: flex;
+  justify-content: center;;
 }
 .mat-tab-label-content {
     font-size: 1.3rem;
@@ -17,6 +19,12 @@ span{
   font-size: 1rem;
   font-weight: 500;
   padding: 0px 8px;
+}
+
+.sub-header{
+  padding: 0px;
+  color: $font-color-light;
+  font-size: 1.1rem;
 }
 
 img{

@@ -1,8 +1,9 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-  <div class="d-flex justify-content-start align-items-start w-100 p-1 h-50">
+  <!-- <div class="d-flex justify-content-start align-items-start w-100 p-1 h-50">
     <h6><span class="badge badge-primary">New</span></h6>
-    <span>Please enter the information below </span>
-  </div>
+
+  </div> -->
+  <span class="sub-header">Enter application information</span>
   <div class="form-row">
     <div class="form-group form-group col-md-8" required="true">
       <label for="appNameInput">Application name</label>
@@ -14,6 +15,7 @@
       <input type="text" class="form-control " id="versionInput" placeholder="ex. 1.000.001" formControlName="appVersion" [ngClass]="{ 'is-invalid': submitted && f.appVersion.errors }">
     </div>
   </div>
+  <span class="sub-header">Enter contact and login information </span>
   <div class="form-row">
     <div class="form-group form-group col-md-5">
       <label for="testerFirstNameInput">First name</label>
@@ -60,11 +62,11 @@
   </div>
   <div class="form-row">
     <div class="form-group col-md-5">
-      <label for="exampleInputPassword1">Create Password</label>
+      <label for="exampleInputPassword1">Create Pin</label>
       <input type="password" class="form-control" id="exampleInputPassword1" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
     </div>
     <div class="form-group col-md-5">
-      <label for="exampleInputPassword1">Re-enter Password</label>
+      <label for="exampleInputPassword1">Re-enter Pin</label>
       <input type="password" class="form-control" id="exampleInputPassword1" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
     </div>
   </div>
@@ -78,11 +80,10 @@
   </div> -->
 <div class="d-flex justify-content-between align-items-top w-100">
   <div class="d-flex justify-content-start align-items-top w-25 h-100">
-    <button type="submit" class="btn btn-primary">Submit information and let's start!</button>
+    <button type="submit" class="btn btn-primary">Submit and let's start!</button>
   </div>
   <div class="d-flex justify-content-end align-items-top w-75">
     <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/undraw_navigator_a479.svg" alt="">
   </div>
 </div>
-
 </form>

@@ -96,14 +96,15 @@
           }
           .googleBtn{
             -webkit-user-select: none;
-            background: transparent;
             border: 0;
             border-radius: 2px;
             box-sizing: border-box;
-            color: #272727;
-            border: 1px solid #bfbfbf;
+            color: white;
+            background: #dc3545;
+            // border: 1px solid #bfbfbf;
             cursor: pointer;
             border-radius: 6px;
+            font-weight: bold;
             font-size: 0.875em;
             margin: 0;
             /* padding: 10px 24px; */
