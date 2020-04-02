@@ -98,6 +98,15 @@
   align-items: flex-start;
 }
 
+@mixin small-image(){
+  vertical-align: middle;
+  border-style: none;
+  width: 20%;
+  margin: 0px 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
 @mixin smallish-image() {
   vertical-align: middle;
   border-style: none;
