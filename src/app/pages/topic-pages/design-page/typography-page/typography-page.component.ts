@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Typography } from '../../../../models/tabs-content/typography.model';
 @Component({
   templateUrl: './typography-page.component.html',
-  styleUrls: ['./typography-page.component.scss']
+  styleUrls: ['./typography-page.component.scss'],
+  styles: [':host { width: 100%; margin-bottom: 55px}']
 })
 export class TypographyPageComponent implements OnInit {
 

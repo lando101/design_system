@@ -4,7 +4,8 @@ import { SecondaryColorPalette } from '../../../../models/tabs-content/secondary
 
 @Component({
   templateUrl: './color-palette-page.component.html',
-  styleUrls: ['./color-palette-page.component.scss']
+  styleUrls: ['./color-palette-page.component.scss'],
+  styles: [':host { width: 100%; margin-bottom: 55px}']
 })
 export class ColorPalettePageComponent implements OnInit {
 

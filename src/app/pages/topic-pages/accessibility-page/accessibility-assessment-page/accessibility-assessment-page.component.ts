@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
 @Component({
   templateUrl: './accessibility-assessment-page.component.html',
-  styleUrls: ['./accessibility-assessment-page.component.scss']
+  styleUrls: ['./accessibility-assessment-page.component.scss'],
+  styles: [':host { width: 100%; margin-bottom: 55px}']
 })
+
 export class AccessibilityAssessmentPageComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;

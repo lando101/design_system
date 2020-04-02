@@ -8,7 +8,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { FormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 // import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core/ripple';
 
 
@@ -25,7 +27,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   MatIconModule,
   CommonModule,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+
+
+
 
   // FooterComponent
  ],
@@ -37,7 +42,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   MatMenuModule,
   MatIconModule,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
 
   // FooterComponent
  ],

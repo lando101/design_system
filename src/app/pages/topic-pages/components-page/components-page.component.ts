@@ -4,7 +4,8 @@ import { SideNavigationComponent } from 'src/app/components/side-navigation/side
 @Component({
   selector: 'app-components-page',
   templateUrl: './components-page.component.html',
-  styleUrls: ['./components-page.component.scss']
+  styleUrls: ['./components-page.component.scss'],
+  styles: [':host { width: 100%; margin-bottom: 55px}']
 })
 export class ComponentsPageComponent implements OnInit {
 

@@ -1,17 +1,65 @@
-<div class="page-reveal-animation">
-  <h1> 508 Compliance Assessment </h1>
-  <h4><strong>Hold your application accountable.</strong> Test your application against 508 standards regularly and receive a compliance score.
-     Come back at any time to re-score your application after enhancements have been made.</h4>
-     <div class="container">
-       <h3>Has this application been tested using the 508 compliance tool before?</h3>
-       <mat-tab-group mat-align-tabs="start">
-        <mat-tab label="No, I need create application.">
-          <app-new-app-assessment></app-new-app-assessment>
-        </mat-tab>
-        <mat-tab label="Yes, I need view my applications.">Previously Tested Application</mat-tab>
-      </mat-tab-group>
-     </div>
-     <div class="container">
-       <!-- <app-accessibility-compliance-assessment></app-accessibility-compliance-assessment> -->
-     </div>
+<div class="app-content-container scroll1">
+  <div class="app-tab-content-outer-container">
+    <div class="app-tab-content-inner-container">
+      <div class="app-reveal-animation">
+        <div class="h-100 w-100">
+          <h1> 508 Compliance Workbench</h1>
+          <h4><strong>Hold your applications accountable.</strong></h4>
+          <div class="h-100">
+            <!-- <h3>Has this application been tested using the 508 compliance tool before?</h3> -->
+            <!-- <mat-tab-group mat-align-tabs="start">
+              <mat-tab label="Compliance Dashboard"> -->
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
+            <div class="modal fadeInUpBig bd-example-modal-lg" tabindex="-1" role="dialog"
+              aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                </div>
+              </div>
+            </div>
+            <div class="row h-100">
+              <div class="col-2 h-100">
+                <div class="d-flex justify-content-between align-items center header-text">
+                  <h5>Applications</h5>
+                  <button class="new-app-button" data-toggle="modal" data-target=".bd-example-modal-lg"><i
+                      class="fas fa-plus"></i></button>
+                </div>
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                    aria-controls="v-pills-home" aria-selected="true">ASSAP</a>
+                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                    aria-controls="v-pills-profile" aria-selected="false">Awards</a>
+                  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                    aria-controls="v-pills-messages" aria-selected="false">Security Reporting</a>
+                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">TRIP</a>
+                </div>
+              </div>
+              <div class="col-10 h-100 i-need-sum-color">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                    aria-labelledby="v-pills-home-tab">
+                    <app-new-app-assessment></app-new-app-assessment>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    ...</div>
+                  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                    aria-labelledby="v-pills-messages-tab">...</div>
+                  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                    aria-labelledby="v-pills-settings-tab">...</div>
+                </div>
+              </div>
+            </div>
+            <!-- </mat-tab>
+              <mat-tab label="Yes, I need view my applications.">Previously Tested Application</mat-tab>
+            </mat-tab-group> -->
+          </div>
+          <div class="container">
+            <!-- <app-accessibility-compliance-assessment></app-accessibility-compliance-assessment> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

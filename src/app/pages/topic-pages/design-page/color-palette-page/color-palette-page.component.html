@@ -1,60 +1,67 @@
-<div class="page-reveal-animation">
-  <h1> Color </h1>
-  <h4>Color is a practical and emotional tool. It conveys personality, sets a tone, attracts attention, and indicates importance.</h4>
-  <div class="container">
-    <p> The consistent use of color is curcial to maintaining the EPAS brand. Color helps users quickly
-      identify what content they need to focus on and how to move through pages quickly.
-    </p>
-    <p>The color palette is compromised of a primary and secondary set of colors. The primary
-      set is often seen the most often and therefore is a conservative set of colors. The
-      secondary palette consists of brighter colors where specific content is emphasized.
-    </p>
-  </div>
-  <div class="section-container container">
-    <h3>Primary Color Palette</h3>
-    <div class="sub-section-container container">
-      <div *ngFor="let color of primaryColorPalettes">
-        <div class="card card-dimension">
-          <div class="card-color-top" style="background: {{color.color}}; color: {{color.textColor}}">
-            <div>{{color.displayName}}</div>
-            <div class="color-label">{{color.color}}</div>
-            <div class="copy-color" (click)="copyHex(color.color)" >
-              <i class="far fa-copy"></i>
-              Copy HEX
+<div class="content-container scroll1">
+  <div class="tab-content-outer-container">
+    <div class="tab-content-inner-container">
+      <div class="page-reveal-animation">
+        <h1> Color </h1>
+        <h4>Color is a practical and emotional tool. It conveys personality, sets a tone, attracts attention, and
+          indicates importance.</h4>
+        <div class="container">
+          <p> The consistent use of color is curcial to maintaining the EPAS brand. Color helps users quickly
+            identify what content they need to focus on and how to move through pages quickly.
+          </p>
+          <p>The color palette is compromised of a primary and secondary set of colors. The primary
+            set is often seen the most often and therefore is a conservative set of colors. The
+            secondary palette consists of brighter colors where specific content is emphasized.
+          </p>
+        </div>
+        <div class="section-container container">
+          <h3>Primary Color Palette</h3>
+          <div class="sub-section-container container">
+            <div *ngFor="let color of primaryColorPalettes">
+              <div class="card card-dimension">
+                <div class="card-color-top" style="background: {{color.color}}; color: {{color.textColor}}">
+                  <div>{{color.displayName}}</div>
+                  <div class="color-label">{{color.color}}</div>
+                  <div class="copy-color" (click)="copyHex(color.color)">
+                    <i class="far fa-copy"></i>
+                    Copy HEX
+                  </div>
+                  <div *ngIf="copiedColorHex === color.color" class="card-copied-alert">
+                    Copied!
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{color.subContentHeader}}</h5>
+                  <p class="card-text">{{color.subContent}}</p>
+                </div>
+              </div>
             </div>
-            <div *ngIf="copiedColorHex === color.color"  class="card-copied-alert">
-              Copied!
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{color.subContentHeader}}</h5>
-            <p class="card-text">{{color.subContent}}</p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="section-container container">
-    <h3>Secondary Color Palette (Areas)</h3>
-    <div class="sub-section-container container">
-      <div *ngFor="let color of secondaryColorPalette">
-        <div class="card card-dimension">
-          <div class="card-color-top" style="background: {{color.color}}; color: {{color.textColor}}">
-            <div>{{color.displayName}}</div>
-            <div class="color-label">{{color.color}}</div>
-            <div class="copy-color" (click)="copyHex(color.color)" >
-              <i class="far fa-copy"></i>
-              Copy HEX
-            </div>
-            <div *ngIf="copiedColorHex === color.color"  class="card-copied-alert">
-              Copied!
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{color.subContentHeader}}</h5>
-            <p class="card-text">{{color.subContent}}</p>
-          </div>
+        <div class="section-container container">
+          <h3>Secondary Color Palette (Areas)</h3>
+          <div class="sub-section-container container">
+            <div *ngFor="let color of secondaryColorPalette">
+              <div class="card card-dimension">
+                <div class="card-color-top" style="background: {{color.color}}; color: {{color.textColor}}">
+                  <div>{{color.displayName}}</div>
+                  <div class="color-label">{{color.color}}</div>
+                  <div class="copy-color" (click)="copyHex(color.color)">
+                    <i class="far fa-copy"></i>
+                    Copy HEX
+                  </div>
+                  <div *ngIf="copiedColorHex === color.color" class="card-copied-alert">
+                    Copied!
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{color.subContentHeader}}</h5>
+                  <p class="card-text">{{color.subContent}}</p>
+                </div>
 
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
