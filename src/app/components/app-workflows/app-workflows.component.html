@@ -1,0 +1,17 @@
+
+<form [formGroup]="workFlowForm">
+  <strong class="p-2">Enter workflows and their pages</strong>
+  <div  class="p-2" *ngFor="let workflow of getWorkflowFormControls(); let i = index">
+    <!-- <label>Work flow name {{i+1}} </label>
+    <input [formControl]="workflow" type="text"> -->
+    <div class="form-group form-group col-md-8">
+      <label for="versionInput">Workflow Name</label>
+      <div class="d-flex justify-content-start align-items-center">
+        <i class="fas fa-sitemap sitemap"></i>
+        <input id="wf-{{i}}" type="text" class="form-control" placeholder="ex. Initiate travel request" [formControl]="workflow" >
+        <button (click)="removeWorkflow(i)" class="trash-btn"><i class="far fa-trash-alt"></i></button>
+      </div>
+    </div>
+  </div>
+  <button (click)="addWorkflow()">Add workflow</button>
+</form>

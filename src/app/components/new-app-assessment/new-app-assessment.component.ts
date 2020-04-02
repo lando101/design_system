@@ -28,6 +28,7 @@ export class NewAppAssessmentComponent implements OnInit {
       this.workFlowInfoGroup = this.formBuilder.group({
         workFlowInfo: ['', Validators.required],
       });
+      this.workFlowInfoGroup.controls['workFlowInfo'].setErrors({'incorrect': true});
       console.log(this.appInfoGroup.controls.appInfo.status);
   }
 

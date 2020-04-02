@@ -13,8 +13,11 @@
   </mat-step>
   <mat-step [stepControl]="workFlowInfoGroup">
     <ng-template matStepLabel>Add workflows and pages</ng-template>
-    <form>
-      <div class="d-flex justify-content-between align-items-center">
+    <form [formGroup] = "workFlowInfoGroup">
+      <div name="workFlowInfo">
+        <app-app-workflows [submittedFromParent] = "submitted" (allowProgression) ="successfulSubmit($event)"></app-app-workflows>
+      </div>
+      <div class="d-flex justify-content-between align-items-center button-container">
         <button mat-button matStepperPrevious>Back</button>
         <button (click)="onSubmit(stepper)" mat-button>Next</button>
       </div>

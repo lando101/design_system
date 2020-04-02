@@ -1,0 +1,13 @@
+@import '../styles.scss';
+// SCROLL BAR STYLING
+.scroll1::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll1::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+.scroll1::-webkit-scrollbar-thumb {
+  background: $primary-color;
+}

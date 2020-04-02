@@ -79,6 +79,23 @@ $asset-color: #ffb140;
   background-color: #005581 !important;
 }
 
+.mat-horizontal-content-container {
+  overflow: hidden !important;
+  padding: 10px 24px 24px 24px !important;
+  height: 375px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  border-top: 1px solid #e6e6e6 !important;
+}
+
+.mat-horizontal-stepper-header-container {
+  height: 55px !important;
+}
+
+.mat-horizontal-stepper-header {
+  height: 55px !important;
+}
+
 // .modal-backdrop {
 //   // z-index: -1 !important;
 //   opacity: .1;
@@ -105,7 +122,14 @@ $asset-color: #ffb140;
     font-size: 1.5rem !important;
     padding: 1rem !important;
     font-weight: 500 !important;
-    border-bottom: 1px solid #e4e4e4 !important;
+    border-bottom: 1px solid #ececec !important;
     background-color: $primary-bg-color;
   }
+}
+
+// TWEAKS OF BOOTSTRAP CLASSES
+
+.badge {
+    font-size: 55% !important;
+    margin: 0px 10px !important;
 }

@@ -15,34 +15,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { SharedModule } from './shared/shared.module';
 import { ComponentsModule } from './components/components.module';
-
+import { AppWorkflowsComponent } from './components/app-workflows/app-workflows.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DesignPageComponent } from './pages/topic-pages/design-page/design-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DesignSystemPageComponent } from './pages/design-system-page/design-system-page.component';
-
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
-
 import { FoundationPageComponent } from './pages/topic-pages/foundation-page/foundation-page.component';
 import { ComponentsPageComponent } from './pages/topic-pages/components-page/components-page.component';
-// import { AssetsPageComponent } from './pages/assets-page/assets-page.component';
-// SERVICES
-import { AuthService } from './services/auth.service';
-import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
-
-import { AuthComponent } from './core/auth';
-import { DefaultLayoutComponent } from './layouts';
-import { LayoutsModule } from './layouts/layouts.module';
-// import { DesignOverviewComponent } from './pages/de';
-import { IconsPageComponent } from './pages/topic-pages/design-page/icons-page/icons-page.component';
-import { DataService } from './services/data.service';
-import { AccessibilityComplianceService } from './services/accessibility-compliance-data.service';
-import { AccessibilityComplianceAssessmentComponent } from './components/accessibility-compliance-assessment/accessibility-compliance-assessment.component';
-
-// MATERIAL IMPORTS
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SideNavigationComponent } from './components/side-navigation/side-navigation.component';
 import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-page/accessibility-page.component';
@@ -65,6 +46,22 @@ import { AccessibilityReqPageComponent } from './pages/topic-pages/accessibility
 import { AccessibilityAssessmentPageComponent } from './pages/topic-pages/accessibility-page/accessibility-assessment-page/accessibility-assessment-page.component';
 import { NewAppAssessmentComponent } from './components/new-app-assessment/new-app-assessment.component';
 import { BasicAppInfoComponent } from './components/basic-app-info/basic-app-info.component';
+
+// SERVICES
+import { AuthService } from './services/auth.service';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { AuthComponent } from './core/auth';
+import { DefaultLayoutComponent } from './layouts';
+import { LayoutsModule } from './layouts/layouts.module';
+import { IconsPageComponent } from './pages/topic-pages/design-page/icons-page/icons-page.component';
+import { DataService } from './services/data.service';
+import { AccessibilityComplianceService } from './services/accessibility-compliance-data.service';
+import { AccessibilityComplianceAssessmentComponent } from './components/accessibility-compliance-assessment/accessibility-compliance-assessment.component';
+
+// MATERIAL IMPORTS
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
@@ -118,7 +115,8 @@ export const firebaseConfig = {
     AccessibilityReqPageComponent,
     AccessibilityAssessmentPageComponent,
     NewAppAssessmentComponent,
-    BasicAppInfoComponent
+    BasicAppInfoComponent,
+    AppWorkflowsComponent
     // FormsModule
   ],
   imports: [
@@ -139,6 +137,7 @@ export const firebaseConfig = {
     LayoutsModule
   ],
   providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [NewAppAssessmentComponent]
 })
 export class AppModule { }

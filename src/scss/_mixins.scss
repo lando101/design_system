@@ -18,6 +18,18 @@
   }
 }
 
+@mixin trash-can-button(){
+  background: transparent;
+  color: #3a3a3a;
+  font-size: 1rem;
+  margin: 0px 10px;
+  border: none;
+  &:hover{
+    transition: .2s ease-in-out;
+    color: red;
+  }
+}
+
 // DROPDOWN :: 3 DOTS
 @mixin drop-down-three-dots(){
     width: auto;

@@ -89,3 +89,10 @@ i {
     color: $font-color;
   }
 }
+
+.score-sheet-button{
+  @include primary-button();
+  margin: 50px;
+  font-size: 1.1rem;
+  font-weight: 500 !important;
+}
