@@ -32,12 +32,17 @@ img{
 }
 
 .button-container{
-  position: absolute;
+  // position: absolute;
   left: 0px;
   width: 100%;
   bottom: 0px;
   height: 50px;
   padding: 0px 20px;
-  border-top: 1px solid #ececec;
-  background: $primary-bg-color;
+  // border-top: 1px solid #ececec;
+  // background: $primary-bg-color;
+}
+
+.form-content{
+  overflow: auto !important;
+  max-height: 45vh !important;
 }

@@ -1,16 +1,34 @@
-
 <form [formGroup]="workFlowForm">
-  <strong class="p-2">Enter workflows and their pages</strong>
-  <div  class="p-2" *ngFor="let workflow of getWorkflowFormControls(); let i = index">
-    <!-- <label>Work flow name {{i+1}} </label>
-    <input [formControl]="workflow" type="text"> -->
-    <div class="form-group form-group col-md-8">
-      <label for="versionInput">Workflow Name</label>
-      <div class="d-flex justify-content-start align-items-center">
-        <i class="fas fa-sitemap sitemap"></i>
-        <input id="wf-{{i}}" type="text" class="form-control" placeholder="ex. Initiate travel request" [formControl]="workflow" >
-        <button (click)="removeWorkflow(i)" class="trash-btn"><i class="far fa-trash-alt"></i></button>
+  <!-- <strong class="p-2">Enter workflows and their pages</strong> -->
+  <div class="p-2" *ngFor="let workflow of getWorkflowFormControls(); let i = index">
+    <div class="form-group form-group col-md-4 give-a-form-sum-space">
+      <div>
+        <div class="d-flex justify-content-start align-items-center">
+
+          <small id="appHelp" class="form-text text-muted give-me-sum-space"> <i
+              class="fas fa-sitemap sitemap"></i>Enter the name of the workflow above.</small>
+          <input id="wf-{{i}}" type="text" class="form-control clear-label" placeholder="Workflow Name"
+            [formControl]="workflow">
+          <button (click)="removeWorkflow(i)" class="trash-btn"><i class="far fa-trash-alt"></i></button>
+        </div>
+
       </div>
+      <!-- <label for="versionInput">Page Name</label> -->
+      <!-- <div class="p-2" *ngFor="let page of getPageFormControls(); let i = index"> -->
+      <mat-form-field class="example-chip-list">
+        <mat-chip-list #chipList aria-label="Page selection">
+          <input placeholder="Add a page to the workflow..." [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)">
+          <mat-chip *ngFor="let page of pages" [selectable]="selectable" [removable]="removable"
+            (removed)="remove(page)">
+            <i class="fas fa-file"></i> {{page.name}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+      </mat-form-field>
+      <!-- </div> -->
+      <!-- <button (click)="addPage()">Add page</button> -->
     </div>
   </div>
   <button (click)="addWorkflow()">Add workflow</button>

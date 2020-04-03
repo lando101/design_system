@@ -1,27 +1,27 @@
 
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
+<mat-vertical-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="appInfoGroup">
     <ng-template matStepLabel>Basic application information</ng-template>
     <form [formGroup] = "appInfoGroup">
       <div name="appInfo">
         <app-basic-app-info [submittedFromParent] = "submitted" (allowProgression) ="successfulSubmit($event)"></app-basic-app-info>
       </div>
-      <div class="d-flex justify-content-end align-items-center button-container">
-        <button (click)="onSubmit(stepper)" mat-button>Next</button>
-      </div>
     </form>
+    <div class="d-flex justify-content-end align-items-center button-container">
+      <button (click)="onSubmit(stepper)" mat-button>Next</button>
+    </div>
   </mat-step>
   <mat-step [stepControl]="workFlowInfoGroup">
     <ng-template matStepLabel>Add workflows and pages</ng-template>
     <form [formGroup] = "workFlowInfoGroup">
-      <div name="workFlowInfo">
+      <div name="workFlowInfo" class="scroll1 form-content">
         <app-app-workflows [submittedFromParent] = "submitted" (allowProgression) ="successfulSubmit($event)"></app-app-workflows>
       </div>
-      <div class="d-flex justify-content-between align-items-center button-container">
-        <button mat-button matStepperPrevious>Back</button>
-        <button (click)="onSubmit(stepper)" mat-button>Next</button>
-      </div>
     </form>
+    <div class="d-flex justify-content-between align-items-center button-container">
+      <button mat-button matStepperPrevious>Back</button>
+      <button (click)="onSubmit(stepper)" mat-button>Next</button>
+    </div>
   </mat-step>
   <mat-step [stepControl]="workFlowInfoGroup">
     <ng-template matStepLabel>Add testers</ng-template>
@@ -29,4 +29,4 @@
   <mat-step [stepControl]="workFlowInfoGroup">
     <ng-template matStepLabel>Review</ng-template>
   </mat-step>
-</mat-horizontal-stepper>
+</mat-vertical-stepper>

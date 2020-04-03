@@ -12,6 +12,7 @@ import { ReactiveFormsModule} from '@angular/forms';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { FormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 // import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core/ripple';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 // import {FooterComponent} from '../components/footer/footer.component';
@@ -28,6 +29,7 @@ import { FormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@a
   CommonModule,
   FormsModule,
   ReactiveFormsModule,
+  MatChipsModule
 
 
 
@@ -43,6 +45,7 @@ import { FormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@a
   MatIconModule,
   FormsModule,
   ReactiveFormsModule,
+  MatChipsModule
 
   // FooterComponent
  ],

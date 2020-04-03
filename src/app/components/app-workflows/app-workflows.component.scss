@@ -7,5 +7,26 @@
 }
 
 .trash-btn{
- @include trash-can-button()
+  @include trash-can-button();
+}
+
+.clear-label{
+  @include clear-label();
+}
+
+::placeholder {
+  color: $font-color !important;
+  opacity: 1; /* Firefox */
+}
+
+.give-me-sum-space{
+  margin: 0px 42px;
+}
+
+.give-a-form-sum-space{
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  min-height: 250px;
+  padding: 0;
 }

@@ -1,5 +1,16 @@
 import { Component, OnInit, Input, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray, AbstractControl } from '@angular/forms';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {MatChipInputEvent} from '@angular/material/chips';
+import {MatChipsModule} from '@angular/material/chips';
+
+
+export interface Page {
+  name: string;
+  type?: string;
+  status?: string;
+  score?: number;
+}
 
 @Component({
   selector: 'app-app-workflows',
@@ -12,20 +23,52 @@ export class AppWorkflowsComponent implements OnInit {
   @Input() submittedFromParent: boolean;
   @Output() allowProgression = new EventEmitter();
   submitted = false;
+  visible = true;
+  selectable = true;
+  removable = true;
+  addOnBlur = true;
+  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+  pages: Page[] = [
+
+  ];
   constructor(private formBuilder: FormBuilder) { }
 
     ngOnInit(): void {
       this.workFlowForm = this.formBuilder.group({
-        appName: ['', Validators.required],
         workflows: this.formBuilder.array([
           this.formBuilder.control(null)
         ]),
-        pages: this.formBuilder.array([
-          this.formBuilder.control(null)
-        ])
+        // pages: this.formBuilder.array([
+        //   this.formBuilder.control(null)
+        // ])
     });
 
 
+  }
+
+
+  // ADD A CHIP & REMOVE A CHIP
+  add(event: MatChipInputEvent): void {
+    const input = event.input;
+    const value = event.value;
+
+    // Add our page
+    if ((value || '').trim()) {
+      this.pages.push({name: value.trim()});
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value = '';
+    }
+  }
+
+  remove(page: any): void {
+    const index = this.pages.indexOf(page);
+
+    if (index >= 0) {
+      this.pages.splice(index, 1);
+    }
   }
 
 // ADDING AND REMOVING WORKFLOW INPUTS
@@ -40,24 +83,24 @@ export class AppWorkflowsComponent implements OnInit {
   }
 
   // ADDING AND REMOVING PAGE INPUTS
-  addPage(): void {
-    (this.workFlowForm.get('pages') as FormArray).push(
-      this.formBuilder.control(null)
-    );
-  }
+  // addPage(): void {
+  //   (this.workFlowForm.get('pages') as FormArray).push(
+  //     this.formBuilder.control(null)
+  //   );
+  // }
 
-  removePage(index) {
-    (this.workFlowForm.get('pages') as FormArray).removeAt(index);
-  }
+  // removePage(index) {
+  //   (this.workFlowForm.get('pages') as FormArray).removeAt(index);
+  // }
 
 
   // GET WORKFLOW CONTROLS
-  getWorkflowFormControls(): AbstractControl[] { 
+  getWorkflowFormControls(): AbstractControl[] {
     return (<FormArray> this.workFlowForm.get('workflows')).controls;
   }
 
-  getPageFormControls(): AbstractControl[] {
-    return (<FormArray> this.workFlowForm.get('pages')).controls;
-  }
+  // getPageFormControls(): AbstractControl[] {
+  //   return (<FormArray> this.workFlowForm.get('pages')).controls;
+  // }
 
 }
