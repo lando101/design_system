@@ -95,4 +95,7 @@ i {
   margin: 50px;
   font-size: 1.1rem;
   font-weight: 500 !important;
+  i {
+    color: $primary-bg-color;
+  }
 }

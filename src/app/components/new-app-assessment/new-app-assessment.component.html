@@ -11,7 +11,7 @@
       <button (click)="onSubmit(stepper)" mat-button>Next</button>
     </div>
   </mat-step>
-  <mat-step [stepControl]="workFlowInfoGroup">
+  <!-- <mat-step [stepControl]="workFlowInfoGroup">
     <ng-template matStepLabel>Add workflows and pages</ng-template>
     <form [formGroup] = "workFlowInfoGroup">
       <div name="workFlowInfo" class="scroll1 form-content">
@@ -22,7 +22,7 @@
       <button mat-button matStepperPrevious>Back</button>
       <button (click)="onSubmit(stepper)" mat-button>Next</button>
     </div>
-  </mat-step>
+  </mat-step> -->
   <mat-step [stepControl]="workFlowInfoGroup">
     <ng-template matStepLabel>Add testers</ng-template>
   </mat-step>
