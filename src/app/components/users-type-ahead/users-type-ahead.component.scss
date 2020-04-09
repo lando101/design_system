@@ -1,0 +1,29 @@
+@import '../../../styles.scss';
+
+.clear-button{
+  @include clear-button();
+}
+
+.add-button{
+  @include add-button()
+}
+
+.selected-tester-chip{
+  height: 30px;
+  width: auto;
+  background: gainsboro;
+  padding: 5px 10px;
+  padding-right: 2px;
+  margin: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  button{
+    @include clear-button();
+  }
+}
+
+table{
+  height: 250px !important;
+}

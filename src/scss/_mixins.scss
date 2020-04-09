@@ -26,6 +26,25 @@
   }
 }
 
+@mixin clear-button(){
+  background: transparent;
+  border: none;
+  font-size: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin add-button(){
+  background: white;
+  border: 1px solid #00891f;
+  color: #00891f;
+  border-radius: 5px;
+  padding: 0px 6px;
+  font-weight: 500;
+  font-size: .75rem;
+}
+
 @mixin trash-can-button(){
   background: transparent;
   color: #3a3a3a;

@@ -1,22 +1,44 @@
-<label for="typeahead-format">Search for a tester:</label>
+<!-- <label for="typeahead-format">Search for a tester:</label> -->
 <!-- <input id="typeahead-format" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [resultFormatter]="formatter" /> -->
-<input id="typeahead-format" type="text" class="form-control" [(ngModel)]="model"/>
+<!-- <input id="typeahead-format" type="text" class="form-control" [(ngModel)]="model"/> -->
+<div class="w-100">
+  <small id="testersHelp" class="form-text text-muted">Selected testers</small>
+  <div *ngIf="selectedTesters; else empty" class="d-flex justify-content-start align-items-center">
+    <div *ngFor="let tester of selectedTesters" class="d-flex justify-content-between align-items-center selected-tester-chip">
+      <div>{{tester.firstName}}  {{tester.lastName}}</div>
+      <button (click)="removeTester(tester)"><i class="far fa-times-circle"></i></button>
+    </div>
+  </div>
+</div>
+<mat-form-field class="example-form-field">
+  <mat-label>Search users</mat-label>
+  <input matInput type="text" [(ngModel)]="model" placeholder="Ex. Jane Smith">
+  <button mat-button *ngIf="model" matSuffix mat-icon-button aria-label="Clear" (click)="model=''" class="clear-button">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
 
-<table class="table">
-<thead>
-  <tr>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Email</th>
-    <th scope="col">ID</th>
-  </tr>
-</thead>
-<tbody>
-  <tr *ngFor="let item of testers | filter: model">
-    <td>{{item.firstName}}</td>
-    <td>{{item.lastName}}</td>
-    <td>{{item.email}}</td>
-    <td>{{item.uid}}</td>
-  </tr>
-</tbody>
+<table class="table p-1">
+  <thead>
+    <tr>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Email</th>
+      <th scope="col">ID</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tester of testers | filter: model">
+      <td>{{tester.firstName}}</td>
+      <td>{{tester.lastName}}</td>
+      <td>{{tester.email}}</td>
+      <td>{{tester.uid}}</td>
+      <td><button class="add-button" (click)="addTester(tester)"><i class="fas fa-plus"></i></button></td>
+    </tr>
+  </tbody>
 </table>
+
+<ng-template #empty>
+  No testers selected yet
+</ng-template>
