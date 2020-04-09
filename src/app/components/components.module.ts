@@ -24,6 +24,7 @@ import { BasicAppInfoComponent } from './basic-app-info/basic-app-info.component
       HeaderComponent,
       SideNavigationComponent,
       DesignOverviewComponent,
+      // AddTestersComponent,
       // BasicAppInfoComponent,
       // NewAppAssessmentComponent,
       // FooterComponent

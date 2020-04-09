@@ -4,12 +4,11 @@ import { CoreModule } from './core/core.module';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { NgModule, Injectable } from '@angular/core';
 // 3RD PARD IMPORTS
-// import { BsDropdownModule } from 'ngx-bootstrap';
-// import { AngularFireModule } from '@angular/fire';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {Ng2SearchPipeModule } from 'ng2-search-filter';
 // PROJECT COMPONENTS
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
@@ -46,6 +45,8 @@ import { AccessibilityReqPageComponent } from './pages/topic-pages/accessibility
 import { AccessibilityAssessmentPageComponent } from './pages/topic-pages/accessibility-page/accessibility-assessment-page/accessibility-assessment-page.component';
 import { NewAppAssessmentComponent } from './components/new-app-assessment/new-app-assessment.component';
 import { BasicAppInfoComponent } from './components/basic-app-info/basic-app-info.component';
+import { AddTestersComponent } from './components/add-testers/add-testers.component';
+import { UsersTypeAheadComponent } from './components/users-type-ahead/users-type-ahead.component';
 
 // SERVICES
 import { AuthService } from './services/auth.service';
@@ -91,9 +92,6 @@ export const firebaseConfig = {
     SignupPageComponent,
     FoundationPageComponent,
     ComponentsPageComponent,
-    // AssetsPageComponent,
-    // LoginPageComponent,
-    // DesignOverviewComponent,
     IconsPageComponent,
     FooterPageComponent,
     AccessibilityComplianceAssessmentComponent,
@@ -117,9 +115,12 @@ export const firebaseConfig = {
     AccessibilityAssessmentPageComponent,
     NewAppAssessmentComponent,
     BasicAppInfoComponent,
-    AppWorkflowsComponent
-    // FormsModule
+    AppWorkflowsComponent,
+    AddTestersComponent,
+    UsersTypeAheadComponent,
+
   ],
+  exports:[UsersTypeAheadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -130,15 +131,15 @@ export const firebaseConfig = {
     ComponentsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    // FormsModule,
-    // MatInputModule
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    LayoutsModule
+    LayoutsModule,
+    NgbModule,
+    Ng2SearchPipeModule
   ],
   providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, UsersTypeAheadComponent],
   entryComponents: [NewAppAssessmentComponent]
 })
 export class AppModule { }

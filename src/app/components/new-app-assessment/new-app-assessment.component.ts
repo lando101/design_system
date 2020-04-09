@@ -6,7 +6,9 @@ import { MatStepper } from '@angular/material/stepper';
 @Component({
   selector: 'app-new-app-assessment',
   templateUrl: './new-app-assessment.component.html',
-  styleUrls: ['./new-app-assessment.component.scss']
+  styleUrls: ['./new-app-assessment.component.scss'],
+  styles: [':host { overflow: auto}']
+
 })
 export class NewAppAssessmentComponent implements OnInit {
   // @Output() submitted = new EventEmitter();
@@ -14,6 +16,7 @@ export class NewAppAssessmentComponent implements OnInit {
   isLinear = true;
   appInfoGroup: FormGroup;
   workFlowInfoGroup: FormGroup;
+  appTestersInfoGroup: FormGroup;
   stepper: MatStepper;
 
 
@@ -27,6 +30,10 @@ export class NewAppAssessmentComponent implements OnInit {
 
       this.workFlowInfoGroup = this.formBuilder.group({
         workFlowInfo: ['', Validators.required],
+      });
+
+      this.appTestersInfoGroup = this.formBuilder.group({
+        testersInfo: ['', Validators.required],
       });
       this.workFlowInfoGroup.controls['workFlowInfo'].setErrors({'incorrect': true});
       console.log(this.appInfoGroup.controls.appInfo.status);

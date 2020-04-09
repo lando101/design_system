@@ -121,6 +121,7 @@ $asset-color: #ffb140;
   border: 1px solid #d1d1d1 !important;
   box-shadow: 0px 3px 19px 16px #c0c0c059 !important;
   overflow: hidden;
+  overflow-y: auto;
   background-color: #f9f9f9 !important;
   .header{
     font-size: 1.5rem !important;
@@ -128,6 +129,9 @@ $asset-color: #ffb140;
     font-weight: 500 !important;
     border-bottom: 1px solid #ececec !important;
     background-color: $primary-bg-color;
+    position: sticky;
+    top: 0px;
+    width: 100%;
   }
 }
 

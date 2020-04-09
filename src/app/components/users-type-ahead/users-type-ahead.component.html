@@ -1,0 +1,22 @@
+<label for="typeahead-format">Search for a tester:</label>
+<!-- <input id="typeahead-format" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [resultFormatter]="formatter" /> -->
+<input id="typeahead-format" type="text" class="form-control" [(ngModel)]="model"/>
+
+<table class="table">
+<thead>
+  <tr>
+    <th scope="col">First</th>
+    <th scope="col">Last</th>
+    <th scope="col">Email</th>
+    <th scope="col">ID</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let item of testers | filter: model">
+    <td>{{item.firstName}}</td>
+    <td>{{item.lastName}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.uid}}</td>
+  </tr>
+</tbody>
+</table>
