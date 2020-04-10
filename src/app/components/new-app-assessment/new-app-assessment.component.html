@@ -4,11 +4,12 @@
     <ng-template matStepLabel>Basic application information</ng-template>
     <form [formGroup] = "appInfoGroup">
       <div name="appInfo">
-        <app-basic-app-info [submittedFromParent] = "submitted" (allowProgression) ="successfulSubmit($event)"></app-basic-app-info>
+        <app-basic-app-info [submittedFromParent] = "submittedBasicInfo"></app-basic-app-info>
       </div>
     </form>
     <div class="d-flex justify-content-end align-items-center button-container">
-      <button (click)="onSubmit(stepper)" mat-button>Next</button>
+      <!-- <button (click)="onSubmit(stepper, 'basic-info')" mat-button>Next</button> -->
+      <button (click)="onSubmit(stepper, 0)" mat-button>Next</button>
     </div>
   </mat-step>
   <!-- <mat-step [stepControl]="workFlowInfoGroup">
@@ -25,17 +26,26 @@
   </mat-step> -->
   <mat-step [stepControl]="appTestersInfoGroup">
     <form [formGroup] = "appTestersInfoGroup">
-      <div name="appInfo">
-        <app-add-testers [submittedFromParent] = "submitted" (allowProgression) ="successfulSubmit($event)"></app-add-testers>
+      <div name="testersInfo">
+        <!-- <app-add-testers [submittedFromParent] = "submitted" (allowProgression) ="successfulSubmit($event)"></app-add-testers> -->
+        <app-users-type-ahead></app-users-type-ahead>
       </div>
     </form>
     <ng-template matStepLabel>Add testers</ng-template>
     <div class="d-flex justify-content-between align-items-center button-container">
       <button mat-button matStepperPrevious>Back</button>
-      <button (click)="onSubmit(stepper)" mat-button>Next</button>
+      <button (click)="onSubmit(stepper, 1)" mat-button>Next</button>
     </div>
   </mat-step>
-  <mat-step [stepControl]="workFlowInfoGroup">
+  <mat-step [stepControl]="appReviewInfoGroup">
     <ng-template matStepLabel>Review</ng-template>
+    <!-- <form [formGroup] = "appTestersInfoGroup">
+      <div name="appInfo">
+      </div>
+    </form>
+    <div class="d-flex justify-content-between align-items-center button-container">
+      <button mat-button matStepperPrevious>Back</button>
+      <button (click)="onSubmit(stepper, 'tester-info')" mat-button>Create</button>
+    </div> -->
   </mat-step>
 </mat-vertical-stepper>

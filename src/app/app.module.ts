@@ -45,7 +45,7 @@ import { AccessibilityReqPageComponent } from './pages/topic-pages/accessibility
 import { AccessibilityAssessmentPageComponent } from './pages/topic-pages/accessibility-page/accessibility-assessment-page/accessibility-assessment-page.component';
 import { NewAppAssessmentComponent } from './components/new-app-assessment/new-app-assessment.component';
 import { BasicAppInfoComponent } from './components/basic-app-info/basic-app-info.component';
-import { AddTestersComponent } from './components/add-testers/add-testers.component';
+// import { AddTestersComponent } from './components/add-testers/add-testers.component';
 import { UsersTypeAheadComponent } from './components/users-type-ahead/users-type-ahead.component';
 
 // SERVICES
@@ -62,6 +62,7 @@ import { AccessibilityComplianceAssessmentComponent } from './components/accessi
 // MATERIAL IMPORTS
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { ValidationServiceService } from './services/validation-service.service';
 
 
 
@@ -116,7 +117,7 @@ export const firebaseConfig = {
     NewAppAssessmentComponent,
     BasicAppInfoComponent,
     AppWorkflowsComponent,
-    AddTestersComponent,
+    // AddTestersComponent,
     UsersTypeAheadComponent,
 
   ],
@@ -138,8 +139,8 @@ export const firebaseConfig = {
     NgbModule,
     Ng2SearchPipeModule
   ],
-  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent],
+  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService],
   bootstrap: [AppComponent, UsersTypeAheadComponent],
-  entryComponents: [NewAppAssessmentComponent]
+  // entryComponents: [NewAppAssessmentComponent]
 })
 export class AppModule { }
