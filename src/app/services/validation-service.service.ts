@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject,  Observable, Subject } from "rxjs";
 import { App } from '../models/app.model';
+import { Tester } from '../models/tester.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,14 +16,13 @@ export class ValidationServiceService {
   // TESTER INFO VARIABLES
   testerInfoValidation = new Subject<boolean>();
   testerInfoValidationStatus$ = this.testerInfoValidation.asObservable();
-  testerInfo = new Subject<App>();
+  testerInfo = new Subject<Tester>();
   testerAppInfo$ = this.testerInfo.asObservable();
 
   constructor() { }
 
   // SET VALIDATION STATUS FOR BASIC INFO
   setBasicInfoValid(valid: boolean){
-    console.log('BASIC INFO VALIDATION SERVICE' + valid);
     this.basicInfoValidation.next(valid);
   }
 
@@ -33,12 +33,12 @@ export class ValidationServiceService {
 
   // SET VALIDATION STATUS FOR TESTER INFO
   setTesterInfoValid(valid: boolean){
-    console.log('BASIC TESTER VALIDATION SERVICE' + valid);
     this.testerInfoValidation.next(valid);
   }
 
   // SET APP TESTER INFORMATION
-  setTesterInfo(app: App){
-    this.testerInfo.next(app);
+  setTesterInfo(testers: Tester){
+    this.testerInfo.next(testers);
+    console.log(testers);
   }
 }

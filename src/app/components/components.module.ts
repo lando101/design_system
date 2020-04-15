@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { DesignOverviewComponent } from './design-overview/design-overview.component';
 import { BasicAppInfoComponent } from './basic-app-info/basic-app-info.component';
+import { AppInfoReviewComponent } from './app-info-review/app-info-review.component';
+import { AccessibilityTestComponent } from './accessibility-test/accessibility-test.component';
 // import { NewAppAssessmentComponent } from './new-app-assessment/new-app-assessment.component';
 // import { FooterComponent } from './footer/footer.component';
 

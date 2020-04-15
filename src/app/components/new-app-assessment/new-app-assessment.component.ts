@@ -89,4 +89,9 @@ export class NewAppAssessmentComponent implements OnInit {
     console.log(this.stepper.selectedIndex);
     this.stepper.selectedIndex = this.type + 1;
   }
+
+  ngOnDestroy(){
+    this.validationBasicInfoSubscription.unsubscribe;
+    this.validationTesterInfoSubscription.unsubscribe;
+  }
 }

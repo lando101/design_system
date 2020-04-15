@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+
+button{
+  @include primary-button();
+  padding: 0px 60px !important;
+  width: auto;
+  display: flex;
+  justify-content: center;;
+}
+
+.section-header{
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.section-instructions-header{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.section-instructions-content{
+  font-size: .85rem;
+}
+.question-content-container{
+  margin-bottom: 15px;
+  padding: 3px;
+  border-radius: 11px;
+  /* border: 1px solid #e8e8e8; */
+  background: white;
+    .question-container{
+      border-left: 3px solid royalblue;
+    }
+}
+
+
+li{
+  font-size: .85rem;
+}

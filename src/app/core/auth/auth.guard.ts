@@ -9,22 +9,19 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  constructor(public authService: AuthService, public router: Router){ 
+  constructor(public authService: AuthService, public router: Router){
   }
 
   // NICK TAKE A LOOK HERE
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot) {
-    
-      console.log(this.authService.isLoggedIn);
-
     if (this.authService.isLoggedIn) {
       return true;
-    } 
+    }
 
     console.log("user needs to log in!");
-    this.router.navigate(['/auth']); 
+    this.router.navigate(['/auth']);
     return false;
 
     // if (this.authService.isLoggedIn !== true) {

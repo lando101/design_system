@@ -45,7 +45,6 @@ export class HeaderComponent implements OnInit {
 
   onResize(event) {
     this.innerWidth = window.innerWidth;
-    console.log(this.innerWidth);
   }
   ngOnInit(): void {
     this.onResize(event);
@@ -63,8 +62,6 @@ export class HeaderComponent implements OnInit {
     this.key = 'welcome-animate';
     sessionStorage.removeItem(this.key);
     this.signout();
-    console.log(localStorage.getItem(this.key));
-    console.log("STORAGE STATE AFTER LOGOUT");
   }
 
   signout(){

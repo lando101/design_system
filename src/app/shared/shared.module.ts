@@ -13,6 +13,7 @@ import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { FormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 // import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core/ripple';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 // import {FooterComponent} from '../components/footer/footer.component';
@@ -29,7 +30,8 @@ import {MatChipsModule} from '@angular/material/chips';
   CommonModule,
   FormsModule,
   ReactiveFormsModule,
-  MatChipsModule
+  MatChipsModule,
+  MatCheckboxModule
 
 
 
@@ -45,7 +47,8 @@ import {MatChipsModule} from '@angular/material/chips';
   MatIconModule,
   FormsModule,
   ReactiveFormsModule,
-  MatChipsModule
+  MatChipsModule,
+  MatCheckboxModule
 
   // FooterComponent
  ],

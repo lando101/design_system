@@ -3,6 +3,20 @@ $design-color: #0085ca;
 $component-color: #de632d;
 $asset-color: #ffb140;
 
+// ICON CLASSES
+
+.fa-check-circle{
+  color: #00e656;
+}
+
+.fa-spinner{
+  color: gold;
+}
+
+.fa-clipboard-list{
+  color: #f47736;
+}
+
 // FOUNDATION TOPIC CLASSES
 .foundation-icon{
   color: $foundation-color;
@@ -113,8 +127,8 @@ $asset-color: #ffb140;
   position: absolute;
   left: 50% !important;
   top: 50% !important;
-  transform: translate(-50%, 5%) !important;
-  width: 1200px !important;
+  transform: translate(-50%, 2%) !important;
+  width: 50vw !important;
   max-width: none !important;
   height: 90vh !important;
   border-radius: 15px !important;

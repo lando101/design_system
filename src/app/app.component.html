@@ -1,12 +1,26 @@
 <router-outlet></router-outlet>
 <!-- <app-accessibility-compliance-assessment></app-accessibility-compliance-assessment> -->
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-aria-labelledby="myLargeModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-lg">
-  <div class="modal-content scroll1">
-   <div class="header d-flex justify-content-start">Create Application Board <span class="badge badge-primary">New</span></div>
-    <app-new-app-assessment class="scroll1"></app-new-app-assessment>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content scroll1">
+      <div class="header d-flex justify-content-start">Create Application Board <span
+          class="badge badge-primary">New</span></div>
+      <app-new-app-assessment class="scroll1"></app-new-app-assessment>
+    </div>
   </div>
 </div>
+
+<div class="modal fade example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="accessibility-test"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content scroll1">
+      <div class="header d-flex justify-content-start">
+        Accessibility Test
+        <span class="badge badge-primary">New</span>
+      </div>
+      <app-accessibility-test class="scroll1"></app-accessibility-test>
+    </div>
+  </div>
 </div>

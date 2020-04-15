@@ -21,9 +21,9 @@
   border-radius: 50px;
   background-color: $primary-color;
   border: none;
-  width: 25px;
-  height: 25px;
-
+  width: 20px;
+  height: 20px;
+  font-size: .8rem;
   i {
     color: $primary-bg-color;
   }
@@ -42,14 +42,14 @@ h4 {
   background-color: #f8f9fa;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   .tab-content {
     width: 100%;
     height: 100%;
     .it-looks-empty {
       text-align: center;
-      font-size: 1.7rem;
+      font-size: 1.4rem;
       font-weight: 100;
     }
     .tab-pane {
@@ -60,6 +60,7 @@ h4 {
 }
 img {
   @include small-image();
+  width: 25%;
 }
 
 i {
@@ -89,6 +90,79 @@ i {
     color: $font-color;
   }
 }
+.app-workbench-header{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $font-color;
+  .add-workflow-button{
+    @include secondary-button();
+    font-size: .95rem;
+  }
+}
+
+.tabs-container{
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+}
+.progress-container{
+  min-height: 10rem;
+  .progress-header-container{
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+  }
+  .progress-title{
+    font-weight: 100;
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+  }
+  .progress-count{
+    font-weight: 500;
+    font-size: .85rem;
+  }
+}
+
+.workflow-card{
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  box-shadow: 0px 2px 7px 2px #f4f4f4;
+  .workflow-card-title{
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1rem;
+  }
+  .progress-container{
+    border-radius: 50px;
+    background: #f0f0f0;
+    // border: 1px solid #e5e5e5;
+    height: 8px;
+    min-height: 0px;
+    .progress-container-complete{
+      width: 25%;
+      height: 100%;
+      border-radius: 50px;
+      background-color: #3e6eff;
+      box-shadow: 0px 0px 6px 1px #9eb6ff;
+    }
+  }
+  .error-status{
+    font-weight: 500;
+    font-size: 1.2rem;
+    .critical{
+      color: #c50000 !important;
+    }
+  }
+  button{
+    border-radius: 5px;
+    background: royalblue;
+    font-weight: 500;
+    border: none;
+    font-size: .85rem;
+    color: white;
+    padding: 3px 25px;
+  }
+}
 
 .score-sheet-button{
   @include primary-button();
@@ -97,5 +171,26 @@ i {
   font-weight: 500 !important;
   i {
     color: $primary-bg-color;
+  }
+}
+
+.appear{
+  opacity: 1;
+  transform: scale(1);
+  animation: workbench-appear .8s;
+
+  @keyframes workbench-appear {
+    0%{
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    25%{
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 }

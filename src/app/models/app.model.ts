@@ -1,3 +1,5 @@
+import {Tester} from './tester.model';
+
 export interface App {
   id?: string;
   name: string;
@@ -7,11 +9,9 @@ export interface App {
   unit: string;
   valid?: boolean;
   tester?: Tester[];
+  workbench?: string;
+  active?: boolean;
+  workflowCount?: number;
 }
 
-export interface Tester {
-  uid: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-}
+

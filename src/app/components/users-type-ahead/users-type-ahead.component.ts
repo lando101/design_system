@@ -61,6 +61,7 @@ export class UsersTypeAheadComponent implements OnInit {
     this.selectedTesters.push(tester);
     this.testers = this.testers.filter(x => x != tester);
     this.validationService.setTesterInfoValid(true);
+    this.validationService.setTesterInfo(tester);
   }
 
   // REMOVE THE TESTER TO CHIP LIST & ADD FROM TABLE

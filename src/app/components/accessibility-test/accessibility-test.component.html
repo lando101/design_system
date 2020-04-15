@@ -1,0 +1,123 @@
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="testInfoGroup">
+    <ng-template matStepLabel>Basic testing information</ng-template>
+    <form [formGroup]="testInfoGroup">
+      <div name="testInfo">
+        <!-- <mat-form-field> -->
+        <div class="container py-2">
+          <div class="section-header">Browser</div>
+          <small class="form-text text-muted">Select the all browsers used to test workflow</small>
+          <div class="d-flex justify-content-start align-items-center p-2">
+            <mat-checkbox class="px-2">Firefox</mat-checkbox>
+            <mat-checkbox class="px-2">Google Chrome</mat-checkbox>
+            <mat-checkbox class="px-2">Internet Explorer</mat-checkbox>
+            <mat-checkbox class="px-2">Microsoft Edge</mat-checkbox>
+            <mat-checkbox class="px-2">Other</mat-checkbox>
+          </div>
+        </div>
+        <div class="container py-2">
+          <div class="section-header">Toolbars</div>
+          <small class="form-text text-muted">Select WAT if using a toolbar</small>
+          <div class="d-flex justify-content-start align-items-center p-2">
+            <mat-checkbox class="px-2">WAT</mat-checkbox>
+          </div>
+        </div>
+        <div class="container py-2">
+          <div class="section-header">Screen Reader</div>
+          <small class="form-text text-muted">Select the all screen readers used to test workflow</small>
+          <div class="d-flex justify-content-start align-items-center p-2">
+            <mat-checkbox class="px-2">JAWS</mat-checkbox>
+            <mat-checkbox class="px-2">System Access</mat-checkbox>
+            <mat-checkbox class="px-2">Voice Over</mat-checkbox>
+            <mat-checkbox class="px-2">Other</mat-checkbox>
+          </div>
+        </div>
+        <!-- </mat-form-field> -->
+      </div>
+    </form>
+    <div class="d-flex justify-content-end align-items-center button-container">
+      <!-- <button (click)="onSubmit(stepper, 'basic-info')" mat-button>Next</button> -->
+      <button mat-button matStepperNext>Begin</button>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="questionOneGroup">
+    <ng-template matStepLabel>Navigation by keyboard</ng-template>
+    <form [formGroup]="questionOneGroup">
+      <div class="question-content-container" name="appInfo">
+        <!-- <mat-form-field> -->
+        <div class="container py-2">
+          <div class="container question-container">
+            <div class="section-header">Question One</div>
+            <p class="py-2">Can the keyboard be used to
+              navigate instead of the mouse,
+              particularly using the tab, shifttab, arrows, alt-down arrow,
+              spacebar, and enter keys? </p>
+          </div>
+          <div class="container">
+            <div class="section-instructions-header">Instructions</div>
+            <p class="py-2 section-instructions-content">With NVDA/JAWS turned OFF, start at your home page/state. Set aside your mouse and do the
+              following:
+              <!-- <ul>
+                <li>Navigate to and through each of your test pages (tab, shift-tab, arrow, enter, and spacebar
+                  should provide a lot of functionality)</li>
+                <li>Complete and submit a form</li>
+                <li>Alt+Down Arrow opens drop down form fields</li>
+                <li>Navigate through a table if available</li>
+                <li>Use any interactive components (maps, calculators, etc.) </li>
+              </ul> -->
+            </p>
+            <ul>
+              <li>Navigate to and through each of your test pages (tab, shift-tab, arrow, enter, and spacebar
+                should provide a lot of functionality)</li>
+              <li>Complete and submit a form</li>
+              <li>Alt+Down Arrow opens drop down form fields</li>
+              <li>Navigate through a table if available</li>
+              <li>Use any interactive components (maps, calculators, etc.) </li>
+            </ul>
+            <div>Repeat this process with NVDA/JAWS turned ON. </div>
+            <div><strong>Note:</strong> When starting your screen reader you will need to close and reopen your browser. </div>
+          </div>
+        </div>
+        <div class="container py-2">
+          <div class="container question-container">
+            <div class="section-header">Accessibility Score</div>
+            <small class="form-text text-muted">Select appropriate score with 1 being the lowest</small>
+            <div class=" p-2">
+              <div class="d-flex justify-content-start align-items-center">
+                <mat-checkbox class="px-2"><strong> 1) </strong></mat-checkbox>
+                <label>Navigation between and within pages
+                  without the mouse is not possible</label>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <mat-checkbox class="px-2"><strong> 3 </strong></mat-checkbox>
+                <label>Navigation with the keyboard
+                  between pages and to key areas
+                  within pages is possible but some
+                  areas can not be reached or when
+                  the focus is moved off to a secondary
+                  window, it can not be moved back
+                  using the keyboard</label>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <mat-checkbox class="px-2"><strong> 5 </strong></mat-checkbox>
+                <label>Navigation with the keyboard
+                  between and within all pages is
+                  possible, including to and back from
+                  secondary windows. </label>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <mat-checkbox class="px-2"><strong> Does not apply </strong></mat-checkbox>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </mat-form-field> -->
+      </div>
+    </form>
+    <div class="d-flex justify-content-between align-items-center button-container">
+      <!-- <button (click)="onSubmit(stepper, 'basic-info')" mat-button>Next</button> -->
+      <button mat-button matStepperPrevious>Previous</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>

@@ -7,66 +7,121 @@
             <h1><i _ngcontent-rxy-c112="" class="fa-tachometer-alt fas"></i> Accessibility Workbench</h1>
             <h4><strong>Hold your applications accountable.</strong></h4>
           </div>
-
           <div class="h-100">
-            <!-- <h3>Has this application been tested using the 508 compliance tool before?</h3> -->
-            <!-- <mat-tab-group mat-align-tabs="start">
-              <mat-tab label="Compliance Dashboard"> -->
-            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
-
             <div class="row h-100">
               <div class="col-2 h-100">
                 <div class="d-flex justify-content-between align-items center header-text p-3">
                   <h5>Application Boards</h5>
-                  <button class="new-app-button d-flex justify-content-center align-items-center" data-toggle="modal" data-target=".bd-example-modal-lg"><i
-                      class="fas fa-plus"></i></button>
+                  <button class="new-app-button d-flex justify-content-center align-items-center"
+                    data-target=".bd-example-modal-lg" data-toggle="modal" ><i class="fas fa-plus"></i></button>
                 </div>
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                    aria-controls="v-pills-home" aria-selected="true">ASAP</a>
-                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                    aria-controls="v-pills-profile" aria-selected="false">Trophies</a>
-                  <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-                    aria-controls="v-pills-messages" aria-selected="false">Security Enlightenment</a>
-                  <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
-                    aria-controls="v-pills-settings" aria-selected="false">TRAVEL</a>
+                  <a *ngFor="let app of apps" [ngClass]="{'active': app.active}" class="nav-link"
+                    (click)='setActive(app)' id="v-pills-home-tab" data-toggle="pill" href="#{{app.workbench}}"
+                    role="tab" aria-controls="v-pills-home" aria-selected="true">{{app.name}}</a>
                 </div>
               </div>
-              <div class="col-10 h-100 i-need-sum-color">
-                <div class="tab-content" id="v-pills-tabContent">
-                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                    aria-labelledby="v-pills-home-tab">
-                    <div class="w-100 h-100 d-flex justify-content-center align-items-start p-5">
-                      <div class="it-looks-empty p-5">
-                        <div class="w-100 h-100 d-flex justify-content-center p-5">
-                          <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/undraw_void_3ggu.svg">
+              <div class="col-10 h-100 p-2 i-need-sum-color">
+                <div id="v-pills-tabContent" class="w-100">
+                  <div *ngFor="let app of apps" class="tab-content">
+                    <div [ngClass]="{'show active appear': app.active}" class="tab-pane fade" id="{{app.workbench}}"
+                      role="tabpanel" aria-labelledby="v-pills-home-tab">
+                      <ng-container *ngIf="app.workflowCount > 0; else emptyWorkflows">
+                        <div class="d-flex justify-content-between align-items-center w-100 p-2 app-workbench-header">
+                          <label>{{app.name}} Accessiblity Board</label>
+                          <button class="add-workflow-button">Add workflow</button>
                         </div>
-                        <div class="nav-header">This application does not have a workflow yet...</div>
-                        <button class="score-sheet-button">
-                          <i class="fas fa-plus p-1"></i>
-                          Add a workflow to be tested
-                        </button>
-                      </div>
+                        <mat-tab-group class="p-3 m-2 tabs-container">
+                          <mat-tab label="Testing">
+                            <div class="progress-container p-3">
+                              <div class="d-flex justify-content-between align-items-center progress-header-container">
+                                <label class="progress-title"><i class="fas fa-clipboard-list"></i> To Do</label>
+                                <label class="progress-count">1 workflows</label>
+                              </div>
+                              <div class="p-3">
+                                <div class="p-2 w-25 workflow-card">
+                                  <div class="w-100 d-flex justify-content-between align-items-center">
+                                    <label class="workflow-card-title">Trophies Workflow</label><small>v.
+                                      1.000.0001</small>
+                                  </div>
+                                  <div class="w-100 p-1">
+                                    <div class="d-flex justify-content-between">
+                                      <small class="form-text text-muted">Progress</small>
+                                      <small class="form-text text-muted">0 of 42</small>
+                                    </div>
+                                    <div class="progress-container">
+                                      <!-- <div class="progress-container-complete"></div> -->
+                                    </div>
+                                  </div>
+                                  <div class="row w-100">
+                                    <div class="p-1 w-100">
+                                      <small class="form-text text-muted">Accessibility Status</small>
+                                      <div class="row">
+                                        <div class="col-4 p-1 text-center">
+                                          <div class="error-status"> 0 </div>
+                                          <small class="form-text text-muted">Critical</small>
+                                        </div>
+                                        <div class="col-4 p-1 text-center">
+                                          <div class="error-status">
+                                            0
+                                          </div>
+                                          <small class="form-text text-muted">Improve</small>
+                                        </div>
+                                        <div class="col-4 p-1 text-center">
+                                          <div class="error-status">
+                                            0
+                                          </div>
+                                          <small class="form-text text-muted">Passed</small>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="w-100 p-1 d-flex justify-content-center align-items-center">
+                                    <button data-toggle="modal" data-target=".example-modal-lg">Start Testing</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="progress-container p-3">
+                              <div class="d-flex justify-content-between align-items-center progress-header-container">
+                                <label class="progress-title"><i class="fas fa-spinner"></i> In Progress</label>
+                                <label class="progress-count">0 workflows</label>
+                              </div>
+                            </div>
+                            <div class="progress-container p-3">
+                              <div class="d-flex justify-content-between align-items-center progress-header-container">
+                                <label class="progress-title"><i class="far fa-check-circle"></i> Done</label>
+                                <label class="progress-count">0 workflows</label>
+                              </div>
+                            </div>
+                          </mat-tab>
+                          <mat-tab label="Metrics"> Content 2 </mat-tab>
+                        </mat-tab-group>
+                      </ng-container>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                    ...</div>
-                  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                    aria-labelledby="v-pills-messages-tab">...</div>
-                  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                    aria-labelledby="v-pills-settings-tab">...</div>
                 </div>
               </div>
             </div>
-            <!-- </mat-tab>
-              <mat-tab label="Yes, I need view my applications.">Previously Tested Application</mat-tab>
-            </mat-tab-group> -->
-          </div>
-          <div class="container">
-            <!-- <app-accessibility-compliance-assessment></app-accessibility-compliance-assessment> -->
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+<ng-template #emptyWorkflows>
+  <div class="w-100 h-100 d-flex justify-content-center align-items-start p-5">
+    <div class="it-looks-empty p-5">
+      <div class="w-100 h-100 d-flex justify-content-center p-5">
+        <img src="https://general-assets-landon.s3.amazonaws.com/work-assets/undraw_no_data_qbuo.svg">
+      </div>
+      <div class="nav-header">This application does not have a workflow to test...</div>
+      <button class="score-sheet-button">
+        <i class="fas fa-plus p-1"></i>
+        Add a workflow to be tested
+      </button>
+    </div>
+  </div>
+</ng-template>

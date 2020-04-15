@@ -12,18 +12,6 @@
       <button (click)="onSubmit(stepper, 0)" mat-button>Next</button>
     </div>
   </mat-step>
-  <!-- <mat-step [stepControl]="workFlowInfoGroup">
-    <ng-template matStepLabel>Add workflows and pages</ng-template>
-    <form [formGroup] = "workFlowInfoGroup">
-      <div name="workFlowInfo" class="scroll1 form-content">
-        <app-app-workflows [submittedFromParent] = "submitted" (allowProgression) ="successfulSubmit($event)"></app-app-workflows>
-      </div>
-    </form>
-    <div class="d-flex justify-content-between align-items-center button-container">
-      <button mat-button matStepperPrevious>Back</button>
-      <button (click)="onSubmit(stepper)" mat-button>Next</button>
-    </div>
-  </mat-step> -->
   <mat-step [stepControl]="appTestersInfoGroup">
     <form [formGroup] = "appTestersInfoGroup">
       <div name="testersInfo">
@@ -39,13 +27,10 @@
   </mat-step>
   <mat-step [stepControl]="appReviewInfoGroup">
     <ng-template matStepLabel>Review</ng-template>
-    <!-- <form [formGroup] = "appTestersInfoGroup">
-      <div name="appInfo">
-      </div>
-    </form>
+    <app-app-info-review></app-app-info-review>
     <div class="d-flex justify-content-between align-items-center button-container">
       <button mat-button matStepperPrevious>Back</button>
-      <button (click)="onSubmit(stepper, 'tester-info')" mat-button>Create</button>
-    </div> -->
+      <button (click)="onSubmit(stepper, 2)" mat-button>Create</button>
+    </div>
   </mat-step>
 </mat-vertical-stepper>

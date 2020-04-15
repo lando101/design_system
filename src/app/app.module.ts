@@ -63,6 +63,8 @@ import { AccessibilityComplianceAssessmentComponent } from './components/accessi
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { ValidationServiceService } from './services/validation-service.service';
+import { AppInfoReviewComponent } from './components/app-info-review/app-info-review.component';
+import { AccessibilityTestComponent } from './components/accessibility-test/accessibility-test.component';
 
 
 
@@ -117,8 +119,10 @@ export const firebaseConfig = {
     NewAppAssessmentComponent,
     BasicAppInfoComponent,
     AppWorkflowsComponent,
+    AppInfoReviewComponent,
     // AddTestersComponent,
     UsersTypeAheadComponent,
+    AccessibilityTestComponent,
 
   ],
   exports:[UsersTypeAheadComponent],

@@ -1,0 +1,43 @@
+@import '../../../styles.scss';
+
+
+.app-container{
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  background: $primary-bg-color;
+}
+
+.app-name-title{
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: normal;
+  color: $font-color;
+}
+
+.app-medium-title{
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: normal;
+  color: #525252;
+}
+
+.app-smaller-title{
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: normal;
+  color: #525252;
+}
+
+.small-text{
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-left: 25px !important;
+}
+
+.tester-title{
+  font-weight: 500;
+}
+
+.row{
+  margin: 0px !important;
+}
