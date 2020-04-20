@@ -22,12 +22,16 @@ button{
 }
 .question-content-container{
   margin-bottom: 15px;
-  padding: 3px;
+  padding: 15px;
   border-radius: 11px;
   /* border: 1px solid #e8e8e8; */
+  border: 1px solid #efefef;
   background: white;
     .question-container{
       border-left: 3px solid royalblue;
+      .icon-container{
+        color: #777777;
+      }
     }
 }
 
