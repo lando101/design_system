@@ -15,7 +15,7 @@
             <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
             <div class="d-flex justify-content-start align-items-end">
               <mat-form-field class="example-form-field" appearance="standard">
-                <mat-label>Button text</mat-label>
+                <mat-label>Type button text</mat-label>
                 <input matInput type="text" [(ngModel)]="buttonLabel">
                 <button mat-button class="reset-button" *ngIf="buttonLabel != 'Lorem Ipsum'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonLabel='Lorem Ipsum'">
                   <!-- <mat-icon>close</mat-icon> -->
@@ -29,9 +29,10 @@
                     <mat-option value="option">Option</mat-option>
                   </mat-select>
                 </mat-form-field>
-                <label class="p-2"> -or- </label>
+                <label class="p-3"> -or- </label>
                 <mat-form-field class="example-form-field" [floatLabel]="floatLabelControl.value" appearance="standard">
-                  <mat-label>Enter Fontawesome class</mat-label>
+                  <mat-label>Type Fontawesome class</mat-label>
+                  <i mat-button class="{{buttonIcon}}" *ngIf="buttonIcon != ''" matSuffix mat-icon-button aria-label="Clear"></i>
                   <input matInput type="text" placeholder="ex. fas fa-info" [(ngModel)]="buttonIcon">
                   <button mat-button class="reset-button" *ngIf="buttonIcon != 'fas fa-wrench'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonIcon='fas fa-wrench'">
                     <!-- <mat-icon>close</mat-icon> -->
@@ -44,33 +45,33 @@
             <table class="table">
               <thead>
                 <tr class="d-flex">
-                  <th scope="col" class="col-md-3">Type Name</th>
-                  <th scope="col" class="col-md-6">Purpose</th>
+                  <th scope="col" class="col-md-2">Type Name</th>
+                  <th scope="col" class="col-md-7">Purpose</th>
                   <th scope="col" class="col-md-3">Example</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="d-flex">
-                  <td class="col-md-3"><strong>Strong</strong></td>
-                  <td class="col-md-6">Primary action button. Used to drawl users attention.</td>
+                  <td class="col-md-2"><strong>Strong</strong></td>
+                  <td class="col-md-7">Primary action button. Used to draw users attention.</td>
                   <td class="col-md-3"><button class="primary-button">{{buttonLabel}}</button></td>
                 </tr>
                 <tr class="d-flex">
-                  <td class="col-md-3"><strong>Strong with Icon</strong></td>
-                  <td class="col-md-6">Primary action button. Used to drawl users attention. Includes icon for additional information. Should be used sparingly.</td>
+                  <td class="col-md-2"><strong>Strong with Icon</strong></td>
+                  <td class="col-md-7">Primary action button. Used to draw users attention. Includes icon for additional information. Should be used sparingly.</td>
                   <td class="col-md-3"><button class="primary-button">
                     <i class="{{buttonIcon}}"></i>
                     {{buttonLabel}}
                   </button></td>
                 </tr>
                 <tr class="d-flex">
-                  <td class="col-md-3"><strong>Standard</strong></td>
-                  <td class="col-md-6">Secondary action button. Typically is not a critical action to complete flow of case.</td>
+                  <td class="col-md-2"><strong>Standard</strong></td>
+                  <td class="col-md-7">Secondary action button. Typically is not a critical action to complete flow of case.</td>
                   <td class="col-md-3"><button class="secondary-button">{{buttonLabel}}</button></td>
                 </tr>
                 <tr class="d-flex">
-                  <td class="col-md-3"><strong>Standard with Icon</strong></td>
-                  <td class="col-md-6">Secondary action button. Typically is not a critical action to complete flow of case. Includes icon for additional information. Should be used sparingly.</td>
+                  <td class="col-md-2"><strong>Standard with Icon</strong></td>
+                  <td class="col-md-7">Secondary action button. Typically is not a critical action to complete flow of case. Includes icon for additional information. Should be used sparingly.</td>
                   <td class="col-md-3">
                     <button class="secondary-button">
                     <i class="{{buttonIcon}}"></i>
@@ -79,6 +80,39 @@
                 </tr>
               </tbody>
             </table>
+        </div>
+        <div class="pt-3">
+          <h3>Guidance and Usage</h3>
+            <section class="p-2">
+              <h5 class="font-weight-light">When to use a button</h5>
+              <p><b>Important interactions.</b> Use buttons for the most important actions you want users to take on your site, such as <code>Download</code>, <code>Sign up</code> or <code>Log out</code>.</p>
+            </section>
+            <section class="p-2">
+              <h5 class="font-weight-light">When to consider something else</h5>
+              <p><strong>Linking between a site’s pages.</strong> Use regular links instead.</p>
+              <p><strong>If the action is less popular or less important.</strong> Less popular or less important actions may be visually styled as links.</p>
+            </section>
+            <section class="p-2">
+              <h5 class="font-weight-light">Usability guidance</h5>
+              <p><strong>Use standard buttons for actions that go a next step.</strong> Use regular links instead.</p>
+              <p><strong>Use outline buttons for actions that happen on the current page.</strong></p>
+              <p><strong>Give an important action a distinctive style.</strong> Style the button most users should click in a way that distinguishes it from other buttons on the page. Try using the <code>primary-button</code> variant or the most visually distinct color variant.</p>
+              <p><strong>Make sure buttons look clickable.</strong> Use color variations to distinguish static, hover, and active states.</p>
+              <p><strong>Avoid using too many buttons on a page.</strong></p>
+              <p><strong>Use sentence case for button labels.</strong></p>
+              <p><strong>Keep button text short.</strong> Button text should be as short as possible with action words that clearly explain what will happen when the button is selected
+                (for example, <code>Download</code>, <code>View</code> or <code>Sign up</code>).</p>
+              <p><strong>Lead with a verb.</strong> Make the first word of the button’s text a verb. For example, instead of <code>Complaint filing</code> label the button <code>File a complaint.</code></p>
+            </section>
+            <section class="p-2">
+              <h5 class="font-weight-light">Accessibility</h5>
+              <p><b>Buttons should display a visible focus state when users tab to them.</b> </p>
+              <p><b>Use standard markup.</b> Avoid using <code>&lt;div&gt;</code> or <code>&lt;img&gt;</code> tags to create buttons. Screen readers don't automatically know either is a usable button </p>
+              <p><b>Screen readers handle buttons and links differently.</b> When styling links to look like buttons, remember that screen readers handle links slightly differently than they do buttons. Pressing the Space key triggers a button,
+                but pressing the Enter key triggers a link.</p>
+
+
+            </section>
         </div>
       </div>
     </div>
