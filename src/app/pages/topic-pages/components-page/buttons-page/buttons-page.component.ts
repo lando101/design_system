@@ -1,6 +1,6 @@
 import { Component, OnInit, DoCheck, OnChanges, NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, FormControl } from "@angular/forms";
 
 
 @Component({
@@ -11,6 +11,8 @@ import { FormsModule } from "@angular/forms";
 export class ButtonsPageComponent implements DoCheck {
 
   buttonLabel = 'Lorem Ipsum';
+  buttonIcon = 'fas fa-wrench'
+  floatLabelControl = new FormControl('always');
 
   constructor() { }
 

@@ -13,42 +13,69 @@
           <h3>Types</h3>
             <p>There are four buttons that can be used in the UI. Each are listed below.</p>
             <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
-            <mat-form-field class="example-form-field">
-              <mat-label>Button text</mat-label>
-              <input matInput type="text" [(ngModel)]="buttonLabel">
-              <button mat-button *ngIf="buttonLabel != 'Lorem Ipsum'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonLabel='Lorem Ipsum'">
-                <!-- <mat-icon>close</mat-icon> -->
-                Reset
-              </button>
-            </mat-form-field>
+            <div class="d-flex justify-content-start align-items-end">
+              <mat-form-field class="example-form-field" appearance="standard">
+                <mat-label>Button text</mat-label>
+                <input matInput type="text" [(ngModel)]="buttonLabel">
+                <button mat-button class="reset-button" *ngIf="buttonLabel != 'Lorem Ipsum'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonLabel='Lorem Ipsum'">
+                  <!-- <mat-icon>close</mat-icon> -->
+                  Reset
+                </button>
+              </mat-form-field>
+              <div class="d-flex justify-content-start align-items-center pl-5">
+                <mat-form-field appearance="standard" [floatLabel]="floatLabelControl.value">
+                  <mat-label>Select Fontawesome icon</mat-label>
+                  <mat-select placeholder="fas fa-wrench">
+                    <mat-option value="option">Option</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <label class="p-2"> -or- </label>
+                <mat-form-field class="example-form-field" [floatLabel]="floatLabelControl.value" appearance="standard">
+                  <mat-label>Enter Fontawesome class</mat-label>
+                  <input matInput type="text" placeholder="ex. fas fa-info" [(ngModel)]="buttonIcon">
+                  <button mat-button class="reset-button" *ngIf="buttonIcon != 'fas fa-wrench'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonIcon='fas fa-wrench'">
+                    <!-- <mat-icon>close</mat-icon> -->
+                    Reset
+                  </button>
+                </mat-form-field>
+              </div>
+
+            </div>
             <table class="table">
               <thead>
                 <tr class="d-flex">
-                  <th scope="col" class="col-md-3">Type</th>
-                  <th scope="col" class="col-md-5">Purpose</th>
-                  <th scope="col" class="col-md-4">Example</th>
+                  <th scope="col" class="col-md-3">Type Name</th>
+                  <th scope="col" class="col-md-6">Purpose</th>
+                  <th scope="col" class="col-md-3">Example</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="d-flex">
                   <td class="col-md-3"><strong>Strong</strong></td>
-                  <td class="col-md-5">Primary action button. Used to drawl users attention.</td>
-                  <td class="col-md-4"><button>{{buttonLabel}}</button></td>
+                  <td class="col-md-6">Primary action button. Used to drawl users attention.</td>
+                  <td class="col-md-3"><button class="primary-button">{{buttonLabel}}</button></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col-md-3"><strong>Strong with Icon</strong></td>
-                  <td class="col-md-5">Primary action button. Used to drawl users attention. Includes icon for additional information. Should be used sparingly.</td>
-                  <td class="col-md-4"><button>{{buttonLabel}}</button></td>
+                  <td class="col-md-6">Primary action button. Used to drawl users attention. Includes icon for additional information. Should be used sparingly.</td>
+                  <td class="col-md-3"><button class="primary-button">
+                    <i class="{{buttonIcon}}"></i>
+                    {{buttonLabel}}
+                  </button></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col-md-3"><strong>Standard</strong></td>
-                  <td class="col-md-5">Secondary action button. Typically is not a critical action to complete flow of case.</td>
-                  <td class="col-md-4"><button>{{buttonLabel}}</button></td>
+                  <td class="col-md-6">Secondary action button. Typically is not a critical action to complete flow of case.</td>
+                  <td class="col-md-3"><button class="secondary-button">{{buttonLabel}}</button></td>
                 </tr>
                 <tr class="d-flex">
                   <td class="col-md-3"><strong>Standard with Icon</strong></td>
-                  <td class="col-md-5">Secondary action button. Typically is not a critical action to complete flow of case. Includes icon for additional information. Should be used sparingly.</td>
-                  <td class="col-md-4"><button>{{buttonLabel}}</button></td>
+                  <td class="col-md-6">Secondary action button. Typically is not a critical action to complete flow of case. Includes icon for additional information. Should be used sparingly.</td>
+                  <td class="col-md-3">
+                    <button class="secondary-button">
+                    <i class="{{buttonIcon}}"></i>
+                    {{buttonLabel}}
+                  </button></td>
                 </tr>
               </tbody>
             </table>

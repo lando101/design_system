@@ -14,6 +14,8 @@ import { FormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@a
 // import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core/ripple';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 // import {FooterComponent} from '../components/footer/footer.component';
@@ -31,7 +33,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   FormsModule,
   ReactiveFormsModule,
   MatChipsModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatSelectModule
 
 
 
@@ -47,7 +50,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   MatIconModule,
   ReactiveFormsModule,
   MatChipsModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatSelectModule
 
   // FooterComponent
  ],

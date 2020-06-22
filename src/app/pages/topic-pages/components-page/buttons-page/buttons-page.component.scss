@@ -1,2 +1,15 @@
 @import '../../../../../styles.scss';
 
+
+.primary-button{
+  @include primary-button();
+}
+
+.secondary-button{
+  @include secondary-button();
+}
+
+i{
+  margin-right: 5px;
+  font-size: .85rem;
+}
