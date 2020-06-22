@@ -45,7 +45,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
   MatStepperModule,
   MatMenuModule,
   MatIconModule,
-  FormsModule,
   ReactiveFormsModule,
   MatChipsModule,
   MatCheckboxModule

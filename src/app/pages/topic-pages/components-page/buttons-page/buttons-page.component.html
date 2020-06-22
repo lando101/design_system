@@ -5,6 +5,54 @@
       <div class="page-reveal-animation">
         <h1> Buttons </h1>
         <h4>Use buttons to draw attention to important actions. Buttons allow users to take an action.</h4>
+        <!-- <div class="container">
+          <h3>Usage</h3>
+            <p>Buttons are used to trigger an action within a page. Typically they do not cause navigation to occur. Examples of button usage are "Submit", "Next", "Cancel".</p>
+        </div> -->
+        <div>
+          <h3>Types</h3>
+            <p>There are four buttons that can be used in the UI. Each are listed below.</p>
+            <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
+            <mat-form-field class="example-form-field">
+              <mat-label>Button text</mat-label>
+              <input matInput type="text" [(ngModel)]="buttonLabel">
+              <button mat-button *ngIf="buttonLabel != 'Lorem Ipsum'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonLabel='Lorem Ipsum'">
+                <!-- <mat-icon>close</mat-icon> -->
+                Reset
+              </button>
+            </mat-form-field>
+            <table class="table">
+              <thead>
+                <tr class="d-flex">
+                  <th scope="col" class="col-md-3">Type</th>
+                  <th scope="col" class="col-md-5">Purpose</th>
+                  <th scope="col" class="col-md-4">Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="d-flex">
+                  <td class="col-md-3"><strong>Strong</strong></td>
+                  <td class="col-md-5">Primary action button. Used to drawl users attention.</td>
+                  <td class="col-md-4"><button>{{buttonLabel}}</button></td>
+                </tr>
+                <tr class="d-flex">
+                  <td class="col-md-3"><strong>Strong with Icon</strong></td>
+                  <td class="col-md-5">Primary action button. Used to drawl users attention. Includes icon for additional information. Should be used sparingly.</td>
+                  <td class="col-md-4"><button>{{buttonLabel}}</button></td>
+                </tr>
+                <tr class="d-flex">
+                  <td class="col-md-3"><strong>Standard</strong></td>
+                  <td class="col-md-5">Secondary action button. Typically is not a critical action to complete flow of case.</td>
+                  <td class="col-md-4"><button>{{buttonLabel}}</button></td>
+                </tr>
+                <tr class="d-flex">
+                  <td class="col-md-3"><strong>Standard with Icon</strong></td>
+                  <td class="col-md-5">Secondary action button. Typically is not a critical action to complete flow of case. Includes icon for additional information. Should be used sparingly.</td>
+                  <td class="col-md-4"><button>{{buttonLabel}}</button></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
       </div>
     </div>
   </div>

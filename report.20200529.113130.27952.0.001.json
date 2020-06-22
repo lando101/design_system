@@ -1,0 +1,434 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200529.113130.27952.0.001.json",
+    "dumpEventTime": "2020-05-29T11:31:30Z",
+    "dumpEventTimeStamp": "1590766290699",
+    "processId": 27952,
+    "cwd": "C:\\Users\\lando\\Documents\\Code\\style-guide-app",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\lando\\AppData\\Roaming\\npm/node_modules/@angular/cli/bin/ng",
+      "serve"
+    ],
+    "nodejsVersion": "v12.16.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.1",
+      "v8": "7.8.279.23-node.31",
+      "uv": "1.34.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18363",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 13312234,
+        "nice": 0,
+        "sys": 16005140,
+        "idle": 161756515,
+        "irq": 8389421
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 18462296,
+        "nice": 0,
+        "sys": 4820578,
+        "idle": 167790734,
+        "irq": 236281
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 19115234,
+        "nice": 0,
+        "sys": 3853343,
+        "idle": 168105046,
+        "irq": 118109
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 17698078,
+        "nice": 0,
+        "sys": 3828234,
+        "idle": 169547312,
+        "irq": 116562
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 12256593,
+        "nice": 0,
+        "sys": 3281000,
+        "idle": 175536015,
+        "irq": 104078
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 15211015,
+        "nice": 0,
+        "sys": 3241687,
+        "idle": 172620921,
+        "irq": 106625
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 11421703,
+        "nice": 0,
+        "sys": 3140156,
+        "idle": 176511750,
+        "irq": 93703
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz",
+        "speed": 3000,
+        "user": 14437843,
+        "nice": 0,
+        "sys": 5071656,
+        "idle": 171564140,
+        "irq": 97687
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "84:a9:3e:7d:31:79",
+        "address": "2601:5c4:c500:75f0:86a9:3eff:fe7d:3179",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "84:a9:3e:7d:31:79",
+        "address": "2601:5c4:c500:75f0:e4e2:67cd:2ca:ddfd",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "84:a9:3e:7d:31:79",
+        "address": "2601:5c4:c500:75f0:f867:7ebf:b292:943",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "84:a9:3e:7d:31:79",
+        "address": "fe80::e4e2:67cd:2ca:ddfd",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 12
+      },
+      {
+        "name": "Ethernet",
+        "internal": false,
+        "mac": "84:a9:3e:7d:31:79",
+        "address": "192.168.0.5",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "Landon"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff7bfd919f9",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff7bfd95e1c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28316"
+    },
+    {
+      "pc": "0x00007ff7bfd94dd8",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+24152"
+    },
+    {
+      "pc": "0x00007ff7bfe934cb",
+      "symbol": "v8::base::CPU::has_sse+38363"
+    },
+    {
+      "pc": "0x00007ff7c06a9f4e",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff7c0692021",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff7c055e57c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff7c055a289",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2713"
+    },
+    {
+      "pc": "0x00007ff7c0581e1f",
+      "symbol": "v8::internal::Factory::NewRawTwoByteString+95"
+    },
+    {
+      "pc": "0x00007ff7c03a384c",
+      "symbol": "v8::internal::String::SlowFlatten+492"
+    },
+    {
+      "pc": "0x00007ff7c026b23f",
+      "symbol": "unibrow::Utf8::EncodeOneByte+687"
+    },
+    {
+      "pc": "0x00007ff7c02a525f",
+      "symbol": "v8::internal::StubCache::value_reference+7471"
+    },
+    {
+      "pc": "0x00007ff7c0af4ddd",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+546637"
+    },
+    {
+      "pc": "0x00000170bab4a507",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2152898560,
+    "totalCommittedMemory": 2152898560,
+    "usedMemory": 2125782920,
+    "availableMemory": 47011648,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047456,
+        "used": 0,
+        "available": 1047456
+      },
+      "old_space": {
+        "memorySize": 327565312,
+        "committedMemory": 327565312,
+        "capacity": 312643144,
+        "used": 312643144,
+        "available": 0
+      },
+      "code_space": {
+        "memorySize": 3575808,
+        "committedMemory": 3575808,
+        "capacity": 3143680,
+        "used": 3143680,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 12587008,
+        "committedMemory": 12587008,
+        "capacity": 3253200,
+        "used": 3253200,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 1807237120,
+        "committedMemory": 1807237120,
+        "capacity": 1806165800,
+        "used": 1806165800,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 544288,
+        "used": 544288,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047456,
+        "used": 0,
+        "available": 1047456
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 286.312,
+    "kernelCpuSeconds": 16.281,
+    "cpuConsumptionPercent": 15.5415,
+    "maxRss": 2624839680,
+    "pageFaults": {
+      "IORequired": 5937078,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 16352,
+      "writes": 21
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\lando\\AppData\\Roaming",
+    "BROWSERSLIST_IGNORE_OLD_DATA": "1",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "LANDON",
+    "ComSpec": "C:\\windows\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\lando",
+    "LOCALAPPDATA": "C:\\Users\\lando\\AppData\\Local",
+    "LOGONSERVER": "\\\\LANDON",
+    "NUMBER_OF_PROCESSORS": "8",
+    "OneDrive": "C:\\Users\\lando\\Federal Bureau of Investigation",
+    "OneDriveCommercial": "C:\\Users\\lando\\Federal Bureau of Investigation",
+    "OneDriveConsumer": "C:\\Users\\lando\\OneDrive",
+    "OnlineServices": "Online Services",
+    "OS": "Windows_NT",
+    "Path": "C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;c:\\Program Files (x86)\\HP\\HP Performance Advisor;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Amazon\\AWSCLIV2\\;C:\\Users\\lando\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\lando\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\lando\\AppData\\Roaming\\npm",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
+    "platformcode": "5X",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e0d",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Users\\lando\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "RegionCode": "NA",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\windows",
+    "TEMP": "C:\\Users\\lando\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\lando\\AppData\\Local\\Temp",
+    "USERDOMAIN": "LANDON",
+    "USERDOMAIN_ROAMINGPROFILE": "LANDON",
+    "USERNAME": "lando",
+    "USERPROFILE": "C:\\Users\\lando",
+    "WEBPACK_DEV_SERVER": "true",
+    "windir": "C:\\windows",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.45.1",
+    "LANG": "en_US.UTF-8",
+    "COLORTERM": "truecolor"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\windows\\SYSTEM32\\ntdll.dll",
+    "C:\\windows\\System32\\KERNEL32.DLL",
+    "C:\\windows\\System32\\KERNELBASE.dll",
+    "C:\\windows\\System32\\WS2_32.dll",
+    "C:\\windows\\System32\\RPCRT4.dll",
+    "C:\\windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\windows\\System32\\PSAPI.DLL",
+    "C:\\windows\\System32\\ucrtbase.dll",
+    "C:\\windows\\System32\\ADVAPI32.dll",
+    "C:\\windows\\System32\\msvcrt.dll",
+    "C:\\windows\\System32\\sechost.dll",
+    "C:\\windows\\System32\\USER32.dll",
+    "C:\\windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\windows\\System32\\win32u.dll",
+    "C:\\windows\\SYSTEM32\\USERENV.dll",
+    "C:\\windows\\System32\\GDI32.dll",
+    "C:\\windows\\System32\\profapi.dll",
+    "C:\\windows\\System32\\gdi32full.dll",
+    "C:\\windows\\System32\\msvcp_win.dll",
+    "C:\\windows\\System32\\CRYPT32.dll",
+    "C:\\windows\\System32\\MSASN1.dll",
+    "C:\\windows\\System32\\bcrypt.dll",
+    "C:\\windows\\SYSTEM32\\WINMM.dll",
+    "C:\\windows\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\windows\\System32\\cfgmgr32.dll",
+    "C:\\windows\\System32\\bcryptPrimitives.dll",
+    "C:\\windows\\System32\\IMM32.DLL",
+    "C:\\windows\\System32\\powrprof.dll",
+    "C:\\windows\\System32\\UMPDC.dll",
+    "C:\\windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\windows\\system32\\uxtheme.dll",
+    "C:\\windows\\System32\\combase.dll",
+    "C:\\windows\\system32\\mswsock.dll",
+    "C:\\windows\\System32\\kernel.appcore.dll",
+    "C:\\windows\\System32\\NSI.dll",
+    "C:\\windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\windows\\System32\\fwpuclnt.dll",
+    "C:\\windows\\system32\\napinsp.dll",
+    "C:\\windows\\system32\\pnrpnsp.dll",
+    "C:\\windows\\System32\\winrnr.dll",
+    "C:\\windows\\system32\\NLAapi.dll",
+    "C:\\windows\\system32\\wshbth.dll"
+  ]
+}

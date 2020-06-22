@@ -65,6 +65,7 @@ import { FormsModule } from '@angular/forms';
 import { ValidationServiceService } from './services/validation-service.service';
 import { AppInfoReviewComponent } from './components/app-info-review/app-info-review.component';
 import { AccessibilityTestComponent } from './components/accessibility-test/accessibility-test.component';
+import { ButtonsPageComponent } from './pages/topic-pages/components-page/buttons-page/buttons-page.component';
 
 
 
@@ -123,6 +124,7 @@ export const firebaseConfig = {
     // AddTestersComponent,
     UsersTypeAheadComponent,
     AccessibilityTestComponent,
+    ButtonsPageComponent
 
   ],
   exports:[UsersTypeAheadComponent],
@@ -141,7 +143,8 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     LayoutsModule,
     NgbModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService],
   bootstrap: [AppComponent, UsersTypeAheadComponent],
