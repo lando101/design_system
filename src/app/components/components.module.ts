@@ -10,6 +10,7 @@ import { BasicAppInfoComponent } from './basic-app-info/basic-app-info.component
 import { AppInfoReviewComponent } from './app-info-review/app-info-review.component';
 import { AccessibilityTestComponent } from './accessibility-test/accessibility-test.component';
 import { ScrollTopComponent } from './scroll-top/scroll-top.component';
+// import { TableExampleComponent } from './table-example/table-example.component';
 // import { NewAppAssessmentComponent } from './new-app-assessment/new-app-assessment.component';
 // import { FooterComponent } from './footer/footer.component';
 
@@ -27,6 +28,7 @@ import { ScrollTopComponent } from './scroll-top/scroll-top.component';
       HeaderComponent,
       SideNavigationComponent,
       DesignOverviewComponent,
+      // TableExampleComponent,
       // ScrollTopComponent,
       // AddTestersComponent,
       // BasicAppInfoComponent,

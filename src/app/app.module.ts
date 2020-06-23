@@ -67,6 +67,13 @@ import { AppInfoReviewComponent } from './components/app-info-review/app-info-re
 import { AccessibilityTestComponent } from './components/accessibility-test/accessibility-test.component';
 import { ButtonsPageComponent } from './pages/topic-pages/components-page/buttons-page/buttons-page.component';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
+import { EditableComponent } from './editable/editable/editable.component';
+import { ViewModeDirective } from './editable/view-mode.directive';
+import { EditModeDirective } from './editable/edit-mode.directive';
+import { EditableOnEnterDirective } from './editable/edit-on-enter.directive';
+import { TableExampleComponent } from './components/table-example/table-example.component';
+import { FocusableDirective } from './directives/focusable.directive';
+import { TableDataService } from './services/table-data.service';
 
 
 
@@ -126,8 +133,12 @@ export const firebaseConfig = {
     UsersTypeAheadComponent,
     AccessibilityTestComponent,
     ButtonsPageComponent,
-    ScrollTopComponent
-
+    ScrollTopComponent,
+    EditableComponent,
+    EditModeDirective,
+    EditableOnEnterDirective,
+    TableExampleComponent,
+    FocusableDirective
   ],
   exports:[UsersTypeAheadComponent],
   imports: [
@@ -148,7 +159,8 @@ export const firebaseConfig = {
     Ng2SearchPipeModule,
     FormsModule
   ],
-  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService],
+  entryComponents: [TableExampleComponent],
+  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService],
   bootstrap: [AppComponent, UsersTypeAheadComponent],
   // entryComponents: [NewAppAssessmentComponent]
 })

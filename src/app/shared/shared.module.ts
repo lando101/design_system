@@ -15,6 +15,8 @@ import { FormsModule, FormBuilder, FormGroup, Validators, FormControl } from '@a
 import {MatChipsModule} from '@angular/material/chips';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 
@@ -34,7 +36,8 @@ import {MatSelectModule} from '@angular/material/select';
   ReactiveFormsModule,
   MatChipsModule,
   MatCheckboxModule,
-  MatSelectModule
+  MatSelectModule,
+  MatTableModule
 
 
 
@@ -51,7 +54,8 @@ import {MatSelectModule} from '@angular/material/select';
   ReactiveFormsModule,
   MatChipsModule,
   MatCheckboxModule,
-  MatSelectModule
+  MatSelectModule,
+  MatTableModule
 
   // FooterComponent
  ],
