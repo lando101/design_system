@@ -18,9 +18,10 @@ h4{
   font-size: 1.25rem;
   font-weight: 300;
   padding: 0px 3px 20px 3px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   color: $font-color-light;
-  border-bottom: 1px solid $border-color-darker;
+  // border-bottom: 1px solid $border-color-darker;
+  border-bottom: none;
 }
 
 h3{
@@ -75,7 +76,13 @@ form{
 
 .type-container{
   padding-left: 20px;
-  border-left: 3px solid $primary-color;
+  border-left: none;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  background: $tab-content-bg-color;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 20px;
 }
 .guidance-container{
     padding-left: 20px;
@@ -133,7 +140,8 @@ form{
         // height: 100%;
         // margin: 0px 0px 55px 0px;
         padding: 20px 5%;
-        background: $tab-content-bg-color;
+        padding-bottom: 170px;
+        background: $primary-bg-color;
         // overflow-y: auto;
         // box-shadow: 0px 0px 8px 3px $light-shadow;
       }
@@ -312,8 +320,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .scroll-top-button{
-  @include primary-button();
+  // @include primary-button();
+  background: transparent;
+  border: none;
+  color: $primary-color;
   position: fixed;
+  display: grid;
   bottom: 20px;
   right: 20px;
   height: 47px;
@@ -321,14 +333,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-size: 1.2rem;
   text-align: center;
   border-radius: 100px !important;
-  box-shadow: 0px 3px 3px 2px #a2a2a2c7;
   i{
     margin: 0px;
     font-size: 1.2rem;
+    text-shadow: 0px 3px 4px #b9b9b9;
   }
-  &:hover{
-    box-shadow: 0px 3px 7px 4px #a2a2a2c7
+  label{
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: .55rem;
   }
+  // &:hover{
+  //   box-shadow: 0px 3px 7px 4px #a2a2a2c7
+  // }
 }
 
 @-webkit-keyframes square {

@@ -33,10 +33,10 @@
 }
 
 @mixin secondary-button(){
-  background: $primary-bg-color;
+  background: $secondary-button-bg;
   border-radius: 5px;
-  border: 1px solid $primary-color;
-  color: $primary-color;
+  border: 1px solid $secondary-button-color;
+  color: $secondary-button-color;
   padding: 4px 15px;
   font-weight: 500;
   justify-content: center;
@@ -48,7 +48,7 @@
   max-width: 175px !important;
   &:hover{
     transition: .2s ease-in-out !important;
-    background: lighten($primary-bg-color, 7%) !important;
+    background: darken($secondary-button-bg, 7%) !important;
   }
 }
 
