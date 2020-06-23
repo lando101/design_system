@@ -1,6 +1,6 @@
 import 'firebase/firestore';
 import { DataService } from 'src/app/services/data.service';
-import { Component, OnInit, Input, ViewChild} from '@angular/core';
+import { Component, OnInit, Input, ViewChild, HostListener} from '@angular/core';
 import { $ } from 'protractor';
 import { Tabs } from '../../models/tabs/tabs.model';
 import { Routes, RouterModule, Router, RouterOutlet } from '@angular/router';
@@ -17,6 +17,8 @@ export class SideNavigationComponent implements OnInit {
   activeTab: Tabs;
   title: string;
   tabs: Tabs [];
+  windowScrolled: boolean;
+
 
   constructor(private router: Router, private ds: DataService) {
     // Subscribe to the topic and tabs observables

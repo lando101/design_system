@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   @Output() sidebarData: EventEmitter<any[]> = new EventEmitter<any[]>();
   // activeSibebarTabs: any[];
   key: string;
+  windowScrolled: boolean;
   routerLinks: any[] = [
     {id: 1, displayName: 'Home', display: true, href: '/home'},
     {id: 2, displayName: 'Foundation', display: true, href: '/foundation'},
@@ -46,6 +47,7 @@ export class HeaderComponent implements OnInit {
   onResize(event) {
     this.innerWidth = window.innerWidth;
   }
+
   ngOnInit(): void {
     this.onResize(event);
   }

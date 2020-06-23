@@ -1,17 +1,17 @@
 
-<div class="content-container scroll1">
+<div class="content-container scroll1" (scroll)="onScroll($event)">
   <div class="tab-content-outer-container">
     <div class="tab-content-inner-container">
       <div class="page-reveal-animation">
-        <h1> Buttons </h1>
+        <h1>Buttons </h1>
         <h4>Use buttons to draw attention to important actions. Buttons allow users to take an action.</h4>
         <!-- <div class="container">
           <h3>Usage</h3>
             <p>Buttons are used to trigger an action within a page. Typically they do not cause navigation to occur. Examples of button usage are "Submit", "Next", "Cancel".</p>
         </div> -->
-        <div>
-          <h3>Types</h3>
-            <p>There are four buttons that can be used in the UI. Each are listed below.</p>
+        <div class="type-container">
+          <h3 class="mb-0">Types</h3>
+            <p class="font-weight-light">There are four buttons that can be used in the UI. Each are listed below.</p>
             <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
             <div class="d-flex justify-content-start align-items-end">
               <mat-form-field class="example-form-field" appearance="standard">
@@ -81,8 +81,8 @@
               </tbody>
             </table>
         </div>
-        <div class="pt-3">
-          <h3>Guidance and Usage</h3>
+        <div class="mt-5 guidance-container">
+          <h3 class="mb-0">Guidance and Usage</h3>
             <section class="p-2">
               <h5 class="font-weight-light">When to use a button</h5>
               <p><b>Important interactions.</b> Use buttons for the most important actions you want users to take on your site, such as <code>Download</code>, <code>Sign up</code> or <code>Log out</code>.</p>
@@ -118,3 +118,6 @@
     </div>
   </div>
 </div>
+<app-scroll-top></app-scroll-top>
+
+

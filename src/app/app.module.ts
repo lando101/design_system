@@ -66,6 +66,7 @@ import { ValidationServiceService } from './services/validation-service.service'
 import { AppInfoReviewComponent } from './components/app-info-review/app-info-review.component';
 import { AccessibilityTestComponent } from './components/accessibility-test/accessibility-test.component';
 import { ButtonsPageComponent } from './pages/topic-pages/components-page/buttons-page/buttons-page.component';
+import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 
 
 
@@ -124,7 +125,8 @@ export const firebaseConfig = {
     // AddTestersComponent,
     UsersTypeAheadComponent,
     AccessibilityTestComponent,
-    ButtonsPageComponent
+    ButtonsPageComponent,
+    ScrollTopComponent
 
   ],
   exports:[UsersTypeAheadComponent],

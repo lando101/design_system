@@ -10,7 +10,7 @@
 $epas-pimary-color: red;
 
 body {
-  overflow: hidden;
+  overflow: auto;
   padding: 0px 0px 55px 0px;
 }
 
@@ -53,6 +53,10 @@ li{
   margin: 8px 0px;
 }
 
+section{
+  border-bottom: 1px solid $border-color;
+}
+
 form{
   padding: 0px 0px;
 }
@@ -69,10 +73,18 @@ form{
   align-items: center;
 }
 
+.type-container{
+  padding-left: 20px;
+  border-left: 3px solid $primary-color;
+}
+.guidance-container{
+    padding-left: 20px;
+    border-left: 3px solid $secondary-color;
+}
 
 // SCROLL BAR STYLING
 .scroll1::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
 }
 
 .scroll1::-webkit-scrollbar-track {
@@ -107,7 +119,7 @@ form{
     height: 100%;
     padding: 0px 15%;
     margin: 0px 0px 55px 0px;
-    overflow-y: auto;
+    overflow: auto;
     display: flex;
     justify-content: center;
     background: $primary-bg-color;
@@ -297,6 +309,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // Buttons
 .reset-button{
   @include reset-button();
+}
+
+.scroll-top-button{
+  @include primary-button();
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 47px;
+  width: 47px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 100px !important;
+  box-shadow: 0px 3px 3px 2px #a2a2a2c7;
+  i{
+    margin: 0px;
+    font-size: 1.2rem;
+  }
+  &:hover{
+    box-shadow: 0px 3px 7px 4px #a2a2a2c7
+  }
 }
 
 @-webkit-keyframes square {
