@@ -13,10 +13,11 @@
           <h3 class="mb-0">Types</h3>
             <p class="font-weight-light">There are four buttons that can be used in the UI. Each are listed below.</p>
             <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
-            <div class="d-flex justify-content-start align-items-end">
-              <mat-form-field class="example-form-field" appearance="standard">
+            <div class="d-flex justify-content-start align-items-end mb-3">
+              <mat-form-field hintLabel="Max 50 characters" class="example-form-field" appearance="standard">
                 <mat-label>Type button text</mat-label>
-                <input matInput type="text" [(ngModel)]="buttonLabel">
+                <input matInput #input maxlength="25" type="text" [(ngModel)]="buttonLabel">
+                <mat-hint align="end">{{input.value?.length || 0}}/25</mat-hint>
                 <button mat-button class="reset-button" *ngIf="buttonLabel != 'Lorem Ipsum'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonLabel='Lorem Ipsum'">
                   <!-- <mat-icon>close</mat-icon> -->
                   Reset
@@ -118,6 +119,6 @@
     </div>
   </div>
 </div>
-<app-scroll-top></app-scroll-top>
+<!-- <app-scroll-top></app-scroll-top> -->
 
 

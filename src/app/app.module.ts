@@ -74,6 +74,13 @@ import { EditableOnEnterDirective } from './editable/edit-on-enter.directive';
 import { TableExampleComponent } from './components/table-example/table-example.component';
 import { FocusableDirective } from './directives/focusable.directive';
 import { TableDataService } from './services/table-data.service';
+import { ListenPageComponent } from './pages/topic-pages/foundation-page/listen-page/listen-page.component';
+import { ContinuityPageComponent } from './pages/topic-pages/foundation-page/continuity-page/continuity-page.component';
+import { EmbraceAccessibilityPageComponent } from './pages/topic-pages/foundation-page/embrace-accessibility-page/embrace-accessibility-page.component';
+import { TrustPageComponent } from './pages/topic-pages/foundation-page/trust-page/trust-page.component';
+import { FoundationOverviewPageComponent } from './pages/topic-pages/foundation-page/foundation-overview-page/foundation-overview-page.component';
+import { UserNeedsPageComponent } from './pages/topic-pages/foundation-page/user-needs-page/user-needs-page.component';
+import { FormsPageComponent } from './pages/topic-pages/components-page/forms-page/forms-page.component';
 
 
 
@@ -134,11 +141,20 @@ export const firebaseConfig = {
     AccessibilityTestComponent,
     ButtonsPageComponent,
     ScrollTopComponent,
+    ViewModeDirective,
     EditableComponent,
     EditModeDirective,
     EditableOnEnterDirective,
     TableExampleComponent,
-    FocusableDirective
+    FocusableDirective,
+    ListenPageComponent,
+    ContinuityPageComponent,
+    EmbraceAccessibilityPageComponent,
+    TrustPageComponent,
+    FoundationOverviewPageComponent,
+    UserNeedsPageComponent,
+    FormsPageComponent,
+    VerifyEmailComponent
   ],
   exports:[UsersTypeAheadComponent],
   imports: [
@@ -160,8 +176,9 @@ export const firebaseConfig = {
     FormsModule
   ],
   entryComponents: [TableExampleComponent],
-  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService],
+  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService, ViewModeDirective],
   bootstrap: [AppComponent, UsersTypeAheadComponent],
   // entryComponents: [NewAppAssessmentComponent]
 })
+
 export class AppModule { }

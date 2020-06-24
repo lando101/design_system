@@ -8,37 +8,37 @@ import { DOCUMENT } from '@angular/common';
 })
 export class ScrollTopComponent implements OnInit {
 
-  windowScrolled: boolean;
+  // windowScrolled: boolean;
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  // constructor(@Inject(DOCUMENT) private document: Document) { }
 
-  // @HostListener("window:scroll", [])
-  @HostListener('window:scroll')
+  // // @HostListener("window:scroll", [])
+  // @HostListener('window:scroll')
 
-  onWindowScroll($event) {
-    console.log('scroll happened');
-    console.log(document.body.scrollHeight);
-    if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
-      this.windowScrolled = true;
-      console.log(document.body.scrollTop);
-    }
-    else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
-      this.windowScrolled = false;
-    }
-  }
+  // onWindowScroll($event) {
+  //   console.log('scroll happened');
+  //   console.log(document.body.scrollHeight);
+  //   if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
+  //     this.windowScrolled = true;
+  //     console.log(document.body.scrollTop);
+  //   }
+  //   else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+  //     this.windowScrolled = false;
+  //   }
+  // }
 
-  scrollToTop() {
-    console.log('tried to scroll top');
-    (function smoothscroll() {
-      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+  // scrollToTop() {
+  //   console.log('tried to scroll top');
+  //   (function smoothscroll() {
+  //     var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
 
-      if (currentScroll > 0) {
-        window.requestAnimationFrame(smoothscroll);
-        window.scrollTo(0, currentScroll - (currentScroll / 8));
-      }
+  //     if (currentScroll > 0) {
+  //       window.requestAnimationFrame(smoothscroll);
+  //       window.scrollTo(0, currentScroll - (currentScroll / 8));
+  //     }
 
-    })();
-  }
+  //   })();
+  // }
 
   ngOnInit() {
   }

@@ -16,6 +16,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 
@@ -37,7 +38,8 @@ import {MatTableModule} from '@angular/material/table';
   MatChipsModule,
   MatCheckboxModule,
   MatSelectModule,
-  MatTableModule
+  MatTableModule,
+  MatSliderModule
 
 
 
@@ -55,7 +57,8 @@ import {MatTableModule} from '@angular/material/table';
   MatChipsModule,
   MatCheckboxModule,
   MatSelectModule,
-  MatTableModule
+  MatTableModule,
+  MatSliderModule
 
   // FooterComponent
  ],

@@ -1,9 +1,43 @@
 @import "../../../scss/variables";
 
+app-table-example{
+  width: 100%;
+}
+
+.mat-accent .mat-slider-track-fill {
+  background-color: #007bff !important;
+}
+
+.column-count{
+  font-weight: bold;
+  font-size: .8rem;
+  color: #545454;
+  margin-left: 5px;
+}
+// .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
+//   background-color: #007bff;
+// }
 table {
   width: 100%;
   box-shadow: none !important;
   border: 1px solid $border-color-darker !important;
+  input{
+    overflow: visible;
+    border: none;
+    background: transparent;
+    &:focus {
+      background: transparent;
+      border: transparent;
+      outline: none;
+      border-bottom: 2px solid #007bff;
+      transition: .1s ease-in;
+
+    }
+  }
+  .header-input{
+    font-weight: bold;
+    color: #484848;
+  }
 }
 .mat-header-row {
   background: #f3f4f6;
@@ -23,3 +57,4 @@ table {
 .mat-cell {
   padding: 0px 15px;
 }
+

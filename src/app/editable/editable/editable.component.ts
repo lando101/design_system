@@ -11,7 +11,7 @@ import { untilDestroyed } from 'ngx-take-until-destroy';
   template: `
     <ng-container *ngTemplateOutlet="currentView"></ng-container>
   `,
-  // styleUrls: ['']
+    styleUrls: ['./editable.component.scss']
 })
 export class EditableComponent {
   @ContentChild(ViewModeDirective) viewModeTpl: ViewModeDirective;
@@ -63,7 +63,8 @@ export class EditableComponent {
   }
 
   get currentView() {
-    return this.mode === 'view' ? this.viewModeTpl.tpl : this.editModeTpl.tpl;
+    // return this.mode === 'view' ? this.viewModeTpl.tpl : this.editModeTpl.tpl;
+    return 'sorry';
   }
 
   ngOnDestroy() {
