@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { FormControl, FormArray, FormGroup, Validators } from '@angular/forms';
 import { TableDataService } from 'src/app/services/table-data.service';
 import { coerceNumberProperty } from '@angular/cdk/coercion';
@@ -159,6 +159,7 @@ export class TableExampleComponent implements OnInit {
   minColumns = 3;
   valueColumns = 4;
   columnWidth:string = '25%';
+  el: ElementRef;
 
   constructor(private core: TableDataService) { }
 
@@ -210,6 +211,8 @@ export class TableExampleComponent implements OnInit {
     $('input').val('');
     this.value = 10;
     this.valueColumns = 4;
+    // this.columnWidth = '25%';
+    $(".column-width").css("width", "25%");
   }
 
 

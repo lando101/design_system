@@ -17,14 +17,22 @@ app-table-example{
 // .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
 //   background-color: #007bff;
 // }
+.settings-header{
+  padding-top: 1rem !important;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: #6b6b6b;
+}
 table {
   width: 100%;
   box-shadow: none !important;
   border: 1px solid $border-color-darker !important;
+  overflow: auto;
   input{
     overflow: visible;
     border: none;
     background: transparent;
+    width: 100%;
     &:focus {
       background: transparent;
       border: transparent;

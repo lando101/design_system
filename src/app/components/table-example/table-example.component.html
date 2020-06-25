@@ -1,6 +1,7 @@
-<div class="d-flex justify-content-between align-items-center">
-  <div>
-    <div>
+<label class="p-0 pt-2 m-0 settings-header">Grid Controls</label>
+<div class="d-flex justify-content-between align-items-center pb-1">
+  <div class="d-flex">
+    <div class="pr-5">
       <mat-slider
         color="accent"
         class="example-margin"
@@ -84,7 +85,7 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr> -->
 <!-- </table> -->
 <table class="table d-flex">
-  <div *ngFor=" let row of tableMockData | slice: 0:valueColumns; let i = index" [ngStyle]="{ width: columnWidth }" appResizable>
+  <div class="column-width" *ngFor=" let row of tableMockData | slice: 0:valueColumns; let i = index" [ngStyle]="{ width: columnWidth }" appResizable>
     <thead>
       <th class="col">
         <input
