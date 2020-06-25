@@ -39,6 +39,27 @@ table {
     color: #484848;
   }
 }
+
+// BOOTSTRAP OVERRRIDES
+.table thead th {
+  width: 100vw;
+  background: #f3f4f6;
+  border: none;
+  height: 50px;
+  border-left: 1px solid gainsboro;
+}
+
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  height: 50px;
+}
+
+::placeholder {
+  color: #484848;
+}
+
 .mat-header-row {
   background: #f3f4f6;
 }

@@ -1,57 +1,77 @@
-<div>
+<div class="d-flex justify-content-between align-items-center">
   <div>
-    <mat-slider color='accent'
+    <div>
+      <mat-slider
+        color="accent"
+        class="example-margin"
+        [disabled]="disabled"
+        [invert]="invert"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [thumbLabel]="thumbLabel"
+        [tickInterval]="tickInterval"
+        [(ngModel)]="value"
+        [vertical]="vertical"
+        (change)="onSliderChange($event)">
+      </mat-slider>
+      <label class="column-count"> {{ value }} rows</label>
+    </div>
+    <div>
+      <mat-slider
+      color="accent"
       class="example-margin"
       [disabled]="disabled"
       [invert]="invert"
-      [max]="max"
-      [min]="min"
+      [max]="maxColumns"
+      [min]="minColumns"
       [step]="step"
       [thumbLabel]="thumbLabel"
       [tickInterval]="tickInterval"
-      [(ngModel)]="value"
+      [(ngModel)]="valueColumns"
       [vertical]="vertical"
-      (change)="onSliderChange($event)"
-    >
+      (change)="onSliderChangeColumn($event)">
     </mat-slider>
-    <label class="column-count"> {{ value }} rows</label>
+    <label class="column-count"> {{ valueColumns }} columns</label>
+    </div>
   </div>
+  <button class="standard-button" (click)="clearFields()">Reset</button>
 </div>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <!--- Note that these columns can be defined in any order.
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+<!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Position Column -->
-  <ng-container matColumnDef="position">
+<!-- Position Column -->
+<!-- <ng-container matColumnDef="position">
     <th mat-header-cell *matHeaderCellDef>
       <input type="text" class="header-input" value="No." />
     </th>
     <td mat-cell *matCellDef="let element">{{ element.position }}</td>
-  </ng-container>
+  </ng-container> -->
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="name">
+<!-- Name Column -->
+<!-- <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>
       <input type="text" class="header-input" value="Name" />
     </th>
     <td mat-cell *matCellDef="let element">
       <input type="text" value="{{ element.name }}" />
     </td>
-  </ng-container>
+  </ng-container> -->
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
+<!-- Weight Column -->
+<!-- <ng-container matColumnDef="weight">
     <th mat-header-cell *matHeaderCellDef>
       <input type="text" class="header-input" value="Weight" />
     </th>
     <td mat-cell *matCellDef="let element">
       <input type="text" value="{{ element.weight }}" />
     </td>
-  </ng-container>
+  </ng-container> -->
 
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
+<!-- Symbol Column -->
+<!-- <ng-container matColumnDef="symbol">
     <th mat-header-cell *matHeaderCellDef>
       <input type="text" class="header-input" value="Symbol" />
     </th>
@@ -61,9 +81,27 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr> -->
+<!-- </table> -->
+<table class="table d-flex">
+  <div *ngFor=" let row of tableMockData | slice: 0:valueColumns; let i = index" [ngStyle]="{ width: columnWidth }" appResizable>
+    <thead>
+      <th class="col">
+        <input
+          type="text"
+          class="header-input"
+          placeholder="{{ row.header }}"
+          value=""
+        />
+      </th>
+    </thead>
+    <tr *ngFor="let rowdata of row.rows | slice: 0:value">
+      <td class="col">
+        <input type="text" placeholder="{{ rowdata }}" value="" />
+      </td>
+    </tr>
+  </div>
 </table>
-
 <!-- Copyright 2019 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at http://angular.io/license -->

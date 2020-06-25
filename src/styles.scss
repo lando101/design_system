@@ -319,6 +319,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   @include reset-button();
 }
 
+.standard-button{
+  @include secondary-button();
+}
+
+
 // Material Overrides
 // .mat-table[_ngcontent-ivy-c285] {
 //   background: #fff !important;
