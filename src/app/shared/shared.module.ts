@@ -18,6 +18,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatSliderModule} from '@angular/material/slider';
 import { ParticlesModule } from 'angular-particle';
+// import { MatTooltipModule } from '@angular/material/tooltip/tooltip-module';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -42,7 +44,8 @@ import { ParticlesModule } from 'angular-particle';
   MatSelectModule,
   MatTableModule,
   MatSliderModule,
-  ParticlesModule
+  ParticlesModule,
+  MatTooltipModule
 
 
 
@@ -62,7 +65,8 @@ import { ParticlesModule } from 'angular-particle';
   MatSelectModule,
   MatTableModule,
   MatSliderModule,
-  ParticlesModule
+  ParticlesModule,
+  MatTooltipModule
 
   // FooterComponent
  ],

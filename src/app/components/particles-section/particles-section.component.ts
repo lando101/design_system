@@ -39,12 +39,35 @@ this.myParams = {
               value: 5,
           },
           line_linked: {
-            color: '#dcdcdc',
+            color: '#d1d1d1',
           },
           move: {
             speed: 1,
           }
-  }
+  },
+  interactivity: {
+  //   events: {
+  //     onhover: {
+  //       enable: true,
+  //       mode: "bubble"
+  //     },
+  //     modes: {
+  //       // grab: {
+  //       //   distance: 400,
+  //       //   line_linked: {
+  //       //     opacity: 1
+  //       //   }
+  //       // },
+  //       bubble: {
+  //         distance: 400,
+  //         size: 8,
+  //         duration: 2,
+  //         opacity: 8,
+  //         speed: 3
+  //       },
+  //     }
+  // }
+}
 };
   }
 
