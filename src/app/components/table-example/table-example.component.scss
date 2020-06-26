@@ -1,6 +1,6 @@
 @import "../../../scss/variables";
 
-app-table-example{
+app-table-example {
   width: 100%;
 }
 
@@ -8,27 +8,31 @@ app-table-example{
   background-color: #007bff !important;
 }
 
-.column-count{
+.column-count {
   font-weight: bold;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #545454;
   margin-left: 5px;
 }
 // .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
 //   background-color: #007bff;
 // }
-.settings-header{
+.settings-header {
   padding-top: 1rem !important;
-    font-weight: 500;
-    font-size: 1.05rem;
-    color: #6b6b6b;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
 }
+.controls-container{
+  height: 38px;
+}
+
 table {
   width: 100%;
   box-shadow: none !important;
   border: 1px solid $border-color-darker !important;
   overflow: auto;
-  input{
+  input {
     overflow: visible;
     border: none;
     background: transparent;
@@ -38,11 +42,10 @@ table {
       border: transparent;
       outline: none;
       border-bottom: 2px solid #007bff;
-      transition: .1s ease-in;
-
+      transition: 0.1s ease-in;
     }
   }
-  .header-input{
+  .header-input {
     font-weight: bold;
     color: #484848;
   }
@@ -57,8 +60,9 @@ table {
   border-left: 1px solid gainsboro;
 }
 
-.table td, .table th {
-  padding: .75rem;
+.table td,
+.table th {
+  padding: 0.75rem;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
   height: 50px;
@@ -86,4 +90,3 @@ table {
 .mat-cell {
   padding: 0px 15px;
 }
-

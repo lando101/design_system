@@ -314,13 +314,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 	}
 }
 
-// Buttons
+// GLOBAL BUTTONS
 .reset-button{
   @include reset-button();
 }
 
 .standard-button{
   @include secondary-button();
+}
+
+// GLOBAL LABELS
+.icon-header{
+  margin-right: 8px;
+  font-size: 1.4rem;
 }
 
 

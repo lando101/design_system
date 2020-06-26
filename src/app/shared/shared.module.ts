@@ -17,6 +17,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import {MatSliderModule} from '@angular/material/slider';
+import { ParticlesModule } from 'angular-particle';
+
 
 
 
@@ -39,7 +41,8 @@ import {MatSliderModule} from '@angular/material/slider';
   MatCheckboxModule,
   MatSelectModule,
   MatTableModule,
-  MatSliderModule
+  MatSliderModule,
+  ParticlesModule
 
 
 
@@ -58,7 +61,8 @@ import {MatSliderModule} from '@angular/material/slider';
   MatCheckboxModule,
   MatSelectModule,
   MatTableModule,
-  MatSliderModule
+  MatSliderModule,
+  ParticlesModule
 
   // FooterComponent
  ],

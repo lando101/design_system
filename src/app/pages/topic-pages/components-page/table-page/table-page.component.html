@@ -6,12 +6,37 @@
         <h1> Table </h1>
         <h4>A table shows tabular data in columns and rows.</h4>
         <div class="type-container">
-          <h3 class="mb-0">Example</h3>
+          <h3 class="mb-0 d-flex align-items-center justify-content-start"><i class="fas fa-pencil-ruler icon-header"></i> Interactive Demo</h3>
             <p class="font-weight-light">Customize the number of rows and columns. Edit field data if needed.</p>
             <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
             <div class="d-flex justify-content-start align-items-end">
               <app-table-example></app-table-example>
             </div>
+        </div>
+        <div class="mt-5 guidance-container">
+          <h3 class="mb-0">Guidance and Usage</h3>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">When to use a table</h5>
+              <p><b>Tabular data.</b> When you need tabular information, such as statistical data.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">When to consider something else</h5>
+              <p><strong>Non-tabular data.</strong> Depending on the type of content, consider using other presentation formats such as definition lists or hierarchical lists.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Usability guidance</h5>
+              <p><strong>Keep it simple.</strong> Tables are great at displaying tabular data. Minimal visual styling helps surface this information more easily.</p>
+              <p><strong>Keep it short.</strong> Tables should use pagination when their are more than 20 rows. Tables should paginate in increments of no more than 20.</p>
+              <p><strong>One field per a cell.</strong> Each cell should contain one field of data. If possible, do not stack fields in a cell.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Accessibility</h5>
+              <p>Simple tables can have two levels of headers. Each header cell should have <code>scope="col"</code> or <code>scope="row"</code>. </p>
+              <p>Complex tables are tables with more than two levels of headers. Each header should be given a unique <code>id</code> and each data cell should have a <code>headers</code> attribute with each related header cell’s <code>id</code> listed.</p>
+              <p>When adding a title to a table, include it in a <code>&lt;caption&gt;</code> tag inside of the <code>&lt;table&gt;</code>  element.</p>
+
+
+            </section>
         </div>
       </div>
     </div>

@@ -10,11 +10,11 @@
             <p>Buttons are used to trigger an action within a page. Typically they do not cause navigation to occur. Examples of button usage are "Submit", "Next", "Cancel".</p>
         </div> -->
         <div class="type-container">
-          <h3 class="mb-0">Types</h3>
+          <h3 class="mb-0 d-flex align-items-center justify-content-start"><i class="fas fa-pencil-ruler icon-header"></i>Interactive Demo</h3>
             <p class="font-weight-light">There are four buttons that can be used in the UI. Each are listed below.</p>
             <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
             <div class="d-flex justify-content-start align-items-end mb-3">
-              <mat-form-field hintLabel="Max 50 characters" class="example-form-field" appearance="standard">
+              <mat-form-field hintLabel="Max 25 characters" class="example-form-field" appearance="standard">
                 <mat-label>Type button text</mat-label>
                 <input matInput #input maxlength="25" type="text" [(ngModel)]="buttonLabel">
                 <mat-hint align="end">{{input.value?.length || 0}}/25</mat-hint>

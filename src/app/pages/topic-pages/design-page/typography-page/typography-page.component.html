@@ -1,31 +1,88 @@
-<div class="page-reveal-animation">
-  <h1> Typography </h1>
-  <h4>The unit's applications need clear and consistent headings, highly legible body paragraphs, clear labels, and easy-to-use input fields.
-     Our default typefaces are designed for legibility and can adapt to a variety of visual tones.</h4>
-  <div class="container">
-    <p> A visual hierarchy of text enables a user to navigate a website or software application
-      with ease. When a user sees consistent use of typography throughout a single digitial experience,
-      it provides a sense of comfort on what actions that user should take.
-    </p>
-    <p>All text in EPAS applications should use a font called Vernada.
-    </p>
-  </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <!-- <th scope="col">#</th> -->
-        <th scope="col">Type</th>
-        <th scope="col">Style</th>
-        <th scope="col">Usage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let font of fontStyles" >
-        <!-- <th scope="row">1</th> -->
-        <td style='font-size: {{font.fontsize}}; font-weight: {{font.fontweight}}; color: {{font.textColor}}; text-decoration: {{font.textDecoration}}'>{{font.type}}</td>
-        <td>{{font.style}}</td>
-        <td>{{font.usage}}</td>
-      </tr>
-    </tbody>
-  </table>
+
+<div class="content-container scroll1">
+  <div class="tab-content-outer-container">
+    <div class="tab-content-inner-container">
+      <div class="page-reveal-animation">
+        <h1> Typography </h1>
+        <h4>The unit's applications need clear and consistent headings, highly legible body paragraphs, clear labels, and easy-to-use input fields.
+           Our default typefaces are designed for legibility and can adapt to a variety of visual tones.</h4>
+        <!-- <div class="container">
+          <p> A visual hierarchy of text enables a user to navigate a website or software application
+            with ease. When a user sees consistent use of typography throughout a single digitial experience,
+            it provides a sense of comfort on what actions that user should take.
+          </p>
+          <p>All text in EPAS applications should use a font called Vernada.
+          </p>
+        </div> -->
+        <div class="type-container">
+          <h3 class="mb-0 d-flex align-items-center justify-content-start"><i class="fas fa-pencil-ruler icon-header"></i> Interactive Demo</h3>
+          <p class="font-weight-light">Enter text in the field below to see it stylized.</p>
+          <div class="d-flex justify-content-start align-items-end mb-3">
+            <mat-form-field hintLabel="Max 40 characters" class="example-form-field" appearance="standard">
+              <mat-label>Type button text</mat-label>
+              <input matInput #input maxlength="40" type="text" [(ngModel)]="textValue">
+              <mat-hint align="end">{{input.value?.length || 0}}/40</mat-hint>
+              <button mat-button class="reset-button" *ngIf="textValue != 'Lorem Ipsum'" matSuffix mat-icon-button aria-label="Clear" (click)="textValue='Lorem Ipsum'">
+                <!-- <mat-icon>close</mat-icon> -->
+                Reset
+              </button>
+            </mat-form-field>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Example</th>
+                <th scope="col">Type</th>
+                <th scope="col">Style</th>
+                <th scope="col">Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let font of fontStyles" >
+                <!-- <th scope="row">1</th> -->
+                <td [ngStyle]="{ fontSize: font.fontsize, color: font.textColor, textDecoration: font.textDecoration, fontWeight: font.fontweight }">{{textValue}}</td>
+
+                <!-- <td style='font-size: {{font.fontsize}}; font-weight: {{font.fontweight}}; color: {{font.textColor}}; text-decoration: {{font.textDecoration}}'>Lorem Ipsum</td> -->
+                <td>{{font.type}}</td>
+                <td><code>{{font.style}}</code></td>
+                <td>{{font.usage}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-5 guidance-container">
+          <h3 class="mb-0">Guidance and Usage</h3>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">The importance of typography</h5>
+              <p>A visual hierarchy of text enables a user to navigate a website or software application
+                with ease. When a user sees consistent use of typography throughout a single digitial experience,
+                it provides a sense of comfort on what actions that user should take.
+              </p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Text alignment</h5>
+              <p>While right-aligned, centered, and justified text have their place, most websites benefit from a consistent
+                use of left-aligned text. Justified text, common in print, does not yet display well enough in a web browser to be considered a best practice.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Line Length</h5>
+              <p><strong>Most lines of text should be 45-90 characters. </strong> Somewhere between 45 and 90 characters per
+                line is broadly considered to be a readable line length, with 66 characters considered a comfortable target for long texts.</p>
+              <p><strong>Large text can have a shorter measure. </strong> Since larger text <code>(&lt;h1&gt;, &lt;h2&gt;)</code>  takes up more screen real estate, it can make sense to assign it a relatively small measure.</p>
+              <p><strong>One field per a cell.</strong> Each cell should contain one field of data. If possible, do not stack fields in a cell.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Accessibility</h5>
+              <p>Simple tables can have two levels of headers. Each header cell should have <code>scope="col"</code> or <code>scope="row"</code>. </p>
+              <p>Complex tables are tables with more than two levels of headers. Each header should be given a unique <code>id</code> and each data cell should have a <code>headers</code> attribute with each related header cell’s <code>id</code> listed.</p>
+              <p>When adding a title to a table, include it in a <code>&lt;caption&gt;</code> tag inside of the <code>&lt;table&gt;</code>  element.</p>
+
+
+            </section>
+        </div>
+      </div>
+    </div>
+    </div>
 </div>
+

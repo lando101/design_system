@@ -1,5 +1,5 @@
 <label class="p-0 pt-2 m-0 settings-header">Grid Controls</label>
-<div class="d-flex justify-content-between align-items-center pb-1">
+<div class="d-flex justify-content-between align-items-center pb-2 controls-container">
   <div class="d-flex">
     <div class="pr-5">
       <mat-slider
@@ -16,6 +16,7 @@
         [vertical]="vertical"
         (change)="onSliderChange($event)">
       </mat-slider>
+      <mat-hint align="end">{{value|| 0}}/{{max}}</mat-hint>
       <label class="column-count"> {{ value }} rows</label>
     </div>
     <div>

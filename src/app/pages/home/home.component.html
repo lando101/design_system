@@ -9,9 +9,10 @@
           <label>Design System</label>
         </div>
       </div>
-      <span *ngFor="let icon of iconBiggerArray; let index = index;">
+      <!-- <span *ngFor="let icon of iconBiggerArray; let index = index;">
         <i class='{{icon.icon}}' [ngClass]="{'even-column': index%2 === 0}" style="top: {{icon.top}}px; left: {{icon.left}}px; transform: rotate({{icon.rotate}}deg)"></i>
-      </span>
+      </span> -->
+      <app-particles-section></app-particles-section>
     </div>
     <div class='home-page-bottom-container'>
       <div class="card-mixin">

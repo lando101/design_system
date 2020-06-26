@@ -10,6 +10,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ResizableModule } from 'angular-resizable-element';
+// import { ParticlesModule } from 'angular-particle';
+
+
 // PROJECT COMPONENTS
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
@@ -48,6 +51,8 @@ import { NewAppAssessmentComponent } from './components/new-app-assessment/new-a
 import { BasicAppInfoComponent } from './components/basic-app-info/basic-app-info.component';
 // import { AddTestersComponent } from './components/add-testers/add-testers.component';
 import { UsersTypeAheadComponent } from './components/users-type-ahead/users-type-ahead.component';
+import { ParticlesSectionComponent } from './components/particles-section/particles-section.component';
+
 
 // SERVICES
 import { AuthService } from './services/auth.service';
@@ -83,6 +88,7 @@ import { FoundationOverviewPageComponent } from './pages/topic-pages/foundation-
 import { UserNeedsPageComponent } from './pages/topic-pages/foundation-page/user-needs-page/user-needs-page.component';
 import { FormsPageComponent } from './pages/topic-pages/components-page/forms-page/forms-page.component';
 import { ResizableDirective } from './directives/resizable.directive';
+
 
 
 
@@ -158,6 +164,7 @@ export const firebaseConfig = {
     FormsPageComponent,
     VerifyEmailComponent,
     ResizableDirective,
+    ParticlesSectionComponent
 
   ],
   exports:[UsersTypeAheadComponent],
@@ -178,7 +185,10 @@ export const firebaseConfig = {
     NgbModule,
     Ng2SearchPipeModule,
     FormsModule,
-    ResizableModule
+    ResizableModule,
+    // ParticlesModule
+
+
   ],
   entryComponents: [TableExampleComponent],
   providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService, ViewModeDirective],

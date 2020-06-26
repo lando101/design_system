@@ -6,7 +6,7 @@ import { Typography } from '../../../../models/tabs-content/typography.model';
   styles: [':host { width: 100%; margin-bottom: 55px}']
 })
 export class TypographyPageComponent implements OnInit {
-
+  textValue = 'Lorem Ipsum';
   fontStyles: Typography[] = [
     {id: 1, type: 'Header 1', style: '2rem, Bold, #3a3a3a', textColor: '#3a3a3a',
       usage: 'Page Headers', display: true, fontsize: '2rem', fontweight: '600',
