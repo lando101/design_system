@@ -88,8 +88,13 @@ import { FoundationOverviewPageComponent } from './pages/topic-pages/foundation-
 import { UserNeedsPageComponent } from './pages/topic-pages/foundation-page/user-needs-page/user-needs-page.component';
 import { FormsPageComponent } from './pages/topic-pages/components-page/forms-page/forms-page.component';
 import { ResizableDirective } from './directives/resizable.directive';
-
-
+// import { ContentsModule } from 'angular-contents';
+import { AngularTiltModule } from 'angular-tilt';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { InjectDirective } from './directives/appInject.directive';
+import { TextInputsComponent } from './components/text-inputs/text-inputs.component';
+import { DropDownsComponent } from './components/drop-downs/drop-downs.component';
 
 
 export const firebaseConfig = {
@@ -164,7 +169,11 @@ export const firebaseConfig = {
     FormsPageComponent,
     VerifyEmailComponent,
     ResizableDirective,
-    ParticlesSectionComponent
+    ParticlesSectionComponent,
+    InjectDirective,
+    TextInputsComponent,
+    DropDownsComponent
+
 
   ],
   exports:[UsersTypeAheadComponent],
@@ -186,12 +195,17 @@ export const firebaseConfig = {
     Ng2SearchPipeModule,
     FormsModule,
     ResizableModule,
+    AngularTiltModule,
+    NgxPageScrollCoreModule.forRoot({duration: 900}),
+    NgxPageScrollModule,
+
+    // ContentsModule
     // ParticlesModule
 
 
   ],
-  entryComponents: [TableExampleComponent],
-  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService, ViewModeDirective],
+  entryComponents: [TableExampleComponent, DropDownsComponent, TextInputsComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
+  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService, ViewModeDirective, ],
   bootstrap: [AppComponent, UsersTypeAheadComponent, TableExampleComponent],
   // entryComponents: [NewAppAssessmentComponent]
 })

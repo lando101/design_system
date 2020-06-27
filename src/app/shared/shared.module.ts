@@ -25,6 +25,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
+
+
+
 // import {FooterComponent} from '../components/footer/footer.component';
 
 
@@ -45,9 +48,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   MatTableModule,
   MatSliderModule,
   ParticlesModule,
-  MatTooltipModule
+  MatTooltipModule,
 
-
+  // AngularTiltModule
 
 
   // FooterComponent
@@ -66,7 +69,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   MatTableModule,
   MatSliderModule,
   ParticlesModule,
-  MatTooltipModule
+  MatTooltipModule,
+
 
   // FooterComponent
  ],

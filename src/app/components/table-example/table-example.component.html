@@ -1,5 +1,5 @@
-<label class="p-0 pt-2 m-0 settings-header">Grid Controls</label>
-<div class="d-flex justify-content-between align-items-center pb-2 controls-container">
+<!-- <label class="p-0 pt-2 m-0 settings-header">Grid Controls</label> -->
+<div class="d-flex justify-content-between align-items-center pb-3 mt-3 controls-container">
   <div class="d-flex">
     <div class="pr-5">
       <mat-slider
@@ -16,8 +16,8 @@
         [vertical]="vertical"
         (change)="onSliderChange($event)">
       </mat-slider>
-      <mat-hint align="end">{{value|| 0}}/{{max}}</mat-hint>
       <label class="column-count"> {{ value }} rows</label>
+      <div class="column-hint-container d-flex justify-content-between"><mat-hint>Max 20 rows</mat-hint><mat-hint align="end">{{value|| 0}}/{{max}}</mat-hint></div>
     </div>
     <div>
       <mat-slider
@@ -35,6 +35,10 @@
       (change)="onSliderChangeColumn($event)">
     </mat-slider>
     <label class="column-count"> {{ valueColumns }} columns</label>
+    <div class="column-hint-container d-flex justify-content-between"><mat-hint>Max 8 columns</mat-hint><mat-hint align="end">{{valueColumns|| 0}}/{{maxColumns}}</mat-hint></div>
+    </div>
+    <div>
+      <mat-checkbox class="pl-5 mb-2 d-flex align-items-center icon-checkbox" [(ngModel)]="sortIcon">Sort Icon</mat-checkbox>
     </div>
   </div>
   <button class="standard-button" (click)="clearFields()">Reset</button>
@@ -95,6 +99,7 @@
           placeholder="{{ row.header }}"
           value=""
         />
+        <i *ngIf="sortIcon" class="fas fa-sort-amount-down"></i>
       </th>
     </thead>
     <tr *ngFor="let rowdata of row.rows | slice: 0:value">

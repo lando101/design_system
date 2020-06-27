@@ -22,27 +22,39 @@ export class ParticlesSectionComponent implements OnInit {
       'left': 0,
       'right': 0,
       'bottom': 0,
+      'filter': 'blur(0px)'
   };
 
 this.myParams = {
       particles: {
           number: {
-              value: 80,
+              value: 100,
           },
           color: {
-              value: '#005581',
+              value: ['#005581', '#de632d', '#0085ca', '#ffb140']
           },
           shape: {
               type: 'circle',
+          },
+          opacity: {
+            value: 0.6,
+            random: false,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
           },
           size: {
               value: 5,
           },
           line_linked: {
-            color: '#d1d1d1',
+            color: '#cfcfcf',
           },
           move: {
-            speed: 1,
+            speed: .47,
+            direction: 'top'
           }
   },
   interactivity: {
@@ -60,7 +72,7 @@ this.myParams = {
   //       // },
   //       bubble: {
   //         distance: 400,
-  //         size: 8,
+  //         size: 1,
   //         duration: 2,
   //         opacity: 8,
   //         speed: 3

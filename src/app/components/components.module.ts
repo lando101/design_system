@@ -30,6 +30,7 @@ import { ScrollTopComponent } from './scroll-top/scroll-top.component';
       HeaderComponent,
       SideNavigationComponent,
       DesignOverviewComponent,
+      // TextInputsComponent,
       // ParticlesSectionComponent,
       // TableExampleComponent,
       // ScrollTopComponent,

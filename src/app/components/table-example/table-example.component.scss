@@ -1,18 +1,24 @@
 @import "../../../scss/variables";
+@import "../../../styles.scss";
 
 app-table-example {
   width: 100%;
 }
 
-.mat-accent .mat-slider-track-fill {
-  background-color: #007bff !important;
-}
 
 .column-count {
   font-weight: bold;
   font-size: 0.8rem;
   color: #545454;
   margin-left: 5px;
+}
+
+.column-hint-container{
+  position: relative;
+  top: -15px;
+  left: 8px;
+  font-size: 75%;
+  width: 113px;
 }
 // .mat-accent .mat-slider-track-fill, .mat-accent .mat-slider-thumb, .mat-accent .mat-slider-thumb-label {
 //   background-color: #007bff;
@@ -26,6 +32,9 @@ app-table-example {
 .controls-container{
   height: 38px;
 }
+.icon-checkbox{
+  padding-top: 10px;
+}
 
 table {
   width: 100%;
@@ -36,7 +45,7 @@ table {
     overflow: visible;
     border: none;
     background: transparent;
-    width: 100%;
+    width: 85%;
     &:focus {
       background: transparent;
       border: transparent;
@@ -44,6 +53,13 @@ table {
       border-bottom: 2px solid #007bff;
       transition: 0.1s ease-in;
     }
+  }
+  i{
+    color: #6d6d6d;
+    margin-left: 5px;
+    position: absolute;
+    right: 15px;
+    top: 17px;
   }
   .header-input {
     font-weight: bold;
@@ -58,6 +74,7 @@ table {
   border: none;
   height: 50px;
   border-left: 1px solid gainsboro;
+  position: relative;
 }
 
 .table td,

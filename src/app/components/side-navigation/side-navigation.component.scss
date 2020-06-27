@@ -1,13 +1,14 @@
 @import "../../../scss/variables";
+@import "../../../styles.scss";
 
 .row {
   display: flex;
   flex-wrap: nowrap;
-  height: 100vh;
+  height: auto;
   width: 100%;
   margin: 0px;
   background: $content-bg-color;
-  position: fixed;
+  position: relative;
   top: 55px;
 }
 
@@ -67,7 +68,10 @@ a{
 .column-container{
   border-right: 1px solid $border-color;
   flex: 0 0 25%;
+  position: fixed;
+  top: 55px;
   max-width: 290px;
+  height: 100vh;
   padding: 0px 0px 0px 0px;
   background: $tab-content-bg-color;
   .nav-header{

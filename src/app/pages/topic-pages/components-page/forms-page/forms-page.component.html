@@ -2,8 +2,20 @@
   <div class="tab-content-outer-container">
     <div class="tab-content-inner-container">
       <div class="page-reveal-animation">
-        <h1> Form Controls </h1>
+        <h1>Form Controls</h1>
         <h4>Form controls allow users to enter information into a page.</h4>
+        <div *ngFor="let section of sections">
+          <a
+            pageScroll
+            href="#{{section.id}}"
+            [pageScrollEasing]="myEasing"
+            [pageScrollOffset]="55"
+            (pageScrollFinish)="doSmth($event)"
+            >{{ section.name }}</a
+          >
+        </div>
+        <!-- INJECTS COMPONENTS FROM SECTIONS ARRAY -->
+        <ng-template appInject></ng-template>
       </div>
     </div>
   </div>

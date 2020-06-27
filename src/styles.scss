@@ -11,7 +11,7 @@ $epas-pimary-color: red;
 
 body {
   overflow: auto;
-  padding: 0px 0px 55px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 h4{
@@ -347,6 +347,30 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 //   width: 100% !important;
 //   box-shadow: none !important;
 // }
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+  // opacity: 0.03 !important;
+  background-color: $primary-color !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: $primary-color ;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+  background-color: $primary-color;
+}
+::ng-deep .mat-accent .mat-slider-thumb-label {
+  background-color: $primary-color;
+}
+::ng-deep .mat-accent .mat-slider-track-fill {
+  background-color: $primary-color;
+}
+.mat-accent .mat-slider-track-fill {
+  background-color: $primary-color !important;
+}
+/* CSS to change Default/'Accent' color */
+
+
 
 .scroll-top-button{
   // @include primary-button();

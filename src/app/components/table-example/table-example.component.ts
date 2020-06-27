@@ -23,6 +23,7 @@ export class TableExampleComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = this.core.list$;
   controls: FormArray;
+  sortIcon: boolean = false;
   tableMockData = [
     {
       "header": "Number",
@@ -213,6 +214,7 @@ export class TableExampleComponent implements OnInit {
     this.valueColumns = 4;
     // this.columnWidth = '25%';
     $(".column-width").css("width", "25%");
+    this.sortIcon = false;
   }
 
 
