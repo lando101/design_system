@@ -102,7 +102,8 @@ const routes: Routes = [
   declarations: [],
   imports: [
     RouterModule.forRoot(routes, {
-      scrollPositionRestoration: 'enabled'
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
     })],
   exports: [RouterModule],
   providers: [AuthGuard]

@@ -1,8 +1,42 @@
-<div id={{id}} class="type-container">
-  <h3 class="mb-0 d-flex align-items-center justify-content-start"><i class="fas fa-pencil-ruler icon-header"></i> Interactive Demo</h3>
-    <p class="font-weight-light">Customize the number of rows and columns. Edit field data if needed.</p>
-    <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
-    <div class="d-flex justify-content-start align-items-end">
-      "HI I'M THE DROPDOWN COMPONENT"
-    </div>
-</div>
+<section class="section-components" id={{id}} >
+  <div class="section-header-container">
+    <h3 class="p-0 m-0">Dropdowns</h3>
+  </div>
+  <div class="type-container">
+    <h3 class="mb-0 d-flex align-items-center justify-content-start"><i class="fas fa-pencil-ruler icon-header"></i> Interactive Demo</h3>
+      <p class="font-weight-light">Customize the number of rows and columns. Edit field data if needed.</p>
+      <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
+      <div class="d-flex justify-content-start align-items-end">
+        "HI I'M THE DROPDOWN COMPONENT"
+      </div>
+  </div>
+  <div class="mt-5 guidance-container">
+    <h3 class="mb-0">Guidance and Usage</h3>
+      <section class="pt-2 pb-2">
+        <h5 class="font-weight-light">When to use the dropdown component</h5>
+        <p><b>Use sparingly. </b> Use the dropdown component only when a user needs to choose from about seven to 15 possible options and you have limited space to display the options.</p>
+      </section>
+      <section class="pt-2 pb-2">
+        <h5 class="font-weight-light">When to consider something else</h5>
+        <p><strong>Fewer than seven options.</strong> Use radio buttons instead.</p>
+        <p><strong>More than 15 options.</strong> If the list of options is very long. Let users type the same information into a text input that suggests possible options instead.</p>
+        <p><strong>Multi-select.</strong> If you need to allow users to select more than one option at once. Users often don’t understand how to select multiple items from dropdowns. Use checkboxes instead.</p>
+        <p><strong>Site navigation. </strong> Use the navigation components instead.</p>
+
+      </section>
+      <section class="pt-2 pb-2">
+        <h5 class="font-weight-light">Usability guidance</h5>
+        <p><strong>Make sure to test.</strong> Test dropdowns thoroughly with members of your target audience. Several usability experts suggest they should be the “UI of last resort.” Many users find them confusing and difficult to use.</p>
+        <p><strong>Avoid dependent options. </strong>  Avoid making options in one dropdown menu change based on the input to another. Users often don’t understand how selecting an item in one impacts another.</p>
+        <p><strong>Use a good default. </strong> When most users will (or should) pick a particular option, make it the default: <code>&lt;option selected="selected"&gt; Default &lt;/option&gt;</code></p>
+        <p><strong>Avoid auto-submission. </strong> Don’t use JavaScript to automatically submit the form (or do anything else) when an option is selected. Offer a “submit” button at the end of the form instead. Users often change their choices multiple times. Auto-submission is also less accessible.</p>
+
+      </section>
+      <section class="pt-2 pb-2">
+        <h5 class="font-weight-light">Accessibility</h5>
+        <p><strong>Always use a label.</strong> Make sure your dropdown has a label. Don’t replace it with the default menu option (for example, removing the “State” label and just having the dropdown read “Select a state” by default).</p>
+        <p><strong>Avoid auto-submission. </strong> Don’t use JavaScript to automatically submit the form (or do anything else) when an option is selected. Auto-submission disrupts screen readers because they select each option as they read them.</p>
+      </section>
+  </div>
+</section>
+

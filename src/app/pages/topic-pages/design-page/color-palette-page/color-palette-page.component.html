@@ -5,7 +5,7 @@
         <h1> Color </h1>
         <h4>Color is a practical and emotional tool. It conveys personality, sets a tone, attracts attention, and
           indicates importance.</h4>
-        <div class="container">
+        <!-- <div class="">
           <p> The consistent use of color is curcial to maintaining the EPAS brand. Color helps users quickly
             identify what content they need to focus on and how to move through pages quickly.
           </p>
@@ -13,13 +13,13 @@
             set is often seen the most often and therefore is a conservative set of colors. The
             secondary palette consists of brighter colors where specific content is emphasized.
           </p>
-        </div>
-        <div class="section-container container">
+        </div> -->
+        <div class="section-container">
           <h3>Primary Color Palette</h3>
-          <div class="sub-section-container container">
-            <div *ngFor="let color of primaryColorPalettes">
+          <div class="sub-section-container container type-container d-flex justify-content-space">
+            <div *ngFor="let color of primaryColorPalettes" class="col-md-3">
               <div class="card card-dimension">
-                <div class="card-color-top" style="background: {{color.color}}; color: {{color.textColor}}">
+                <div class="card-color-top" [ngStyle]="{color: color.textColor, background: color.color}">
                   <div>{{color.displayName}}</div>
                   <div class="color-label">{{color.color}}</div>
                   <div class="copy-color" (click)="copyHex(color.color)">
@@ -38,12 +38,12 @@
             </div>
           </div>
         </div>
-        <div class="section-container container">
+        <div class="section-container">
           <h3>Secondary Color Palette (Areas)</h3>
-          <div class="sub-section-container container">
-            <div *ngFor="let color of secondaryColorPalette">
+          <div class="sub-section-container container type-container d-flex justify-content-space">
+            <div *ngFor="let color of secondaryColorPalette" class="col-md-3">
               <div class="card card-dimension">
-                <div class="card-color-top" style="background: {{color.color}}; color: {{color.textColor}}">
+                <div class="card-color-top" [ngStyle]="{color: color.textColor, background: color.color}">
                   <div>{{color.displayName}}</div>
                   <div class="color-label">{{color.color}}</div>
                   <div class="copy-color" (click)="copyHex(color.color)">
@@ -62,6 +62,36 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="mt-5 guidance-container">
+          <h3 class="mb-0">Guidance and Usage</h3>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">The importance of color</h5>
+              <p>The consistent use of color is curcial to maintaining the EPAS brand. Color helps users quickly
+                identify what content they need to focus on and how to move through pages quickly.
+              </p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Primary vs. Secondary</h5>
+              <p>The color palette is compromised of a primary and secondary set of colors. The primary
+                set is often seen the most often and therefore is a conservative set of colors. The
+                secondary palette consists of brighter colors where specific content is emphasized.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Line Length</h5>
+              <p><strong>Most lines of text should be 45-90 characters. </strong> Somewhere between 45 and 90 characters per
+                line is broadly considered to be a readable line length, with 66 characters considered a comfortable target for long texts.</p>
+              <p><strong>Large text can have a shorter measure. </strong> Since larger text <code>(&lt;h1&gt;, &lt;h2&gt;)</code>  takes up more screen real estate, it can make sense to assign it a relatively small measure.</p>
+              <p><strong>One field per a cell.</strong> Each cell should contain one field of data. If possible, do not stack fields in a cell.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Accessibility</h5>
+              <p>Simple tables can have two levels of headers. Each header cell should have <code>scope="col"</code> or <code>scope="row"</code>. </p>
+              <p>Complex tables are tables with more than two levels of headers. Each header should be given a unique <code>id</code> and each data cell should have a <code>headers</code> attribute with each related header cell’s <code>id</code> listed.</p>
+              <p>When adding a title to a table, include it in a <code>&lt;caption&gt;</code> tag inside of the <code>&lt;table&gt;</code>  element.</p>
+
+
+            </section>
         </div>
       </div>
     </div>

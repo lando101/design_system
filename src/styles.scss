@@ -58,6 +58,15 @@ section{
   border-bottom: 1px solid $border-color;
 }
 
+.section-components{
+  padding-bottom: 5rem;
+  border-bottom: none;
+}
+
+.section-header-container{
+  @include section-header();
+}
+
 form{
   padding: 0px 0px;
 }
@@ -324,6 +333,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   @include secondary-button();
 }
 
+.primary-button{
+  @include primary-button();
+}
 .icon-button{
   color: $primary-color;
   background-color: transparent;
@@ -340,6 +352,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-size: 1.4rem;
 }
 
+.input-label{
+  font-weight: 500;
+  color: lighten($font-color, 5%);
+}
+
+.text-muted-override{
+    color: #6c757d;
+}
 
 // Material Overrides
 // .mat-table[_ngcontent-ivy-c285] {

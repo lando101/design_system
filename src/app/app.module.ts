@@ -95,6 +95,12 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { InjectDirective } from './directives/appInject.directive';
 import { TextInputsComponent } from './components/text-inputs/text-inputs.component';
 import { DropDownsComponent } from './components/drop-downs/drop-downs.component';
+import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.component';
+import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';
+import { MenuExampleComponent } from './components/menu-example/menu-example.component';
+import { MultiSelectExampleComponent } from './components/multi-select-example/multi-select-example.component';
+import { ScrollSpyDirective } from './directives/scroll-spy.directive';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 
 export const firebaseConfig = {
@@ -172,7 +178,13 @@ export const firebaseConfig = {
     ParticlesSectionComponent,
     InjectDirective,
     TextInputsComponent,
-    DropDownsComponent
+    DropDownsComponent,
+    RadioButtonsComponent,
+    AutoCompleteComponent,
+    MenuExampleComponent,
+    MultiSelectExampleComponent,
+    ScrollSpyDirective,
+    CheckboxComponent
 
 
   ],
@@ -204,7 +216,9 @@ export const firebaseConfig = {
 
 
   ],
-  entryComponents: [TableExampleComponent, DropDownsComponent, TextInputsComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
+  entryComponents: [TableExampleComponent, DropDownsComponent, TextInputsComponent,
+    RadioButtonsComponent, AutoCompleteComponent, MenuExampleComponent, MultiSelectExampleComponent,
+    CheckboxComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
   providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService, ViewModeDirective, ],
   bootstrap: [AppComponent, UsersTypeAheadComponent, TableExampleComponent],
   // entryComponents: [NewAppAssessmentComponent]

@@ -1,8 +1,135 @@
-<div id={{id}}  class="type-container">
-  <h3 class="mb-0 d-flex align-items-center justify-content-start"><i class="fas fa-pencil-ruler icon-header"></i> Interactive Demo</h3>
-    <p class="font-weight-light">Customize the number of rows and columns. Edit field data if needed.</p>
-    <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
-    <div class="d-flex justify-content-start align-items-end">
-      "HI I'M THE TEXT INPUTS COMPONENT"
-    </div>
-</div>
+<section class="section-components" id={{id}} >
+  <div class="section-header-container">
+    <h3 class="p-0 m-0">Text Inputs</h3>
+  </div>
+  <div class="type-container">
+    <h3 class="mb-0 d-flex align-items-center justify-content-start"><i class="fas fa-pencil-ruler icon-header"></i> Interactive Demo</h3>
+      <p class="font-weight-light">Customize the number of rows and columns. Edit field data if needed.</p>
+      <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
+      <div class="d-flex justify-content-start align-items-end mb-3">
+        <mat-form-field hintLabel="Max 25 characters" class="example-form-field" appearance="standard">
+          <mat-label>Input label</mat-label>
+          <input matInput #input maxlength="25" type="text" [(ngModel)]="inputLabel">
+          <mat-hint align="end">{{input.value?.length || 0}}/25</mat-hint>
+          <button mat-button class="reset-button" *ngIf="inputLabel != 'Lorem Ipsum'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonLabel='Lorem Ipsum'">
+            <!-- <mat-icon>close</mat-icon> -->
+            Reset
+          </button>
+        </mat-form-field>
+        <div class="d-flex justify-content-start align-items-center pl-5">
+          <mat-form-field hintLabel="Max 25 characters" class="example-form-field" [floatLabel]="floatLabelControl.value" appearance="standard">
+            <mat-label>Input placeholder</mat-label>
+            <input matInput type="text" placeholder="ex. Lorem Ipsum" [(ngModel)]="inputPlaceholder">
+            <mat-hint align="end">{{input.value?.length || 0}}/25</mat-hint>
+            <button mat-button class="reset-button" *ngIf="inputPlaceholder != 'ex. Lorem Ipsum'" matSuffix mat-icon-button aria-label="Clear" (click)="buttonIcon='fas fa-wrench'">
+              <!-- <mat-icon>close</mat-icon> -->
+              Reset
+            </button>
+          </mat-form-field>
+        </div>
+
+      </div>
+      <table class="table">
+        <thead>
+          <tr class="d-flex">
+            <th scope="col" class="col-md-2">Type Name</th>
+            <th scope="col" class="col-md-7">Purpose</th>
+            <th scope="col" class="col-md-3">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="d-flex">
+            <td class="col-md-2"><strong>Standard</strong></td>
+            <td class="col-md-5">Standard input field for data entry. Used for short data entries. Does not include validation.</td>
+            <td class="col-md-5">
+              <div class="form-group d-flex align-items-center">
+                <label for="exampleInputEmail1" class="w-25 input-label">{{inputLabel}}</label>
+                <input type="email" placeholder="{{inputPlaceholder}}" class="form-control w-75" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+            </td>
+          </tr>
+          <tr class="d-flex">
+            <td class="col-md-2"><strong>Standard Text Area</strong></td>
+            <td class="col-md-5">Standard box allows a user to enter more information. This might be used when asking for a lenghty answer or for a user to paste data.</td>
+            <td class="col-md-5">
+              <div class="form-group d-flex align-items-center">
+                <label for="exampleFormControlTextarea1" class="w-25 input-label">{{inputLabel}}</label>
+                <div class="w-75">
+                  <textarea type="email" placeholder="{{inputPlaceholder}}" [(ngModel)]="interaction.textValue" (ngModelChange)="onModelChange($event)" class="form-control" id="exampleFormControlTextarea1" aria-describedby="emailHelp" maxlength="200"></textarea>
+                  <small [ngClass]="{'text-danger': numberOfCharacters === maxNumberOfCharacters}" id="emailHelp" class="form-text text-muted-override">Remaining: {{maxNumberOfCharacters - numberOfCharacters}} characters</small>
+                </div>
+
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+          </td>
+          </tr>
+          <tr class="d-flex">
+            <td class="col-md-2"><strong>Read-Only Text</strong></td>
+            <td class="col-md-5">Secondary action button. Typically is not a critical action to complete flow of case.</td>
+            <td class="col-md-5">
+                <fieldset disabled>
+                  <div class="form-group d-flex align-items-center">
+                    <label for="disabledSelect" class="w-25 input-label">{{inputLabel}}</label>
+                    <input type="email" placeholder="{{inputPlaceholder}}" class="form-control w-75" id="disabledSelect" aria-describedby="emailHelp">
+                  </div>
+                </fieldset>
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </td>
+          </tr>
+          <tr class="d-flex">
+            <td class="col-md-2"><strong>Standard with Validation</strong></td>
+            <td class="col-md-5">Validation can be used when a user is required to enter data into the field. Validation should occur after a user has committed an error.</td>
+            <td class="col-md-5">
+              <div class="form-group d-flex align-items-center">
+                <label for="exampleInputEmail1" class="w-25 input-label">{{inputLabel}}</label>
+                <div class="w-75">
+                <input type="email" [(ngModel)]="inputValue" (ngModelChange)="onModelValChange($event)" placeholder="{{inputPlaceholder}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small class="text-danger" *ngIf="testValidation === false">This field cannot be empty</small>
+                </div>
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+
+          </td>
+          </tr>
+          <!-- <tr class="d-flex">
+            <td class="col-md-2"><strong>Icon</strong></td>
+            <td class="col-md-5">Icon button is used for well known actions that can be represented with an icon. The icon button should be used sparingly.
+              Examples include <code>Print</code>, <code>Refresh</code>, <code>Save</code>, etc.</td>
+            <td class="col-md-5">
+          </td>
+          </tr> -->
+        </tbody>
+      </table>
+      <div class="d-flex align-items-center justify-content-end">
+        <button type="submit" (click) = "testValSubmit()" class="primary-button">Test Validation</button>
+      </div>
+  </div>
+  <div class="mt-5 guidance-container">
+    <h3 class="mb-0">Guidance and Usage</h3>
+      <section class="pt-2 pb-2">
+        <h5 class="font-weight-light">When to use the text input component</h5>
+        <p><b>Unpredictable or freeform responses.</b> If you can’t reasonably predict a user’s answer to a prompt and there might be wide variability in users’ answers.</p>
+        <p><b>Input simplicity.</b> When using another type of input will make answering more difficult. For example, birthdays and other known dates are easier to type in than they are to select from a calendar picker.</p>
+        <p><b>Pasted content. </b> When users want to be able to paste in a response.</p>
+      </section>
+      <section class="pt-2 pb-2">
+        <h5 class="font-weight-light">When to consider something else</h5>
+        <p><strong>Predetermined input options. </strong> When users are choosing from a specific set of options.</p>
+      </section>
+      <section class="pt-2 pb-2">
+        <h5 class="font-weight-light">Usability guidance</h5>
+        <p><strong>Use fields appropriate to the length of the input. </strong> The length of the text input provides a hint to users as to how much text to write. Do not require users
+          to write paragraphs of text into a single-line input box; use a text area instead.</p>
+        <p><strong>Wait to validate.</strong> Only show error validation messages or stylings after a user has interacted with a particular field.</p>
+        <p><strong>Avoid placeholder text. </strong> Avoid using placeholder text that appears within a text field before a user starts typing. If placeholder text is no longer visible after a user clicks into the field, users will no longer have that text available when they need to review their entries.
+           (People who have cognitive or visual disabilities have additional problems with placeholder text.)</p>
+      </section>
+      <section class="pt-2 pb-2">
+        <h5 class="font-weight-light">Accessibility</h5>
+        <p><strong>Avoid splitting numbers.</strong> Avoid breaking numbers with distinct sections (such as phone numbers, Social Security Numbers, or credit card numbers) into separate input fields. For example, use one input for phone number, not three (one for area code, one for local code, and one for number).
+          Each field needs to be labeled for a screen reader and the labels for fields broken into segments are often not meaningful.</p>
+      </section>
+  </div>
+</section>
+

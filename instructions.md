@@ -25,6 +25,9 @@ https://www.youtube.com/watch?v=ZkYsMBNR_eY&t=600s
   ]
 }
 
+// HOW TO USE DIRECTIVE TO LOAD COMPONENTS DYNAMICALLY
+https://blog.bogdancarpean.com/angular-how-to-dynamically-inject-a-component-to-dom/
+
 // WHEN AND HOW TO BUILD A DATA SERVICE
 https://www.codementor.io/@yomateo/angular-service-go-get-json-4min-video-oohl3rwmx
 
