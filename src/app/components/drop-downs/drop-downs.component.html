@@ -7,7 +7,34 @@
       <p class="font-weight-light">Customize the number of rows and columns. Edit field data if needed.</p>
       <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
       <div class="d-flex justify-content-start align-items-end">
-        "HI I'M THE DROPDOWN COMPONENT"
+        <mat-form-field class="example-chip-list">
+          <mat-chip-list #chipList aria-label="Fruit selection">
+            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                     [removable]="removable" (removed)="remove(fruit)">
+              {{fruit.name}}
+              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="New dropdown item..."
+                   [matChipInputFor]="chipList"
+                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                   [matChipInputAddOnBlur]="addOnBlur"
+                   (matChipInputTokenEnd)="add($event)">
+          </mat-chip-list>
+        </mat-form-field>
+      </div>
+      <div class="btn-group" dropdown>
+        <button id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-animated">
+          Button dropdown <span class="caret"></span>
+        </button>
+        <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-animated">
+          <li *ngFor="let fruit of fruits" role="menuitem"><a class="dropdown-item" href="#">{{fruit.name}}</a></li>
+          <!-- <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
+          </li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Something else
+            here</a></li> -->
+        </ul>
       </div>
   </div>
   <div class="mt-5 guidance-container">
