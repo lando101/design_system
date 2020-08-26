@@ -31,7 +31,8 @@ this.myParams = {
               value: 100,
           },
           color: {
-              value: ['#005581', '#de632d', '#0085ca', '#ffb140']
+              // value: ['#005581', '#de632d', '#0085ca', '#ffb140']
+              value: ['#01807e', '#de632d', '#0085ca', '#253746']
           },
           shape: {
               type: 'circle',

@@ -33,6 +33,44 @@
         align-items: center;
         z-index: 9;
         .brand-inner-container {
+          height: auto;
+          // min-width: 1000px;
+          width: auto;
+          background: radial-gradient(#f8f9fa, #ffffff7d, #ffffff00);
+          padding: 20px;
+          animation: brand-scale 0.7s;
+          @keyframes brand-scale {
+            0% {
+              opacity: 0;
+              transform: scale(0.98);
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+          .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            // background-color: $primary-bg-color;
+            z-index: 1;
+          }
+          label {
+            text-align: center;
+            font-weight: 100;
+            font-size: 3rem;
+            color: $font-color;
+            padding: 0px 12px;
+            margin: 0px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .brand-inner-inline-container {
           display: flex;
           align-items: center;
           justify-content: center;

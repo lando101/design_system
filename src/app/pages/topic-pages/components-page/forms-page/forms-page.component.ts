@@ -5,13 +5,15 @@ import { Interface } from 'readline';
 import { PageContent } from 'src/app/models/page-content.model';
 import { TableExampleComponent } from 'src/app/components/table-example/table-example.component';
 import { InjectDirective } from 'src/app/directives/appInject.directive';
+import { ActivatedRoute, Router } from '@angular/router';
+
+// COMPONENTS
 import { DropDownsComponent } from 'src/app/components/drop-downs/drop-downs.component';
 import { TextInputsComponent } from 'src/app/components/text-inputs/text-inputs.component';
 import { RadioButtonsComponent } from 'src/app/components/radio-buttons/radio-buttons.component';
 import { AutoCompleteComponent } from 'src/app/components/auto-complete/auto-complete.component';
 import { MenuExampleComponent } from 'src/app/components/menu-example/menu-example.component';
 import { MultiSelectExampleComponent } from 'src/app/components/multi-select-example/multi-select-example.component';
-import { ActivatedRoute, Router } from '@angular/router';
 import { CheckboxComponent } from 'src/app/components/checkbox/checkbox.component';
 
 
@@ -74,7 +76,9 @@ export class FormsPageComponent implements OnInit {
     document.querySelector('#' + section)
       .scrollIntoView();
   }
-  // SCROLL EASING LOGIC
+
+
+  // SCROLL EASING LOGIC :: USED FOR STYLE PURPOSES
   public myEasing: EasingLogic = (t: number, b: number, c: number, d: number): number => {
     // easeInOutExpo easing
 

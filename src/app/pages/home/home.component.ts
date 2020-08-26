@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
   ];
   localTopics: Topic[];
   iconBiggerArray: any[] = [{icon: 'fas fa-fingerprint', left: '5', top: '1', rotate: '35'}];
-
+  tiltSettings: any;
   constructor(private topicService: TopicService) {
 
   }
@@ -51,12 +51,22 @@ export class HomeComponent implements OnInit {
     // GET TOPICS FROM TOPICS SERVICE :: TO BE CHANGED TO JSON
     this.localTopics = this.topicService.getTopics();
 
-    // this.getLocalStorage();
-    // if (sessionStorage.getItem(this.key) === null){
-    //   setTimeout(() => {
-      // this.setLocalStorage();
-    //   }, 2000);
-    // }
+    this.tiltSettings =
+    {
+      reverse: true,  // reverse the tilt direction
+      max: 10,     // max tilt rotation (degrees)
+      startX: 0,      // the starting tilt on the X axis, in degrees.
+      startY: 0,      // the starting tilt on the Y axis, in degrees.
+      perspective: 1200,   // Transform perspective, the lower the more extreme the tilt gets.
+      scale: 1.04,      // 2 = 200%, 1.5 = 150%, etc..
+      speed: 800,    // Speed of the enter/exit transition
+      transition: true,   // Set a transition on enter/exit.
+      axis: null,   // What axis should be disabled. Can be X or Y.
+      reset: true,    // If the tilt effect has to be reset on exit.
+      easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+      glare: true,  // if it should have a "glare" effect
+      "max-glare": .1,      // the maximum "glare" opacity (1 = 100%, 0.5 = 50%)
+    }
    }
 
     randomNumber(min, max) {
