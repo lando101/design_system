@@ -21,13 +21,9 @@ import { ParticlesModule } from 'angular-particle';
 // import { MatTooltipModule } from '@angular/material/tooltip/tooltip-module';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
-
-
-
-
-
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
+import { RippleGlobalOptions, MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
 
 
 // import {FooterComponent} from '../components/footer/footer.component';
@@ -51,7 +47,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   MatSliderModule,
   ParticlesModule,
   MatTooltipModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatButtonModule,
+  MatRadioModule
 
   // AngularTiltModule
 
@@ -73,7 +71,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   MatSliderModule,
   ParticlesModule,
   MatTooltipModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatButtonModule,
+  MatRadioModule
 
 
   // FooterComponent

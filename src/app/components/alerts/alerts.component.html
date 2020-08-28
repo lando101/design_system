@@ -1,6 +1,6 @@
 <mat-form-field class="m-2 p-1">
   <mat-label>Message</mat-label>
-  <input matInput value="Disco party!" #message>
+  <input matInput value="Lorem Ipsum" #message>
 </mat-form-field>
 
 <mat-form-field class="m-2 p-1">
@@ -32,10 +32,10 @@
 <button class="primary-button btn-block m-2" (click)="openSnackBar(message.value, action.value)">Trigger alert</button>
 <div class="w-100 py-3">
   <p class="font-weight-light">Example</p>
-  <div class="sample-alert">
+  <div class="sample-alert" aria-label="Sample alert">
     <div class="sample-alert-content m-2">
       <span class="m-2 p-2">{{message.value}}</span>
-      <span class="m-2 p-2 action">{{action.value}}</span>
+      <button mat-button mat-button-base class="action">{{action.value}}</button>
     </div>
   </div>
 </div>

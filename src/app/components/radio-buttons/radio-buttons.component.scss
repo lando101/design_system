@@ -1,2 +1,18 @@
 @import '../../../scss/variables';
 @import '../../../styles.scss';
+
+
+.example-radio-group-vertical {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-group-vertical {
+  display: flex;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
