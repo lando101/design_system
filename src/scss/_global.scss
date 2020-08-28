@@ -1,7 +1,12 @@
-$foundation-color: #005581;
-$design-color: #0085ca;
-$component-color: #de632d;
-$asset-color: #ffb140;
+// $foundation-color: #c2cace;
+// $design-color: #0085ca;
+// $component-color: #de632d;
+// $asset-color: #ffb140;
+
+$foundation-color: #0D5D64;
+$design-color: #49777F;
+$component-color: #4E5663;
+$asset-color: #233645;
 
 // GLOBAL BRANDING STYLING
 .logo-container-lg{
@@ -38,7 +43,7 @@ $asset-color: #ffb140;
   color: $foundation-color;
 }
 .foundation-circle-background{
-  background: lighten($foundation-color, 8%);
+  background: lighten($foundation-color, 5%);
 }
 .foundation-background{
   background: $foundation-color;
@@ -49,7 +54,7 @@ $asset-color: #ffb140;
   color: $design-color;
 }
 .design-circle-background{
-  background: lighten($design-color, 8%);
+  background: lighten($design-color, 5%);
 }
 .design-background{
   background: $design-color;
@@ -60,7 +65,7 @@ $asset-color: #ffb140;
   color: $component-color;
 }
 .component-circle-background{
-  background: lighten($component-color, 8%);
+  background: lighten($component-color, 5%);
 }
 .component-background{
   background: $component-color;
@@ -71,7 +76,7 @@ $asset-color: #ffb140;
   color: $asset-color;
 }
 .asset-circle-background{
-  background: lighten($asset-color, 8%);
+  background: lighten($asset-color, 5%);
 }
 .asset-background{
   background: $asset-color;

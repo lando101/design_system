@@ -101,6 +101,7 @@ import { MenuExampleComponent } from './components/menu-example/menu-example.com
 import { MultiSelectExampleComponent } from './components/multi-select-example/multi-select-example.component';
 import { ScrollSpyDirective } from './directives/scroll-spy.directive';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { AlertsComponent } from './components/alerts/alerts.component';
 
 
 export const firebaseConfig = {
@@ -184,7 +185,8 @@ export const firebaseConfig = {
     MenuExampleComponent,
     MultiSelectExampleComponent,
     ScrollSpyDirective,
-    CheckboxComponent
+    CheckboxComponent,
+    AlertsComponent
 
 
   ],
@@ -218,7 +220,7 @@ export const firebaseConfig = {
   ],
   entryComponents: [TableExampleComponent, DropDownsComponent, TextInputsComponent,
     RadioButtonsComponent, AutoCompleteComponent, MenuExampleComponent, MultiSelectExampleComponent,
-    CheckboxComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
+    CheckboxComponent, AlertsComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
   providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService, ViewModeDirective, ],
   bootstrap: [AppComponent, UsersTypeAheadComponent, TableExampleComponent],
   // entryComponents: [NewAppAssessmentComponent]

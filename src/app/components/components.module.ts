@@ -15,6 +15,7 @@ import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
 import { MenuExampleComponent } from './menu-example/menu-example.component';
 import { MultiSelectExampleComponent } from './multi-select-example/multi-select-example.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+// import { AlertsComponent } from './alerts/alerts.component';
 // import { ParticlesSectionComponent } from './particles-section/particles-section.component';
 
 // import { TableExampleComponent } from './table-example/table-example.component';

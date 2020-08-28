@@ -1,0 +1,29 @@
+@import '../../../scss/index';
+
+.sample-alert{
+  border-radius: 13px;
+  box-sizing: border-box;
+  display: block !important;
+  margin: 24px !important;
+  // max-width: 33vw;
+  width: 50%;
+  min-width: 344px;
+  min-height: 48px;
+  transform-origin: center;
+  background: #323232;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  .sample-alert-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 20px;
+    opacity: 1;
+    span{
+      font-weight: 500;
+      color: $font-color-invert;
+    }
+    .action{
+      color: lighten($primary-color, 10%);
+    }
+  }
+}

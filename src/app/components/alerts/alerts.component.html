@@ -1,0 +1,41 @@
+<mat-form-field class="m-2 p-1">
+  <mat-label>Message</mat-label>
+  <input matInput value="Disco party!" #message>
+</mat-form-field>
+
+<mat-form-field class="m-2 p-1">
+  <mat-label>Action</mat-label>
+  <input matInput value="Dismiss" #action>
+</mat-form-field>
+
+<mat-form-field class="m-2 p-1">
+  <mat-label>Horizontal position</mat-label>
+  <mat-select [(value)]="horizontalPosition">
+    <mat-option value="start">Start</mat-option>
+    <mat-option value="center">Center</mat-option>
+    <mat-option value="end">End</mat-option>
+    <mat-option value="left">Left</mat-option>
+    <mat-option value="right">Right</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field class="m-2 p-1">
+  <mat-label>Vertical position</mat-label>
+  <mat-select [(value)]="verticalPosition">
+    <mat-option value="top">Top</mat-option>
+    <mat-option value="bottom">Bottom</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field class="m-2 p-1">
+  <mat-label>Alert duration (seconds)</mat-label>
+  <input type="number" [(ngModel)]="durationInSeconds" matInput>
+</mat-form-field>
+<button class="primary-button btn-block m-2" (click)="openSnackBar(message.value, action.value)">Trigger alert</button>
+<div class="w-100 py-3">
+  <p class="font-weight-light">Example</p>
+  <div class="sample-alert">
+    <div class="sample-alert-content m-2">
+      <span class="m-2 p-2">{{message.value}}</span>
+      <span class="m-2 p-2 action">{{action.value}}</span>
+    </div>
+  </div>
+</div>

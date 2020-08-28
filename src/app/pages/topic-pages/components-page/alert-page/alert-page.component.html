@@ -1,11 +1,49 @@
+
 <div class="content-container scroll1">
   <div class="tab-content-outer-container">
     <div class="tab-content-inner-container">
       <div class="page-reveal-animation">
-        <h1> Alert </h1>
-        <h4>An alert keeps users informed of important and sometimes time-sensitive changes.</h4>
+        <h1> Alerts </h1>
+        <h4>Alerts notify users of changes, updates and other relevant information.</h4>
+        <div class="type-container">
+          <h3 class="mb-0 d-flex align-items-center justify-content-start"><i class="fas fa-pencil-ruler icon-header"></i> Interactive Demo</h3>
+            <p class="font-weight-light">Customize an example alert.</p>
+            <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
+            <div class="d-flex justify-content-start align-items-end">
+              <app-alerts></app-alerts>
+            </div>
+        </div>
+        <div class="mt-5 guidance-container">
+          <h3 class="mb-0">Guidance and Usage</h3>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">When to use a alerts</h5>
+              <p><b>System status messages.</b>  As a notification that keeps people informed of the status of the system and which may or may not require the user to respond. This includes errors, warnings, and general updates.</p>
+              <p><b>Validation messages.</b>  As a validation message that alerts someone that they just did something that needs to be corrected or as confirmation that a task was completed successfully.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">When to consider something else</h5>
+              <p><strong>Long forms.</strong>  On long forms, always include in-line validation in addition to any error messages that appear at the top of the form.</p>
+              <p><strong>Destructive actions.</strong>  If an action will result in destroying a user’s work (for example, deleting an application) use a more intrusive pattern, such as a confirmation modal dialogue, to allow the user to confirm that this is what they want.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Usability guidance</h5>
+              <p><strong>Consider next steps.</strong> When the user is required to do something in response to an alert, let them know what they need to do and make that task as easy as possible.
+                Think about how much context to provide with your message. For example, a notification
+                of a system change may require more contextual information than a validation message. Write the message in concise, human readable language; avoid jargon and computer code.</p>
+              <p><strong>Be polite. </strong> Be polite in error messages — don’t blame the user.</p>
+              <p><strong>Alerts are an opportunity.</strong> Users will read a message that helps them resolve an error even if they generally won’t read documentation; include some educational material in your error message.</p>
+              <p><strong>Don’t overdo it.</strong> Too many notifications will either overwhelm or annoy the user and are likely to be ignored.</p>
+              <p><strong>Allow a user to dismiss a notification wherever appropriate.</strong></p>
+              <p><strong>Understand the user’s context. </strong>Don’t include notifications that aren’t related to the user’s current goal.</p>
+            </section>
+            <section class="pt-2 pb-2">
+              <h5 class="font-weight-light">Accessibility</h5>
+              <p><strong>Use the proper ARIA role.</strong>If the message is not interactive, use the ARIA<code>role="alert"</code> to inform assistive technologies of a time-sensitive and important message.  If the message is interactive, use the use the ARIA
+                <code>role="alertdialog"</code> instead.</p>
+              <p><strong>Don’t visually hide alert messages and then make them visible when they are needed. </strong> Users of older assistive technologies may still be able to perceive the alert messages even if they are not currently applicable.</p>
+            </section>
+        </div>
       </div>
     </div>
   </div>
 </div>
-

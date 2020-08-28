@@ -1,8 +1,9 @@
 @import "../../../scss/variables";
 @import "../../../scss/mixins";
+@import "../../../scss/index";
 
 // COLORS
-$primary-color: #005581;
+$primary-color: $font-color;
 $border-color: #eaeaea;
 
 .nav-item{
@@ -89,17 +90,9 @@ nav{
     }
   }
   button{
-    border-left: 1px solid $border-color;
-    border-radius: 0;
-    font-size: .93rem;
-    color: $primary-color;
-    cursor: pointer;
-    font-weight: 500;
-    width: 100px;
-    padding: 0px 6px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include clear-button();
+    border-left: 1px solid $border-color !important;
+    font-size: .9rem;
     height: 35px;
     z-index: 100;
     &:hover{

@@ -20,6 +20,8 @@ import {MatSliderModule} from '@angular/material/slider';
 import { ParticlesModule } from 'angular-particle';
 // import { MatTooltipModule } from '@angular/material/tooltip/tooltip-module';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 
@@ -49,6 +51,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   MatSliderModule,
   ParticlesModule,
   MatTooltipModule,
+  MatSnackBarModule
 
   // AngularTiltModule
 
@@ -70,6 +73,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   MatSliderModule,
   ParticlesModule,
   MatTooltipModule,
+  MatSnackBarModule
 
 
   // FooterComponent

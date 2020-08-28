@@ -1,0 +1,13 @@
+
+// MATERIAL INK BAR
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: $secondary-color !important;
+}
+
+.mat-snack-bar-container{
+  border-radius: 13px !important;
+}
+
+.mat-simple-snackbar-action{
+  color: lighten($primary-color, 10%) !important;
+}
