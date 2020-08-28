@@ -7,7 +7,7 @@
       <p class="font-weight-light">Customize the number of rows and columns. Edit field data if needed.</p>
       <!-- <input [(ngModel)]="buttonLabel" placeholder="{{buttonLabel}}" type="text"> -->
       <div class="d-flex justify-content-start align-items-end">
-        <mat-form-field class="example-chip-list">
+        <mat-form-field class="example-chip-list w-50">
           <mat-chip-list #chipList aria-label="Fruit selection">
             <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
                      [removable]="removable" (removed)="remove(fruit)">
@@ -41,7 +41,7 @@
     <h3 class="mb-0">Guidance and Usage</h3>
       <section class="pt-2 pb-2">
         <h5 class="font-weight-light">When to use the dropdown component</h5>
-        <p><b>Use sparingly. </b> Use the dropdown component only when a user needs to choose from about seven to 15 possible options and you have limited space to display the options.</p>
+        <p><b>Use sparingly. </b> Use the dropdown component only when a user needs to choose from about 7 to 15 possible options and you have limited space to display the options.</p>
       </section>
       <section class="pt-2 pb-2">
         <h5 class="font-weight-light">When to consider something else</h5>

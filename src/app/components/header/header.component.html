@@ -15,6 +15,7 @@
       <a mat-tab-link
          *ngFor="let link of routerLinks"
          [routerLink]="link.href"
+         [disableRipple]="true"
          (click)="setSidebar(link)"
          routerLinkActive #rla="routerLinkActive"
          [active]="rla.isActive">
@@ -28,7 +29,7 @@
     <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item *ngFor="let link of routerLinks" [routerLink]="link.href" (click)="setSidebar(link)">
+    <button mat-menu-item *ngFor="let link of routerLinks" [routerLink]="link.href" [disableRipple]="true" (click)="setSidebar(link)">
       <!-- <mat-icon>dialpad</mat-icon> -->
       <span>{{link.displayName}}</span>
     </button>
