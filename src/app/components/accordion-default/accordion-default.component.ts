@@ -43,6 +43,12 @@ export class AccordionDefaultComponent implements OnInit {
       content: 'Dynamic Group Body - 2',
       id: 'heading2',
       collapseID: 'collapse2'
+    },
+    {
+      title: 'Dynamic Group Header - 3',
+      content: 'Dynamic Group Body - 3',
+      id: 'heading3',
+      collapseID: 'collapse3'
     }
   ];
 
@@ -86,6 +92,12 @@ export class AccordionDefaultComponent implements OnInit {
         content: 'Dynamic Group Body - 2',
         id: 'heading2',
         collapseID: 'collapse2'
+      },
+      {
+        title: 'Dynamic Group Header - 3',
+        content: 'Dynamic Group Body - 3',
+        id: 'heading3',
+        collapseID: 'collapse3'
       }
     ];
   }
