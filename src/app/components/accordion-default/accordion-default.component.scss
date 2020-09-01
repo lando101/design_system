@@ -1,0 +1,25 @@
+@import '../../../scss/index';
+// CLASS IS USED IN TYPESCRIPT FILE
+::ng-deep .card-custom-class{
+  border-radius: 0px !important;
+  border-bottom: none !important;
+}
+
+.border-radius-0{
+  border-radius: 0 !important;
+}
+
+.title-input {
+  overflow: visible;
+  border: none;
+  background: transparent;
+  width: 40%;
+  font-weight: 600;
+  &:focus {
+    background: transparent;
+    border: transparent;
+    outline: none;
+    border-bottom: 2px solid $primary-color;
+    transition: 0.1s ease-in;
+  }
+}

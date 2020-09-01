@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CoreModule } from './core/core.module';
 // 3RD PARD IMPORTS
-import { BsDropdownModule } from 'ngx-bootstrap';
+import { BsDropdownModule, AccordionModule } from 'ngx-bootstrap';
 import { NgModule, Injectable } from '@angular/core';
 // 3RD PARD IMPORTS
 import { HttpClientModule } from '@angular/common/http';
@@ -102,6 +102,7 @@ import { MultiSelectExampleComponent } from './components/multi-select-example/m
 import { ScrollSpyDirective } from './directives/scroll-spy.directive';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { AlertsComponent } from './components/alerts/alerts.component';
+import { AccordionDefaultComponent } from './components/accordion-default/accordion-default.component';
 
 
 export const firebaseConfig = {
@@ -186,7 +187,9 @@ export const firebaseConfig = {
     MultiSelectExampleComponent,
     ScrollSpyDirective,
     CheckboxComponent,
-    AlertsComponent
+    AlertsComponent,
+    AccordionDefaultComponent,
+
 
 
   ],
@@ -212,6 +215,8 @@ export const firebaseConfig = {
     AngularTiltModule,
     NgxPageScrollCoreModule.forRoot({duration: 900}),
     NgxPageScrollModule,
+    AccordionModule.forRoot(),
+
 
     // ContentsModule
     // ParticlesModule

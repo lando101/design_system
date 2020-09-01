@@ -336,6 +336,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .primary-button{
   @include primary-button();
 }
+
+.secondary-button{
+  @include secondary-button();
+}
 .icon-button{
   color: $primary-color;
   background-color: transparent;

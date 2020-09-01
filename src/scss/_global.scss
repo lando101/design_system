@@ -1,3 +1,5 @@
+@import './mixins/button_mixins';
+
 // $foundation-color: #c2cace;
 // $design-color: #0085ca;
 // $component-color: #de632d;
@@ -20,7 +22,10 @@ $asset-color: #233645;
 }
 
 
-
+// BUTTONS
+.secondary-button{
+  @include secondary-button();
+}
 
 
 
