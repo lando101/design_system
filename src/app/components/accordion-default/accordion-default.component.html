@@ -18,6 +18,7 @@
       </mat-form-field>
       <i class="fas fa-info-circle" matTooltip="Adjust the height of the content in the accordion."></i>
     </div>
+    <mat-checkbox class="pl-5 mb-2 d-flex align-items-center icon-checkbox" [(ngModel)]='multiSelect' (change)='multiSelectToggle()'>Multiselect</mat-checkbox>
   </div>
   <button type="button" class="btn btn-primary btn-sm secondary-button mx-3" (click)='reset()'>Reset</button>
 </div>
@@ -36,7 +37,7 @@
         </h2>
       </div>
 
-      <div id="{{group.collapseID}}" class="collapse" attr.aria-labelledby="{{group.id}}" data-parent="#accordionExample">
+      <div id="{{group.collapseID}}" class="collapse" attr.aria-labelledby="{{group.id}}" attr.data-parent="{{multiSelectId}}">
         <div class="card-body" [ngStyle]="{'height': height + 'px'}">
         </div>
       </div>

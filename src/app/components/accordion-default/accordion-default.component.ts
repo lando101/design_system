@@ -9,7 +9,8 @@ import { coerceNumberProperty } from '@angular/cdk/coercion';
 })
 export class AccordionDefaultComponent implements OnInit {
   height = 170;
-
+  multiSelectId = '#accordionExample';
+  multiSelect = false;
   // SLIDER VARIABLES AND LOGIC
   // ROWS
   autoTicks = false;
@@ -74,6 +75,14 @@ export class AccordionDefaultComponent implements OnInit {
   removeGroupItem(){
     if(this.groups.length > 1){
       this.groups.pop();
+    }
+  }
+
+  multiSelectToggle(){
+    if(this.multiSelect){
+      this.multiSelectId = '';
+    } else if (!this.multiSelect){
+      this.multiSelectId = '#accordionExample';
     }
   }
 

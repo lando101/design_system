@@ -16,12 +16,6 @@ import { MenuExampleComponent } from './menu-example/menu-example.component';
 import { MultiSelectExampleComponent } from './multi-select-example/multi-select-example.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { AccordionDefaultComponent } from './accordion-default/accordion-default.component';
-// import { AlertsComponent } from './alerts/alerts.component';
-// import { ParticlesSectionComponent } from './particles-section/particles-section.component';
-
-// import { TableExampleComponent } from './table-example/table-example.component';
-// import { NewAppAssessmentComponent } from './new-app-assessment/new-app-assessment.component';
-// import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -29,26 +23,11 @@ import { AccordionDefaultComponent } from './accordion-default/accordion-default
       CommonModule,
       SharedModule,
       RouterModule,
-      // FooterComponent
-      // FontAwesomeModule,
-
     ],
     declarations: [
       HeaderComponent,
       SideNavigationComponent,
       DesignOverviewComponent,
-      // MultiSelectExampleComponent,
-      // MenuExampleComponent,
-      // AutoCompleteComponent,
-      // RadioButtonsComponent,
-      // TextInputsComponent,
-      // ParticlesSectionComponent,
-      // TableExampleComponent,
-      // ScrollTopComponent,
-      // AddTestersComponent,
-      // BasicAppInfoComponent,
-      // NewAppAssessmentComponent,
-      // FooterComponent
     ],
     exports: [
       HeaderComponent,

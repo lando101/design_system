@@ -13,10 +13,6 @@ import { FoundationPageComponent } from './pages/topic-pages/foundation-page/fou
 // import { AssetsPageComponent } from './pages/assets-page/assets-page.component';
 import { ComponentsPageComponent } from './pages/topic-pages/components-page/components-page.component';
 import { IconsPageComponent } from './pages/topic-pages/design-page/icons-page/icons-page.component';
-
-
-// SERVICES
-import { AuthGuard } from './core/auth';
 import { DefaultLayoutComponent } from './layouts';
 import { AccessibilityPageComponent } from './pages/topic-pages/accessibility-page/accessibility-page.component';
 import { ColorPalettePageComponent } from './pages/topic-pages/design-page/color-palette-page/color-palette-page.component';
@@ -38,6 +34,11 @@ import { TagPageComponent } from './pages/topic-pages/components-page/tag-page/t
 import { AccessibilityAssessmentPageComponent } from './pages/topic-pages/accessibility-page/accessibility-assessment-page/accessibility-assessment-page.component';
 import { AccessibilityOverviewPageComponent } from './pages/topic-pages/accessibility-page/accessibility-overview-page/accessibility-overview-page.component';
 import { AccessibilityReqPageComponent } from './pages/topic-pages/accessibility-page/accessibility-req-page/accessibility-req-page.component';
+import { CardPageComponent } from './pages/topic-pages/components-page/card-page/card-page.component';
+
+// SERVICES
+import { AuthGuard } from './core/auth';
+
 
 const routes: Routes = [
   { path: '',
@@ -68,6 +69,7 @@ const routes: Routes = [
         {path: '', redirectTo: 'design-overview', pathMatch: 'full' },
         {path: 'alert', component: AlertPageComponent, data: { title: 'Alert'}},
         {path: 'accordion', component: AccordionPageComponent, data: { title: 'Accordion'}},
+        {path: 'card', component: CardPageComponent, data: { title: 'Card'}},
         {path: 'form-controls', component: FormsPageComponent, data: { title: 'Form Controls'}},
         {path: 'button', component: ButtonsPageComponent, data: { title: 'Buttons'}},
         {path: 'banner', component: BannerPageComponent, data: { title: 'Banner'}},

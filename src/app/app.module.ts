@@ -52,6 +52,7 @@ import { BasicAppInfoComponent } from './components/basic-app-info/basic-app-inf
 // import { AddTestersComponent } from './components/add-testers/add-testers.component';
 import { UsersTypeAheadComponent } from './components/users-type-ahead/users-type-ahead.component';
 import { ParticlesSectionComponent } from './components/particles-section/particles-section.component';
+import { CardPageComponent } from './pages/topic-pages/components-page/card-page/card-page.component';
 
 
 // SERVICES
@@ -103,6 +104,7 @@ import { ScrollSpyDirective } from './directives/scroll-spy.directive';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { AlertsComponent } from './components/alerts/alerts.component';
 import { AccordionDefaultComponent } from './components/accordion-default/accordion-default.component';
+import { CardComponent } from './components/card/card.component';
 
 
 export const firebaseConfig = {
@@ -189,9 +191,8 @@ export const firebaseConfig = {
     CheckboxComponent,
     AlertsComponent,
     AccordionDefaultComponent,
-
-
-
+    CardComponent,
+    CardPageComponent
   ],
   exports:[UsersTypeAheadComponent],
   imports: [
