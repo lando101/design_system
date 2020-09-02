@@ -1,12 +1,57 @@
 @import '../../../scss/index';
+
+$accordion-bg: #e3e5e7;
+
 // CLASS IS USED IN TYPESCRIPT FILE
 ::ng-deep .card-custom-class{
   border-radius: 0px !important;
   border-bottom: none !important;
 }
 
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .border-radius-0{
   border-radius: 0 !important;
+}
+
+.accordion>.card>.card-header {
+  padding: 5px;
+  background-color: $accordion-bg;
+  border-bottom: 2px solid white;
+}
+
+.accordion>.card:not(:first-of-type) {
+  border: 0px;
+}
+
+.collapsed{
+  div{
+    i{
+      animation: .3s rotate-arrow-back;
+      /* rotate "play" icon from > (right arrow) to down arrow */
+      -webkit-transform: rotate(0deg);
+      -moz-transform:    rotate(0deg);
+      -ms-transform:     rotate(0deg);
+      -o-transform:      rotate(0deg);
+      transform:         rotate(0deg);
+    }
+  }
+}
+
+button[aria-expanded="true"]{
+  div{
+    i{
+      animation: .3s rotate-arrow-down;
+      -webkit-transform: rotate(90deg);
+      -moz-transform:    rotate(90deg);
+      -ms-transform:     rotate(90deg);
+      -o-transform:      rotate(90deg);
+      transform:         rotate(90deg);
+    }
+  }
 }
 
 .title-input {
@@ -21,5 +66,41 @@
     outline: none;
     border-bottom: 2px solid $primary-color;
     transition: 0.1s ease-in;
+  }
+}
+
+// ROTATES ARROW BACK TO DEFAULT
+@keyframes rotate-arrow-back {
+  0%{
+    -webkit-transform: rotate(90deg);
+    -moz-transform:    rotate(90deg);
+    -ms-transform:     rotate(90deg);
+    -o-transform:      rotate(90deg);
+    transform:         rotate(90deg);
+  }
+  100%{
+    -webkit-transform: rotate(0deg);
+    -moz-transform:    rotate(0deg);
+    -ms-transform:     rotate(0deg);
+    -o-transform:      rotate(0deg);
+    transform:         rotate(0deg);
+  }
+}
+
+// ROTATES ARROW DOWN
+@keyframes rotate-arrow-down {
+  0%{
+    -webkit-transform: rotate(0deg);
+    -moz-transform:    rotate(0deg);
+    -ms-transform:     rotate(0deg);
+    -o-transform:      rotate(0deg);
+    transform:         rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(90deg);
+    -moz-transform:    rotate(90deg);
+    -ms-transform:     rotate(90deg);
+    -o-transform:      rotate(90deg);
+    transform:         rotate(90deg);
   }
 }

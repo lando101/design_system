@@ -27,6 +27,10 @@ $asset-color: #233645;
   @include secondary-button();
 }
 
+// ACCENTS
+.accent-one{
+  color: $accent-color-one;
+}
 
 
 // ICON CLASSES
