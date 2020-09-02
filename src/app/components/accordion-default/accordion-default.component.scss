@@ -27,6 +27,14 @@ $accordion-bg: #e3e5e7;
   border: 0px;
 }
 
+.accordion>.card:not(:last-of-type) {
+  border: none;
+}
+
+.card-body{
+  border: 1px solid rgb(232, 232, 232);
+}
+
 .collapsed{
   div{
     i{
