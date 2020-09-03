@@ -2,13 +2,13 @@
 
 .section-container{
   padding: 10px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid $border-color-darker;
   border-radius: 10px;
-  background: #f7f7f7;
+  background: $content-bg-color;
 }
 
 p{
-  border-bottom: 1px solid lighten(#d8d8d8, 2%);
+  border-bottom: 1px solid lighten($border-color-darker, 2%);
   margin-bottom: 0px !important;
   padding-bottom: 5px;
 }
