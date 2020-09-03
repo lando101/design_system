@@ -3,7 +3,7 @@
   <p>Card Info:</p>
   <div class="section-container">
     <mat-form-field>
-      <mat-label>Card Title...</mat-label>
+      <mat-label cdkFocusInitial>Card Title...</mat-label>
       <input matInput [(ngModel)]="data.title">
     </mat-form-field>
     <mat-form-field class="d-block w-50">
@@ -34,9 +34,9 @@
     </div>
   </section>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+<div mat-dialog-actions class="d-flex justify-content-between align-items-center">
+  <button class="secondary-button btn btn-sm" (click)="onNoClick()">Cancel</button>
+  <button class="primary-button btn btn-sm" [mat-dialog-close]="data">Finish</button>
 </div>
 
 
