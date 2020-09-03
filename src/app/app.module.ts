@@ -53,6 +53,7 @@ import { BasicAppInfoComponent } from './components/basic-app-info/basic-app-inf
 import { UsersTypeAheadComponent } from './components/users-type-ahead/users-type-ahead.component';
 import { ParticlesSectionComponent } from './components/particles-section/particles-section.component';
 import { CardPageComponent } from './pages/topic-pages/components-page/card-page/card-page.component';
+import { ColorPickerComponent } from './components/color-picker/color-picker.component';
 
 
 // SERVICES
@@ -107,8 +108,8 @@ import { AccordionDefaultComponent } from './components/accordion-default/accord
 import { CardComponent } from './components/card/card.component';
 import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
-
+import { ColorSketchModule } from 'ngx-color/sketch';
+import { ColorBlockModule } from 'ngx-color/block';
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
   authDomain: 'style-guide-app.firebaseapp.com',
@@ -195,8 +196,8 @@ export const firebaseConfig = {
     AccordionDefaultComponent,
     CardComponent,
     CardPageComponent,
-    EditDialogComponent
-
+    EditDialogComponent,
+    ColorPickerComponent
   ],
   exports:[UsersTypeAheadComponent],
   imports: [
@@ -221,8 +222,9 @@ export const firebaseConfig = {
     NgxPageScrollCoreModule.forRoot({duration: 900}),
     NgxPageScrollModule,
     AccordionModule.forRoot(),
-    MatDialogModule
-
+    MatDialogModule,
+    ColorSketchModule,
+    ColorBlockModule
     // ContentsModule
     // ParticlesModule
 

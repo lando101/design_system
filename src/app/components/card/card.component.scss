@@ -5,7 +5,10 @@
 }
 
 .card-min-height{
-  height: 190px;
+  min-height: 205px;
+  max-height: 255px;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .soft-border-radius{
@@ -34,6 +37,7 @@ label{
       color: $primary-color;
     }
     ul{
+
       button{
         i{
           font-size: 1.35rem;

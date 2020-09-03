@@ -23,9 +23,9 @@
               </button>
             </div>
           </div>
-          <ul class="list-group list-group-flush card-min-height">
+          <ul class="list-group list-group-flush card-min-height scroll1">
             <button *ngFor="let option of card.options" class="border-0 bg-transparent my-1 py-1 d-flex align-items-center justify-content-start">
-              <i class="{{option.icon}} pr-1 mr-2"></i>
+              <i class="{{option.icon}} pr-1 mr-2" [ngStyle]="{'color': option.color}"></i>
               <div class="px-1">
                 <!-- <li class="list-group-item border-0 px-0">Cras justo odio</li> -->
                 <div class="option-title">{{option.optionTitle}}</div>

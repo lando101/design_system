@@ -1,0 +1,6 @@
+<button class="btn btn-sm btn-link" (click)="setFocus()" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  Change color
+</button>
+<mat-menu #menu="matMenu" class="p-0">
+    <color-block [color]="state" (onChangeComplete)="changeComplete($event)" (click)="$event.stopPropagation()"></color-block>
+</mat-menu>

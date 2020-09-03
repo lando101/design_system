@@ -27,7 +27,7 @@ import { Option } from 'src/app/models/option.model';
 export class CardComponent implements OnInit {
 
   options: Option[] =[];
-  cards:Card[] = [{id: 'card1', title: 'Card title', icon: 'fas fa-wrench', options:[{optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user'}]}];
+  cards:Card[] = [{id: 'card1', title: 'Card title', icon: 'fas fa-wrench', options:[{optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user', color: ''}]}];
   editVisible = true;
   constructor(public dialog: MatDialog) { }
 
@@ -51,7 +51,7 @@ export class CardComponent implements OnInit {
   // ADD A NEW CARD
   addCard(){
     const id = "card" + (this.cards.length + 1).toString();
-    const newCard = {id: id, title: 'Card title', icon: 'fas fa-wrench',  options:[{optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user'}]};
+    const newCard = {id: id, title: 'Card title', icon: 'fas fa-wrench',  options:[{optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user', color: ''}]};
     this.cards.push(newCard);
   }
 

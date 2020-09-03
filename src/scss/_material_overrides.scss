@@ -43,6 +43,10 @@
   background-color: $primary-color !important;
 }
 
+
+.mat-menu-content:not(:empty) {
+  padding: 0px !important
+}
 // DIAGLOG
 // .mat-dialog-container {
 //   width: 45vw;
