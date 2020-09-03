@@ -105,6 +105,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { AlertsComponent } from './components/alerts/alerts.component';
 import { AccordionDefaultComponent } from './components/accordion-default/accordion-default.component';
 import { CardComponent } from './components/card/card.component';
+import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 export const firebaseConfig = {
@@ -192,7 +194,9 @@ export const firebaseConfig = {
     AlertsComponent,
     AccordionDefaultComponent,
     CardComponent,
-    CardPageComponent
+    CardPageComponent,
+    EditDialogComponent
+
   ],
   exports:[UsersTypeAheadComponent],
   imports: [
@@ -217,7 +221,7 @@ export const firebaseConfig = {
     NgxPageScrollCoreModule.forRoot({duration: 900}),
     NgxPageScrollModule,
     AccordionModule.forRoot(),
-
+    MatDialogModule
 
     // ContentsModule
     // ParticlesModule
@@ -226,7 +230,7 @@ export const firebaseConfig = {
   ],
   entryComponents: [TableExampleComponent, DropDownsComponent, TextInputsComponent,
     RadioButtonsComponent, AutoCompleteComponent, MenuExampleComponent, MultiSelectExampleComponent,
-    CheckboxComponent, AlertsComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
+    CheckboxComponent, AlertsComponent, EditDialogComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
   providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService, ViewModeDirective, ],
   bootstrap: [AppComponent, UsersTypeAheadComponent, TableExampleComponent],
   // entryComponents: [NewAppAssessmentComponent]

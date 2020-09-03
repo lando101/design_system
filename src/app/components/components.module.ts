@@ -16,6 +16,7 @@ import { MenuExampleComponent } from './menu-example/menu-example.component';
 import { MultiSelectExampleComponent } from './multi-select-example/multi-select-example.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { AccordionDefaultComponent } from './accordion-default/accordion-default.component';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 
 
 @NgModule({

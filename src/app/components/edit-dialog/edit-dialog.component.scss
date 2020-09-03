@@ -1,0 +1,12 @@
+.section-container{
+  padding: 10px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+p{
+  border-bottom: 1px solid lighten(#d8d8d8, 2%);
+  margin-bottom: 0px !important;
+  padding-bottom: 5px;
+}

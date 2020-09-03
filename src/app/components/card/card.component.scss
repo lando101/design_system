@@ -12,6 +12,10 @@
   border-radius: 10px;
 }
 
+label{
+  margin-bottom: 0px !important
+}
+
 .card{
   box-shadow: 0px 3px 6px 1px #e7e7e7;
   border: none !important;
@@ -19,9 +23,31 @@
     .card-title{
       font-size: 1.2rem !important;
       font-weight: 500 !important;
+
+    }
+    .card-icon{
+      font-size: .95rem;
+      margin-right: 9px;
+      color: $font-color !important;
     }
     i{
       color: $primary-color;
+    }
+    ul{
+      button{
+        i{
+          font-size: 1.35rem;
+        }
+        .option-title{
+          font-size: 1.1rem;
+          text-align: left;
+        }
+        .option-subtitle{
+          text-align: left;
+          opacity: .7;
+          font-size: .93rem;
+        }
+      }
     }
   }
 

@@ -1,0 +1,42 @@
+<h1 mat-dialog-title>Card Editor</h1>
+<div mat-dialog-content>
+  <p>Card Info:</p>
+  <div class="section-container">
+    <mat-form-field>
+      <mat-label>Card Title...</mat-label>
+      <input matInput [(ngModel)]="data.title">
+    </mat-form-field>
+    <mat-form-field class="d-block w-50">
+      <mat-label>Card Icon...</mat-label>
+      <input matInput class="mr-2" [(ngModel)]="data.icon">
+       <mat-icon matSuffix><i class="{{data.icon}}"></i></mat-icon>
+    </mat-form-field>
+  </div>
+  <section *ngIf="data.options">
+    <div *ngFor="let option of data.options">
+      <p>Option {{data.options.length}}: <strong>{{option.optionTitle}}</strong></p>
+      <div class="section-container">
+        <mat-form-field class="d-block w-50">
+          <mat-label>Option Title...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="option.optionTitle">
+        </mat-form-field>
+        <mat-form-field class="d-block w-75">
+          <mat-label>Option Subtitle...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="option.optionSubtitle">
+        </mat-form-field>
+        <mat-form-field class="d-block w-50">
+          <mat-label>Option Icon...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="option.icon">
+          <mat-icon matSuffix><i class="{{option.icon}}"></i></mat-icon>
+        </mat-form-field>
+      </div>
+
+    </div>
+  </section>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
+
+
