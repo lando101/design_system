@@ -110,6 +110,7 @@ import { EditDialogComponent } from './components/edit-dialog/edit-dialog.compon
 import { MatDialogModule } from '@angular/material/dialog';
 import { ColorSketchModule } from 'ngx-color/sketch';
 import { ColorBlockModule } from 'ngx-color/block';
+import { FontAwesomeSearchComponent } from './components/font-awesome-search/font-awesome-search.component';
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
   authDomain: 'style-guide-app.firebaseapp.com',
@@ -197,7 +198,9 @@ export const firebaseConfig = {
     CardComponent,
     CardPageComponent,
     EditDialogComponent,
-    ColorPickerComponent
+    ColorPickerComponent,
+    FontAwesomeSearchComponent
+
   ],
   exports:[UsersTypeAheadComponent],
   imports: [

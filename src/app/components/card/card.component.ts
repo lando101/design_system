@@ -27,14 +27,14 @@ import { Option } from 'src/app/models/option.model';
 export class CardComponent implements OnInit {
 
   options: Option[] =[];
-  cards:Card[] = [{id: 'card1', title: 'Card title', icon: 'fas fa-wrench', options:[{optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user', color: ''}]}];
+  cards:Card[] = [{id: 'card1', title: 'Card title', icon: 'fas fa-wrench', color: '', options:[{optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user', color: ''}]}];
   editVisible = true;
   constructor(public dialog: MatDialog) { }
 
   openDialog(card: Card): void {
     let dialogRef = this.dialog.open(EditDialogComponent, {
       width: '450px',
-      data: { id: card.id, title: card.title, options: card.options, icon: card.icon }
+      data: { id: card.id, title: card.title, options: card.options, icon: card.icon, color: card.color }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -51,7 +51,7 @@ export class CardComponent implements OnInit {
   // ADD A NEW CARD
   addCard(){
     const id = "card" + (this.cards.length + 1).toString();
-    const newCard = {id: id, title: 'Card title', icon: 'fas fa-wrench',  options:[{optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user', color: ''}]};
+    const newCard = {id: id, title: 'Card title', icon: 'fas fa-wrench', color: '', options:[{optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user', color: ''}]};
     this.cards.push(newCard);
   }
 

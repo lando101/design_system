@@ -6,11 +6,14 @@
       <mat-label cdkFocusInitial>Card Title...</mat-label>
       <input matInput [(ngModel)]="data.title">
     </mat-form-field>
-    <mat-form-field class="d-block w-50">
-      <mat-label>Card Icon...</mat-label>
-      <input matInput class="mr-2" [(ngModel)]="data.icon">
-       <mat-icon matSuffix><i class="{{data.icon}}"></i></mat-icon>
-    </mat-form-field>
+    <div class="d-flex align-items-center justify-content-start">
+      <mat-form-field class="d-block w-50">
+        <mat-label>Card Icon...</mat-label>
+        <input matInput class="mr-2" [(ngModel)]="data.icon">
+        <mat-icon matSuffix><i [ngStyle]="{'color': data.color}" class="{{data.icon}}"></i></mat-icon>
+      </mat-form-field>
+      <app-color-picker (objectChange)="changeComplete($event)"></app-color-picker>
+    </div>
   </div>
   <section *ngIf="data.options">
     <div *ngFor="let option of data.options; let i = index">
@@ -47,6 +50,7 @@
     <button class="btn-link btn" (click)="addOption()">Add option</button>
   </div>
 </div>
+<app-font-awesome-search></app-font-awesome-search>
 <div mat-dialog-actions class="d-flex justify-content-between align-items-center">
   <button class="secondary-button btn btn-sm" (click)="onNoClick()">Cancel</button>
   <button class="primary-button btn btn-sm" [mat-dialog-close]="data">Finish</button>

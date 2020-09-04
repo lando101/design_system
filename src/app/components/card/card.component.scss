@@ -2,6 +2,12 @@
 
 .card-container{
   background: #EEEEEE;
+  position: relative;
+  .edit-toggle{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 }
 
 .card-min-height{
@@ -31,10 +37,7 @@ label{
     .card-icon{
       font-size: .95rem;
       margin-right: 9px;
-      color: $font-color !important;
-    }
-    i{
-      color: $primary-color;
+      // color: $font-color !important;
     }
     ul{
 

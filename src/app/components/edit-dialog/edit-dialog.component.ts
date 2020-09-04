@@ -23,10 +23,15 @@ export class EditDialogComponent implements OnInit {
     this.data.options.push({optionTitle:'Option title', optionSubtitle: 'Option subtitle', icon:'fas fa-user', color: ''});
   }
 
-  changeComplete($event: ColorEvent, option: any){
-    console.log($event.color);
-    this.state = $event.color.hex;
-    option.color = $event.color.hex;
+  changeComplete($event: ColorEvent, option?: any){
+    if(option){
+      console.log($event.color);
+      this.state = $event.color.hex;
+      option.color = $event.color.hex;
+    } else{
+        this.data.color = $event.color.hex;
+    }
+
   }
 
   print(event: any){
