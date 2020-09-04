@@ -1,13 +1,15 @@
-<form class="example-form">
+<form class="example-form d-flex align-items-center justify-content-start">
   <mat-form-field class="example-full-width">
-    <input type="text"
-           placeholder="Pick one"
+    <input  type="text"
+           placeholder="Choose an icon..."
            aria-label="Number"
            matInput
            [formControl]="myControl"
            [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
+           <!-- matAutocompletePosition="below"> -->
+           <mat-icon matSuffix><i class="{{icon.class}}" [ngStyle]="{'color': icon.color}"></i></mat-icon>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="iconChange($event)">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
         <div class="d-flex justify-content-start align-items-center">
           <i class="{{option.class}} px-3 col-md-2"></i>
           <span class="px-1">{{option.name}}</span>
@@ -16,4 +18,5 @@
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
+  <app-color-picker (objectChange)="colorSelected($event)" [state]="icon.color"></app-color-picker>
 </form>

@@ -7,7 +7,8 @@ import { ColorEvent } from 'ngx-color';
   styleUrls: ['./color-picker.component.scss']
 })
 export class ColorPickerComponent implements OnInit {
-  state = '#000000';
+  @Input() state = "#000000";
+  // state = '#000000';
   // @Input() object: any;
   @Output() objectChange = new EventEmitter<any>();
 

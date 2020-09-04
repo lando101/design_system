@@ -53,11 +53,7 @@ export class AccordionDefaultComponent implements OnInit {
     }
   ];
 
-
-
   constructor() { }
-
-
 
   ngOnInit(): void {
   }
