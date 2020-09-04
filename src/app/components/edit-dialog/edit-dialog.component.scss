@@ -2,15 +2,20 @@
 
 .section-container{
   padding: 10px;
-  border: 1px solid $border-color-darker;
+  border: 1px solid darken($border-color-darker, 2%);
   border-radius: 10px;
-  background: $content-bg-color;
+  background: $tab-content-bg-color;
 }
 
 p{
-  border-bottom: 1px solid lighten($border-color-darker, 2%);
+  border-bottom: 1px solid darken($border-color-darker, 2%);
   margin-bottom: 0px !important;
   padding-bottom: 5px;
 }
 
-
+.mat-dialog-content {
+  padding: 10px 24px !important;
+  background: darken($content-bg-color, 2%) !important;
+  border-top: 1px solid $border-color-darker !important;
+  border-bottom: 1px solid $border-color-darker !important;
+}
