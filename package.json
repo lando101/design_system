@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "aws-deploy": "aws s3 sync dist/style-guide-app/ s3://style-guide-app"
+    "aws-deploy": "aws s3 sync dist/style-guide-app/ s3://design-system-default"
   },
   "private": true,
   "dependencies": {

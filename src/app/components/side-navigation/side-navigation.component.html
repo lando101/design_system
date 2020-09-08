@@ -16,7 +16,7 @@
 
 
   <mat-drawer-container class="example-container" [hasBackdrop]="false">
-    <mat-drawer #drawer mode="side" class="fixed-drawer">
+    <mat-drawer #drawer mode="side" class="fixed-drawer" opened="true">
         <!-- <div *ngIf="this.visible" class="column-container"> -->
           <div class="nav-dimensions scroll1">
             <div class="nav-header">{{title}}</div>
@@ -37,24 +37,13 @@
   <!-- </div> -->
     </mat-drawer>
     <mat-drawer-content>
-      <!-- <mat-form-field>
-        <mat-label>Sidenav mode</mat-label>
-        <mat-select #mode value="side">
-          <mat-option value="side">Side</mat-option>
-          <mat-option value="over">Over</mat-option>
-          <mat-option value="push">Push</mat-option>
-        </mat-select>
-      </mat-form-field> -->
-      <button class="secondary-button btn btn-sm" (click)="drawer.toggle()">Toggle sidenav</button>
+      <button class="secondary-button btn btn-sm" (click)="drawer.toggle()"><span *ngIf="drawer._animationState == 'open' || drawer._animationState == 'open-instant'; else closed">Hide Sidenav</span></button>
     <router-outlet></router-outlet>
     </mat-drawer-content>
   </mat-drawer-container>
-  <!-- <div class="content-container scroll1">
-    <div class="tab-content-outer-container">
-      <div class="tab-content-inner-container">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </div> -->
   <!-- <app-footer></app-footer> -->
 </div>
+
+<ng-template #closed>
+  <span>Show Sidenav</span>
+</ng-template>
