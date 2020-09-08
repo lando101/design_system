@@ -22,6 +22,7 @@ $asset-color: #233645;
 }
 
 
+
 // BUTTONS
 .secondary-button{
   @include secondary-button();
@@ -185,8 +186,6 @@ $asset-color: #233645;
     font-size: 55% !important;
     margin: 0px 10px !important;
 }
-
-
 
 // COLOR PALLET PICKER
 .block-triangle{
