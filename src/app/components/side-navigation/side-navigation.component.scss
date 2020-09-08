@@ -20,24 +20,33 @@ a{
   }
 }
 
-mat-drawer-content {
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  button{
-    z-index: 9;
+
+
+.mat-drawer-container {
+  height: calc(100vh - 55px) !important;
+  .fixed-drawer{
+    position: fixed !important;
+    top: 55px;
+  }
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .sticky-button{
+      position: sticky;
+      left: 10px;
+      top: 10px;
+      z-index: 9;
+    }
   }
 }
 
-::ng-deep .mat-drawer.mat-drawer-side {
-  width: 275px;
+.mat-drawer.mat-drawer-side {
+  width: 275px !important;
 }
 
-.fixed-drawer{
-  position: fixed !important;
-  top: 55px;
-}
+
 
 
 .nav-dimensions{
