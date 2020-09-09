@@ -25,6 +25,7 @@ export class SideNavigationComponent implements OnInit {
 
   }
 
+
   ngOnInit(): void {
     this.ds.tabs.subscribe(updatedTabs => {
       this.tabs = updatedTabs;

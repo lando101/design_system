@@ -1,4 +1,110 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-  <mat-drawer-content>Main content</mat-drawer-content>
-</mat-drawer-container>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side" class="left-panel">
+    <div class="header p-2">
+      <div class="d-flex justify-content-start align-items-center">
+        <div class="col-sm-3 p-0">
+          <div class="thumbnail-container">
+            <img
+              src="https://general-assets-landon.s3.amazonaws.com/work-assets/booz-allen-hamilton-logo-twitter-b.png"
+              alt="Booz Allen thumbnail"
+            />
+          </div>
+        </div>
+        <div class="col-sm-9 p-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <small>Case ID</small><i class="far fa-star"></i>
+          </div>
+          <strong>Case Name</strong>
+        </div>
+      </div>
+    </div>
+    <div class="action-container px-1">
+      <div class="d-flex justify-content-between align-items-center">
+        <button class="secondary-button btn btn-sm">Actions</button>
+      </div>
+    </div>
+    <div class="meta-data-container px-3 py-2">Metadata</div>
+    <div class="tabs">
+      <div
+        class="nav flex-column nav-pills"
+        id="v-pills-tab"
+        role="tablist"
+        aria-orientation="vertical"
+      >
+        <a
+          class="nav-link active"
+          id="v-pills-home-tab"
+          data-toggle="pill"
+          href="#v-pills-home"
+          role="tab"
+          aria-controls="v-pills-home"
+          aria-selected="true"
+          >Comments</a
+        >
+        <a
+          class="nav-link"
+          id="v-pills-profile-tab"
+          data-toggle="pill"
+          href="#v-pills-profile"
+          role="tab"
+          aria-controls="v-pills-profile"
+          aria-selected="false"
+          >History</a
+        >
+        <a
+          class="nav-link"
+          id="v-pills-messages-tab"
+          data-toggle="pill"
+          href="#v-pills-messages"
+          role="tab"
+          aria-controls="v-pills-messages"
+          aria-selected="false"
+          >Details</a
+        >
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav opened mode="side" position="end" class="right-panel"
+    >End content</mat-sidenav
+  >
+  <div class="tab-content" id="v-pills-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="v-pills-home"
+      role="tabpanel"
+      aria-labelledby="v-pills-home-tab"
+    >
+      Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem
+      sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum
+      qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit
+      excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo
+      et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum
+      enim et cillum eu deserunt excepteur ea incididunt minim occaecat.
+    </div>
+    <div
+      class="tab-pane fade"
+      id="v-pills-profile"
+      role="tabpanel"
+      aria-labelledby="v-pills-profile-tab"
+    >
+      Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt
+      duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non
+      ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam.
+      Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit
+      aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id
+      officia mollit qui esse anim eiusmod do sint minim consectetur qui.
+    </div>
+    <div
+      class="tab-pane fade"
+      id="v-pills-messages"
+      role="tabpanel"
+      aria-labelledby="v-pills-messages-tab"
+    >
+      Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor
+      aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam
+      quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident
+      Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est
+      magna commodo est ea veniam consectetur.
+    </div>
+  </div>
+</mat-sidenav-container>
