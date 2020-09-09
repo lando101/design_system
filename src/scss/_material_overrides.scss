@@ -58,6 +58,12 @@
 //   top: 0%;
 // }
 
+.custom-dialog-container .mat-dialog-container {
+  /* add your styles */
+  padding: 5px 5px !important;
+  overflow: hidden !important;
+}
+
 .mat-dialog-container {
   border-radius: 10px !important;
 }

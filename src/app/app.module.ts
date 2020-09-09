@@ -112,6 +112,7 @@ import { ColorSketchModule } from 'ngx-color/sketch';
 import { ColorBlockModule } from 'ngx-color/block';
 import { FontAwesomeSearchComponent } from './components/font-awesome-search/font-awesome-search.component';
 import { SideNavExampleComponent } from './components/side-nav-example/side-nav-example.component';
+import { SidenavDialogComponent } from './components/sidenav-dialog/sidenav-dialog.component';
 export const firebaseConfig = {
   apiKey: 'AIzaSyDube3bcNPWdFbYbt3veyajdx1J0Qio-s8',
   authDomain: 'style-guide-app.firebaseapp.com',
@@ -201,7 +202,8 @@ export const firebaseConfig = {
     EditDialogComponent,
     ColorPickerComponent,
     FontAwesomeSearchComponent,
-    SideNavExampleComponent
+    SideNavExampleComponent,
+    SidenavDialogComponent
 
   ],
   exports:[UsersTypeAheadComponent],
@@ -237,8 +239,9 @@ export const firebaseConfig = {
   ],
   entryComponents: [TableExampleComponent, DropDownsComponent, TextInputsComponent,
     RadioButtonsComponent, AutoCompleteComponent, MenuExampleComponent, MultiSelectExampleComponent,
-    CheckboxComponent, AlertsComponent, EditDialogComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
-  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService, TableDataService, ViewModeDirective, ],
+    CheckboxComponent, AlertsComponent, EditDialogComponent, SidenavDialogComponent], // ADD COMPONENTS HERE IF YOU WANT TO DYNAMICALLY LOAD THEM WITH A LOOP METHOD
+  providers: [AuthService, DataService, AngularFirestoreModule, SideNavigationComponent, ValidationServiceService,
+    TableDataService, ViewModeDirective],
   bootstrap: [AppComponent, UsersTypeAheadComponent, TableExampleComponent],
   // entryComponents: [NewAppAssessmentComponent]
 })
