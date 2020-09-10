@@ -37,8 +37,17 @@
       }
     }
     .meta-data-container {
-      height: 100px;
+      height: auto;
       border-bottom: 1px solid $border-color-darker;
+      .label-data{
+        flex-wrap: nowrap;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      small{
+        font-weight: 500 !important;
+      }
     }
     .tabs {
       height: auto;
