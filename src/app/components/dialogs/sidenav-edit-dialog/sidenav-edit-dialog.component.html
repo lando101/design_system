@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>Side Navigation Editor</h1>
+<div mat-dialog-content class="scroll1">
+  <p>Header:</p>
+  <div class="section-container">
+    <mat-form-field class="d-block w-25">
+      <mat-label cdkFocusInitial>ID...</mat-label>
+      <input matInput [(ngModel)]="data.sideNav.caseId">
+    </mat-form-field>
+    <mat-form-field class="d-block w-75">
+      <mat-label cdkFocusInitial>Case Name...</mat-label>
+      <input matInput [(ngModel)]="data.sideNav.caseName">
+    </mat-form-field>
+    <!-- <div class="d-flex align-items-center justify-content-start">
+      <mat-form-field class="d-block w-50">
+        <mat-label>Card Icon...</mat-label>
+        <input matInput class="mr-2" [(ngModel)]="data.icon">
+        <mat-icon matSuffix><i [ngStyle]="{'color': data.color}" class="{{data.icon}}"></i></mat-icon>
+      </mat-form-field>
+      <app-color-picker (objectChange)="changeComplete($event)"></app-color-picker>
+    </div> -->
+    <app-font-awesome-search [currentClass]="data.icon" [currentColor]="data.color"></app-font-awesome-search>
+  </div>
+  <section *ngIf="data.options">
+    <div *ngFor="let option of data.options; let i = index">
+      <p>Option {{i+1}}: <strong>{{option.optionTitle}}</strong></p>
+      <div class="section-container">
+        <mat-form-field class="d-block w-50">
+          <mat-label>Option Title...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="option.optionTitle">
+        </mat-form-field>
+        <mat-form-field class="d-block w-75">
+          <mat-label>Option Subtitle...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="option.optionSubtitle">
+        </mat-form-field>
+        <!-- <div class="d-flex align-items-center justify-content-start">
+          <mat-form-field class="d-block w-50">
+            <mat-label>Option Icon...</mat-label>
+            <input matInput class="mr-2" [(ngModel)]="option.icon">
+            <mat-icon matSuffix><i class="{{option.icon}}" [ngStyle]="{'color': option.color}"></i></mat-icon>
+          </mat-form-field>
+        </div> -->
+        <app-font-awesome-search></app-font-awesome-search>
+
+
+
+        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <color-block [color]="state" (onChangeComplete)="changeComplete($event, option)"></color-block>
+        </mat-menu> -->
+      </div>
+
+    </div>
+  </section>
+  <div class="d-flex justify-content-start align-items-center my-3">
+    <button class="btn-link btn">Add option</button>
+  </div>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-between align-items-center">
+  <button class="secondary-button btn btn-sm" (click)="onNoClick()">Cancel</button>
+  <button class="primary-button btn btn-sm" [mat-dialog-close]="data">Finish</button>
+</div>

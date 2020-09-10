@@ -6,9 +6,10 @@
         <h1> Side Navigation </h1>
         <h4>Hierarchical, vertical navigation placed at the side of a page.</h4>
         <div class="w-100 d-flex justify-content-start align-items-center">
-          <button class="secondary-button btn btn-sm" (click)="openDialog()"><i class="fas fa-expand pr-2"></i> Full screen</button>
+          <button class="secondary-button btn btn-sm" (click)="openFullScreenDialog()"><i class="fas fa-expand pr-2"></i> Full Screen</button>
+          <button class="secondary-button btn btn-sm" (click)="openEditSidenav()"><i class="fas fa-expand pr-2"></i> Edit Side Navigation</button>
         </div>
-        <app-side-nav-example></app-side-nav-example>
+        <app-side-nav-example [sideNavData] = "sideNavData"></app-side-nav-example>
       </div>
     </div>
   </div>

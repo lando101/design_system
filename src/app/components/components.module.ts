@@ -7,12 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { DesignOverviewComponent } from './design-overview/design-overview.component';
 
-
-
-
-
-
-
 @NgModule({
     imports: [
       CommonModule,
