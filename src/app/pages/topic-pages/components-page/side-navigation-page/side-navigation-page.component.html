@@ -5,9 +5,9 @@
       <div class="page-reveal-animation">
         <h1> Side Navigation </h1>
         <h4>Hierarchical, vertical navigation placed at the side of a page.</h4>
-        <div class="w-100 d-flex justify-content-start align-items-center">
+        <div class="w-100 d-flex justify-content-between align-items-center">
+          <button class="btn-link btn btn-sm" (click)="openEditSidenav()"> Edit Side Navigation</button>
           <button class="secondary-button btn btn-sm" (click)="openFullScreenDialog()"><i class="fas fa-expand pr-2"></i> Full Screen</button>
-          <button class="secondary-button btn btn-sm" (click)="openEditSidenav()"><i class="fas fa-expand pr-2"></i> Edit Side Navigation</button>
         </div>
         <app-side-nav-example [sideNavData] = "sideNavData"></app-side-nav-example>
       </div>

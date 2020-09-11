@@ -1,14 +1,15 @@
 <h1 mat-dialog-title>Side Navigation Editor</h1>
 <div mat-dialog-content class="scroll1">
-  <p>Header:</p>
+  <h1 class="font-weight-light m-0">Header</h1>
+  <small>Data in the top part of the side nav (ID and case name)</small>
   <div class="section-container">
     <mat-form-field class="d-block w-25">
       <mat-label cdkFocusInitial>ID...</mat-label>
-      <input matInput [(ngModel)]="data.sideNav.caseId">
+      <input matInput [(ngModel)]="sideNavData.caseId">
     </mat-form-field>
     <mat-form-field class="d-block w-75">
       <mat-label cdkFocusInitial>Case Name...</mat-label>
-      <input matInput [(ngModel)]="data.sideNav.caseName">
+      <input matInput [(ngModel)]="sideNavData.caseName">
     </mat-form-field>
     <!-- <div class="d-flex align-items-center justify-content-start">
       <mat-form-field class="d-block w-50">
@@ -18,39 +19,120 @@
       </mat-form-field>
       <app-color-picker (objectChange)="changeComplete($event)"></app-color-picker>
     </div> -->
-    <app-font-awesome-search [currentClass]="data.icon" [currentColor]="data.color"></app-font-awesome-search>
+    <!-- <app-font-awesome-search [currentClass]="data.icon" [currentColor]="data.color"></app-font-awesome-search> -->
   </div>
-  <section *ngIf="data.options">
-    <div *ngFor="let option of data.options; let i = index">
-      <p>Option {{i+1}}: <strong>{{option.optionTitle}}</strong></p>
-      <div class="section-container">
+  <section>
+    <h1 class="font-weight-light m-0">Metadata</h1>
+    <small>General data about the case</small>
+    <div class="mt-2 mb-1 d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-start align-items-center">
+        <label class="font-weight-bolder mb-0">Important Metadata</label>
+        <small class="mx-2"><i class="fas fa-info-circle" matTooltip="Metadata that deserves a call out (ex. SLA, Priority, Dates, etc.)"></i></small>
+      </div>
+      <div class="d-flex justify-content-end align-items-center">
+        <small>{{sideNavData.imprtMeta.length}} of 2</small>
+      </div>
+    </div>
+    <div *ngFor="let meta of sideNavData.imprtMeta; let i = index">
+      <div class="section-container mt-0">
+        <div class="d-flex align-items-center justify-content-between">
+          <p>{{meta.desc}}</p>
+          <button mat-icon-button matTooltip="Remove {{meta.desc}}"><i class="far fa-trash-alt"></i></button>
+        </div>
         <mat-form-field class="d-block w-50">
-          <mat-label>Option Title...</mat-label>
-          <input matInput class="mr-2" [(ngModel)]="option.optionTitle">
+          <mat-label>Label...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="meta.desc">
         </mat-form-field>
         <mat-form-field class="d-block w-75">
-          <mat-label>Option Subtitle...</mat-label>
-          <input matInput class="mr-2" [(ngModel)]="option.optionSubtitle">
+          <mat-label>Content...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="meta.content">
         </mat-form-field>
-        <!-- <div class="d-flex align-items-center justify-content-start">
-          <mat-form-field class="d-block w-50">
-            <mat-label>Option Icon...</mat-label>
-            <input matInput class="mr-2" [(ngModel)]="option.icon">
-            <mat-icon matSuffix><i class="{{option.icon}}" [ngStyle]="{'color': option.color}"></i></mat-icon>
-          </mat-form-field>
-        </div> -->
-        <app-font-awesome-search></app-font-awesome-search>
-
-
-
-        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-          <color-block [color]="state" (onChangeComplete)="changeComplete($event, option)"></color-block>
-        </mat-menu> -->
       </div>
+    </div>
+    <div class="add-container">
+      <div class="w-100 d-flex justify-content-center align-items-center ">
+        <button mat-icon-button matTooltip="Add important metadata">
+          <i class="fas fa-plus-circle"></i>
+        </button>
+      </div>
+      <div class="w-100 d-flex justify-content-center align-items-center">
+        <small>{{sideNavData.imprtMeta.length}} of 2</small>
+      </div>
+    </div>
+    <div class="mt-2 mb-1 d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-start align-items-center">
+        <label class="font-weight-bolder mb-0">Standard Metadata</label>
+        <small class="mx-2"><i class="fas fa-info-circle" matTooltip="General information that is useful but does not need a callout"></i></small>
+      </div>
+      <div class="d-flex justify-content-end align-items-center">
+        <small>{{sideNavData.strdMeta.length}} of 6</small>
+      </div>
+    </div>
+    <div *ngFor="let meta of sideNavData.strdMeta; let i = index">
+      <div class="section-container mt-0">
+        <div class="d-flex align-items-center justify-content-between">
+          <p>{{meta.desc}}</p>
+          <button mat-icon-button matTooltip="Remove {{meta.desc}}"><i class="far fa-trash-alt"></i></button>
+        </div>
+        <mat-form-field class="d-block w-50">
+          <mat-label>Label...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="meta.desc">
+        </mat-form-field>
+        <mat-form-field class="d-block w-75">
+          <mat-label>Content...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="meta.content">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="add-container">
+      <div class="w-100 d-flex justify-content-center align-items-center ">
+        <button mat-icon-button matTooltip="Add standard metadata">
+          <i class="fas fa-plus-circle"></i>
+        </button>
+      </div>
+      <div class="w-100 d-flex justify-content-center align-items-center">
+        <small>{{sideNavData.strdMeta.length}} of 6</small>
+      </div>
+    </div>
+    <div class="mt-2 mb-1 d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-start align-items-center">
+        <label class="font-weight-bolder mb-0">Long Metadata</label>
+        <small class="mx-2"><i class="fas fa-info-circle" matTooltip="Meta data that will require more than one line (ex. Descriptions, etc.)"></i></small>
+      </div>
+      <div class="d-flex justify-content-end align-items-center">
+        <small>{{sideNavData.longMeta.length}} of 2</small>
+      </div>
+    </div>
+    <div *ngFor="let meta of sideNavData.longMeta; let i = index">
+      <div class="section-container mt-0">
+        <div class="d-flex align-items-center justify-content-between">
+          <p>{{meta.desc}}</p>
+          <button mat-icon-button matTooltip="Remove {{meta.desc}}"><i class="far fa-trash-alt"></i></button>
+        </div>
+        <mat-form-field class="d-block w-50">
+          <mat-label>Label...</mat-label>
+          <input matInput class="mr-2" [(ngModel)]="meta.desc">
+        </mat-form-field>
+        <div class="form-group">
+          <small for="exampleFormControlTextarea1" class="w-25 text-muted-override">Content</small>
+          <div class="w-100">
+            <textarea type="text" [(ngModel)]="meta.content" (ngModelChange)="onModelChange($event)" class="form-control" id="exampleFormControlTextarea1" aria-describedby="emailHelp" maxlength="200"></textarea>
+            <small [ngClass]="{'text-danger': numberOfCharacters === maxNumberOfCharacters}" id="emailHelp" class="form-text text-muted-override">Remaining: {{maxNumberOfCharacters - numberOfCharacters}} characters</small>
+          </div>
 
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+      </div>
+    </div>
+    <div class="add-container">
+      <div class="w-100 d-flex justify-content-center align-items-center ">
+        <button mat-icon-button matTooltip="Add long metadata">
+          <i class="fas fa-plus-circle"></i>
+        </button>
+      </div>
+      <div class="w-100 d-flex justify-content-center align-items-center">
+        <small>{{sideNavData.longMeta.length}} of 2</small>
+      </div>
     </div>
   </section>
   <div class="d-flex justify-content-start align-items-center my-3">

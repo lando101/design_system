@@ -11,8 +11,8 @@ export class SideNavExampleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.sideNavData);
-    console.log('Side nav got the data');
+    // console.log(this.sideNavData);
+    // console.log('Side nav got the data');
 
     if(!this.sideNavData){
       // IF NO DATA IS RECEIVED USE THIS DATA INSTEAD :: USED IN FULL SCREEN VIEW

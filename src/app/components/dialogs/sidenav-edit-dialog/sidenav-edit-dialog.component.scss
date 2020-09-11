@@ -8,9 +8,10 @@
 }
 
 p{
-  border-bottom: 1px solid darken($border-color-darker, 2%);
+  // border-bottom: 1px solid darken($border-color-darker, 2%);
   margin-bottom: 0px !important;
-  padding-bottom: 5px;
+  padding-bottom: 12px;
+  font-weight: 500;
 }
 
 .mat-dialog-content {
@@ -18,4 +19,11 @@ p{
   background: darken($content-bg-color, 2%) !important;
   border-top: 1px solid $border-color-darker !important;
   border-bottom: 1px solid $border-color-darker !important;
+}
+
+.add-container{
+  margin-top: -25px;
+  i{
+    font-size: 1.1rem;
+  }
 }
