@@ -34,6 +34,7 @@ export interface Metadata {
 }
 
 export interface StandardMeta {
+  id: string;
   desc: string;
   content: string;
   important: boolean;
@@ -44,6 +45,7 @@ export interface StandardMeta {
 }
 
 export interface ImportantMeta {
+  id: string;
   desc: string;
   content: string;
   important: boolean;
@@ -54,6 +56,7 @@ export interface ImportantMeta {
 }
 
 export interface LongMeta {
+  id: string;
   desc: string;
   content: string;
   important: boolean;

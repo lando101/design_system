@@ -26,15 +26,15 @@ export class SideNavExampleComponent implements OnInit {
           {tabName: 'Details', order: 2, href: 'details'},
         ],
         strdMeta: [
-          {desc: 'Badge Label', content:'Status', important: false, badge: true, layout: 'inline', class: 'pimary', type: 'standard'},
-          {desc: 'Label 1', content:'Lorem ipsum', important: false, badge: false, layout: 'inline', type: 'standard'},
-          {desc: 'Label 2', content:'Lorem ipsum', important: false, badge: false, layout: 'inline', type: 'standard'},
+          {id: 'strd1', desc: 'Badge Label', content:'Status', important: false, badge: true, layout: 'inline', class: 'pimary', type: 'standard'},
+          {id: 'strd2', desc: 'Label 1', content:'Lorem ipsum', important: false, badge: false, layout: 'inline', type: 'standard'},
+          {id: 'strd3', desc: 'Label 2', content:'Lorem ipsum', important: false, badge: false, layout: 'inline', type: 'standard'},
         ],
         imprtMeta: [
-          {desc: 'Desc Label', content:'Important info', important: true, badge: false, layout: 'block', type: 'highlight'}
+          {id: 'imprt1', desc: 'Desc Label', content:'Important info', important: true, badge: false, layout: 'block', type: 'highlight'}
         ],
         longMeta: [
-          {desc: 'Long Text Label',
+          {id: 'long1', desc: 'Long Text Label',
             content:'Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint.',
             important: false, badge: false, layout: 'block', type: 'paragraph'
           }

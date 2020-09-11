@@ -21,9 +21,21 @@ p{
   border-bottom: 1px solid $border-color-darker !important;
 }
 
+.card-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+// .card-container::after {
+//   content: "";
+//   flex: auto;
+// }
 .add-container{
   margin-top: -25px;
   i{
     font-size: 1.1rem;
+  }
+  .warning{
+    color: #dc0000 !important;
   }
 }

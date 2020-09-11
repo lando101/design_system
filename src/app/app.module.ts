@@ -10,6 +10,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ResizableModule } from 'angular-resizable-element';
+import { FlexLayoutModule } from "@angular/flex-layout";
 // import { ParticlesModule } from 'angular-particle';
 
 
@@ -233,7 +234,8 @@ export const firebaseConfig = {
     AccordionModule.forRoot(),
     MatDialogModule,
     ColorSketchModule,
-    ColorBlockModule
+    ColorBlockModule,
+    FlexLayoutModule
     // ContentsModule
     // ParticlesModule
 

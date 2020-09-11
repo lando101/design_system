@@ -26,6 +26,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { RippleGlobalOptions, MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 // import {FooterComponent} from '../components/footer/footer.component';
@@ -53,7 +54,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
   MatButtonModule,
   MatRadioModule,
   MatAutocompleteModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatGridListModule
   // AngularTiltModule
 
 
@@ -78,7 +80,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
   MatButtonModule,
   MatRadioModule,
   MatAutocompleteModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatGridListModule
 
 
 

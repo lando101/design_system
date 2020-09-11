@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Side Navigation Editor</h1>
+<!-- <h1 mat-dialog-title>Side Navigation Editor</h1>
 <div mat-dialog-content class="scroll1">
   <h1 class="font-weight-light m-0">Header</h1>
   <small>Data in the top part of the side nav (ID and case name)</small>
@@ -11,15 +11,6 @@
       <mat-label cdkFocusInitial>Case Name...</mat-label>
       <input matInput [(ngModel)]="sideNavData.caseName">
     </mat-form-field>
-    <!-- <div class="d-flex align-items-center justify-content-start">
-      <mat-form-field class="d-block w-50">
-        <mat-label>Card Icon...</mat-label>
-        <input matInput class="mr-2" [(ngModel)]="data.icon">
-        <mat-icon matSuffix><i [ngStyle]="{'color': data.color}" class="{{data.icon}}"></i></mat-icon>
-      </mat-form-field>
-      <app-color-picker (objectChange)="changeComplete($event)"></app-color-picker>
-    </div> -->
-    <!-- <app-font-awesome-search [currentClass]="data.icon" [currentColor]="data.color"></app-font-awesome-search> -->
   </div>
   <section>
     <h1 class="font-weight-light m-0">Metadata</h1>
@@ -49,9 +40,9 @@
         </mat-form-field>
       </div>
     </div>
-    <div class="add-container">
+    <div class="add-container" *ngIf="sideNavData.imprtMeta.length < 2; else max">
       <div class="w-100 d-flex justify-content-center align-items-center ">
-        <button mat-icon-button matTooltip="Add important metadata">
+        <button mat-icon-button matTooltip="Add important metadata" (click)="addImportantMeta()">
           <i class="fas fa-plus-circle"></i>
         </button>
       </div>
@@ -84,9 +75,9 @@
         </mat-form-field>
       </div>
     </div>
-    <div class="add-container">
+    <div class="add-container" *ngIf="sideNavData.strdMeta.length < 6; else max">
       <div class="w-100 d-flex justify-content-center align-items-center ">
-        <button mat-icon-button matTooltip="Add standard metadata">
+        <button mat-icon-button matTooltip="Add standard metadata" (click)="addStandardMeta()">
           <i class="fas fa-plus-circle"></i>
         </button>
       </div>
@@ -119,14 +110,12 @@
             <textarea type="text" [(ngModel)]="meta.content" (ngModelChange)="onModelChange($event)" class="form-control" id="exampleFormControlTextarea1" aria-describedby="emailHelp" maxlength="200"></textarea>
             <small [ngClass]="{'text-danger': numberOfCharacters === maxNumberOfCharacters}" id="emailHelp" class="form-text text-muted-override">Remaining: {{maxNumberOfCharacters - numberOfCharacters}} characters</small>
           </div>
-
-          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
         </div>
       </div>
     </div>
-    <div class="add-container">
+    <div class="add-container" *ngIf="sideNavData.longMeta.length < 2; else max">
       <div class="w-100 d-flex justify-content-center align-items-center ">
-        <button mat-icon-button matTooltip="Add long metadata">
+        <button mat-icon-button matTooltip="Add long metadata" (click)="addLongMeta()">
           <i class="fas fa-plus-circle"></i>
         </button>
       </div>
@@ -135,11 +124,190 @@
       </div>
     </div>
   </section>
-  <div class="d-flex justify-content-start align-items-center my-3">
-    <button class="btn-link btn">Add option</button>
-  </div>
 </div>
 <div mat-dialog-actions class="d-flex justify-content-between align-items-center">
   <button class="secondary-button btn btn-sm" (click)="onNoClick()">Cancel</button>
   <button class="primary-button btn btn-sm" [mat-dialog-close]="data">Finish</button>
 </div>
+
+
+<ng-template #max>
+  <div class="d-flex justify-content-center align-items-center add-container pt-2 pb-3">
+    <small class="warning">Reached max amount</small>
+  </div>
+</ng-template> -->
+<h1 mat-dialog-title>Side Navigation Editor</h1>
+<div mat-dialog-content class="scroll1">
+  <mat-vertical-stepper [linear]="isLinear" #stepper>
+    <!-- STEP 1 -->
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel
+          ><div>Header</div>
+          <small>Case id and name</small></ng-template
+        >
+        <div class="section-container">
+          <mat-form-field>
+            <mat-label cdkFocusInitial>ID...</mat-label>
+            <input
+              matInput
+              [ngModelOptions]="{ standalone: true }"
+              [(ngModel)]="sideNavData.caseId"
+              value="{{ sideNavData.caseId }}"
+            />
+          </mat-form-field>
+          <mat-form-field class="d-block w-75">
+            <mat-label cdkFocusInitial>Case Name...</mat-label>
+            <input
+              matInput
+              [ngModelOptions]="{ standalone: true }"
+              [(ngModel)]="sideNavData.caseName"
+            />
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- STEP 2 -->
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel
+          ><div>Metadata</div>
+          <small>General information about case</small></ng-template
+        >
+        <div class="mt-2 mb-1 d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-start align-items-center">
+            <label class="font-weight-bolder mb-0">Standard Metadata</label>
+            <small class="mx-2"><i class="fas fa-info-circle" matTooltip="General information that is useful but does not need a callout"></i></small>
+          </div>
+          <div class="d-flex justify-content-end align-items-center">
+            <small>{{sideNavData.strdMeta.length}} of 6</small>
+          </div>
+        </div>
+        <!-- <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+               required> -->
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+          <div
+            fxFlex="25%"
+            fxFlex.xs="100%"
+            fxFlex.sm="50%"
+            fxFlex.md="33%"
+            fxFlex.lg="25%"
+            *ngFor="let meta of sideNavData.strdMeta; let i = index"
+          >
+            <div class="section-container mt-0">
+              <div class="d-flex align-items-center justify-content-between">
+                <p>{{ meta.desc }}</p>
+                <button mat-icon-button matTooltip="Remove {{ meta.desc }}">
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </div>
+              <mat-form-field class="d-block w-50">
+                <mat-label>Label...</mat-label>
+                <input
+                  matInput
+                  class="mr-2"
+                  [ngModelOptions]="{ standalone: true }"
+                  [(ngModel)]="meta.desc"
+                  value="{{ meta.desc }}"
+                />
+              </mat-form-field>
+              <mat-form-field class="d-block w-75">
+                <mat-label>Content...</mat-label>
+                <input
+                  matInput
+                  class="mr-2"
+                  [ngModelOptions]="{ standalone: true }"
+                  [(ngModel)]="meta.content"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="add-container" *ngIf="sideNavData.strdMeta.length < 6; else max">
+          <div class="w-100 d-flex justify-content-center align-items-center ">
+            <button mat-icon-button matTooltip="Add standard metadata" (click)="addStandardMeta()">
+              <i class="fas fa-plus-circle"></i>
+            </button>
+          </div>
+          <div class="w-100 d-flex justify-content-center align-items-center">
+            <small>{{sideNavData.strdMeta.length}} of 6</small>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- STEP 3 -->
+    <mat-step [stepControl]="tabFormGroup">
+      <form [formGroup]="tabFormGroup">
+        <ng-template matStepLabel
+          ><div>Tabs</div>
+          <small>Toggle data viewable below the form</small></ng-template
+        >
+        <div
+          class="mt-2 mb-1 d-flex justify-content-between align-items-center"
+        >
+          <div class="d-flex justify-content-end align-items-center">
+            <h4>Standard Meta</h4>
+            <small>{{ sideNavData.strdMeta.length }} of 6</small>
+          </div>
+        </div>
+        <!-- <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+               required> -->
+        <input matInput formControlName="secondCtrl" />
+        <div *ngFor="let meta of sideNavData.strdMeta; let i = index">
+          <div class="section-container mt-0">
+            <div class="d-flex align-items-center justify-content-between">
+              <p>{{ meta.desc }}</p>
+              <button mat-icon-button matTooltip="Remove {{ meta.desc }}">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </div>
+            <mat-form-field class="d-block w-50">
+              <mat-label>Label...</mat-label>
+              <input
+                matInput
+                class="mr-2"
+                [ngModelOptions]="{ standalone: true }"
+                [(ngModel)]="meta.desc"
+                value="{{ meta.desc }}"
+              />
+            </mat-form-field>
+            <mat-form-field class="d-block w-75">
+              <mat-label>Content...</mat-label>
+              <input
+                matInput
+                class="mr-2"
+                [ngModelOptions]="{ standalone: true }"
+                [(ngModel)]="meta.content"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>
+
+<ng-template #max>
+  <div class="d-flex justify-content-center align-items-center add-container pt-2 pb-3">
+    <small class="warning">Reached max amount</small>
+  </div>
+</ng-template> -->
