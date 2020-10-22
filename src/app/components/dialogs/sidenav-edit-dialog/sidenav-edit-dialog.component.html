@@ -142,27 +142,19 @@
     <!-- STEP 1 -->
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel
-          ><div>Header</div>
-          <small>Case id and name</small></ng-template
-        >
+        <ng-template matStepLabel>
+          <div>Header</div>
+          <small>Case id and name</small>
+        </ng-template>
         <div class="section-container">
           <mat-form-field>
             <mat-label cdkFocusInitial>ID...</mat-label>
-            <input
-              matInput
-              [ngModelOptions]="{ standalone: true }"
-              [(ngModel)]="sideNavData.caseId"
-              value="{{ sideNavData.caseId }}"
-            />
+            <input matInput [ngModelOptions]="{ standalone: true }" [(ngModel)]="sideNavData.caseId"
+              value="{{ sideNavData.caseId }}" />
           </mat-form-field>
           <mat-form-field class="d-block w-75">
             <mat-label cdkFocusInitial>Case Name...</mat-label>
-            <input
-              matInput
-              [ngModelOptions]="{ standalone: true }"
-              [(ngModel)]="sideNavData.caseName"
-            />
+            <input matInput [ngModelOptions]="{ standalone: true }" [(ngModel)]="sideNavData.caseName" />
           </mat-form-field>
         </div>
         <div>
@@ -173,14 +165,15 @@
     <!-- STEP 2 -->
     <mat-step [stepControl]="secondFormGroup">
       <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel
-          ><div>Metadata</div>
-          <small>General information about case</small></ng-template
-        >
+        <ng-template matStepLabel>
+          <div>Metadata</div>
+          <small>General information about case</small>
+        </ng-template>
         <div class="mt-2 mb-1 d-flex justify-content-between align-items-center">
           <div class="d-flex justify-content-start align-items-center">
             <label class="font-weight-bolder mb-0">Standard Metadata</label>
-            <small class="mx-2"><i class="fas fa-info-circle" matTooltip="General information that is useful but does not need a callout"></i></small>
+            <small class="mx-2"><i class="fas fa-info-circle"
+                matTooltip="General information that is useful but does not need a callout"></i></small>
           </div>
           <div class="d-flex justify-content-end align-items-center">
             <small>{{sideNavData.strdMeta.length}} of 6</small>
@@ -189,14 +182,8 @@
         <!-- <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
                required> -->
         <div fxLayout="row wrap" fxLayoutGap="16px grid">
-          <div
-            fxFlex="25%"
-            fxFlex.xs="100%"
-            fxFlex.sm="50%"
-            fxFlex.md="33%"
-            fxFlex.lg="25%"
-            *ngFor="let meta of sideNavData.strdMeta; let i = index"
-          >
+          <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" fxFlex.lg="25%"
+            *ngFor="let meta of sideNavData.strdMeta; let i = index">
             <div class="section-container mt-0">
               <div class="d-flex align-items-center justify-content-between">
                 <p>{{ meta.desc }}</p>
@@ -206,22 +193,12 @@
               </div>
               <mat-form-field class="d-block w-50">
                 <mat-label>Label...</mat-label>
-                <input
-                  matInput
-                  class="mr-2"
-                  [ngModelOptions]="{ standalone: true }"
-                  [(ngModel)]="meta.desc"
-                  value="{{ meta.desc }}"
-                />
+                <input matInput class="mr-2" [ngModelOptions]="{ standalone: true }" [(ngModel)]="meta.desc"
+                  value="{{ meta.desc }}" />
               </mat-form-field>
               <mat-form-field class="d-block w-75">
                 <mat-label>Content...</mat-label>
-                <input
-                  matInput
-                  class="mr-2"
-                  [ngModelOptions]="{ standalone: true }"
-                  [(ngModel)]="meta.content"
-                />
+                <input matInput class="mr-2" [ngModelOptions]="{ standalone: true }" [(ngModel)]="meta.content" />
               </mat-form-field>
             </div>
           </div>
@@ -236,6 +213,43 @@
             <small>{{sideNavData.strdMeta.length}} of 6</small>
           </div>
         </div>
+        <div class="mt-2 mb-1 d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-start align-items-center">
+            <label class="font-weight-bolder mb-0">Important Metadata</label>
+            <small class="mx-2"><i class="fas fa-info-circle" matTooltip="Metadata that deserves a call out (ex. SLA, Priority, Dates, etc.)"></i></small>
+          </div>
+          <div class="d-flex justify-content-end align-items-center">
+            <small>{{sideNavData.imprtMeta.length}} of 2</small>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+          <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" fxFlex.lg="25%" *ngFor="let meta of sideNavData.imprtMeta; let i = index">
+            <div class="section-container mt-0">
+              <div class="d-flex align-items-center justify-content-between">
+                <p>{{meta.desc}}</p>
+                <button mat-icon-button matTooltip="Remove {{meta.desc}}"><i class="far fa-trash-alt"></i></button>
+              </div>
+              <mat-form-field class="d-block w-50">
+                <mat-label>Label...</mat-label>
+                <input matInput class="mr-2" [(ngModel)]="meta.desc">
+              </mat-form-field>
+              <mat-form-field class="d-block w-75">
+                <mat-label>Content...</mat-label>
+                <input matInput class="mr-2" [(ngModel)]="meta.content">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="add-container" *ngIf="sideNavData.imprtMeta.length < 2; else max">
+          <div class="w-100 d-flex justify-content-center align-items-center ">
+            <button mat-icon-button matTooltip="Add important metadata" (click)="addImportantMeta()">
+              <i class="fas fa-plus-circle"></i>
+            </button>
+          </div>
+          <div class="w-100 d-flex justify-content-center align-items-center">
+            <small>{{sideNavData.imprtMeta.length}} of 2</small>
+          </div>
+        </div>
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
@@ -245,13 +259,11 @@
     <!-- STEP 3 -->
     <mat-step [stepControl]="tabFormGroup">
       <form [formGroup]="tabFormGroup">
-        <ng-template matStepLabel
-          ><div>Tabs</div>
-          <small>Toggle data viewable below the form</small></ng-template
-        >
-        <div
-          class="mt-2 mb-1 d-flex justify-content-between align-items-center"
-        >
+        <ng-template matStepLabel>
+          <div>Tabs</div>
+          <small>Toggle data viewable below the form</small>
+        </ng-template>
+        <div class="mt-2 mb-1 d-flex justify-content-between align-items-center">
           <div class="d-flex justify-content-end align-items-center">
             <h4>Standard Meta</h4>
             <small>{{ sideNavData.strdMeta.length }} of 6</small>
@@ -270,22 +282,12 @@
             </div>
             <mat-form-field class="d-block w-50">
               <mat-label>Label...</mat-label>
-              <input
-                matInput
-                class="mr-2"
-                [ngModelOptions]="{ standalone: true }"
-                [(ngModel)]="meta.desc"
-                value="{{ meta.desc }}"
-              />
+              <input matInput class="mr-2" [ngModelOptions]="{ standalone: true }" [(ngModel)]="meta.desc"
+                value="{{ meta.desc }}" />
             </mat-form-field>
             <mat-form-field class="d-block w-75">
               <mat-label>Content...</mat-label>
-              <input
-                matInput
-                class="mr-2"
-                [ngModelOptions]="{ standalone: true }"
-                [(ngModel)]="meta.content"
-              />
+              <input matInput class="mr-2" [ngModelOptions]="{ standalone: true }" [(ngModel)]="meta.content" />
             </mat-form-field>
           </div>
         </div>
@@ -310,4 +312,4 @@
   <div class="d-flex justify-content-center align-items-center add-container pt-2 pb-3">
     <small class="warning">Reached max amount</small>
   </div>
-</ng-template> -->
+</ng-template>

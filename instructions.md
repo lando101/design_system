@@ -37,6 +37,9 @@ https://www.positronx.io/full-angular-7-firebase-authentication-system/
 INSTALLING BOOTSTRAP RESOURCE
 https://www.techiediaries.com/angular-bootstrap/
 
+INCREASE NODE.JS MEMORY LIMIT
+set NODE_OPTIONS=--max_old_space_size=8192 
+
 ****************************************
 CLI COMMANDS
 
